@@ -15,6 +15,14 @@
       background-position: 0% 50%;
     }
   }
+  
+  @media (max-width: 978px) {
+    .title_screen {
+      padding-top:0;
+      padding-bottom: 20px;
+      margin:0;
+    }
+  }
 
 .darkpurple {
     background-color: #1F2544;

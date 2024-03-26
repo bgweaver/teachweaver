@@ -24,6 +24,14 @@
     }
   }
 
+.nav-link {
+  color: #D8D8D8;
+}
+
+.link-secondary {
+  color: #474F7A;
+}
+
 .darkpurple {
     background-color: #1F2544;
 }

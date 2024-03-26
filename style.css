@@ -1,0 +1,61 @@
+.gradient-background {
+    background: linear-gradient(300deg,#474F7A, #81689D, #FFD0EC);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.darkpurple {
+    background-color: #1F2544;
+}
+
+.mediumpurple {
+    background-color: #474F7A;
+}
+
+.max-width-img {
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+}
+
+.profile-img {
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background-color: #FFD0EC;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+}
+
+p, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+@media (max-width: 576px) {
+  .flex-lg-row {
+      flex-direction: column;
+      align-items: center;
+  }
+}

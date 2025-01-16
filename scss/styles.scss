@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+ .logo {
+    font-family: "Exo 2", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #EDEDED;
+  }
+
+  .nav-link {
+    color: #EDEDED;
+  }
+
+  .nav-link:hover {
+    color: #00D9F9
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     /* Centers content vertically */
+    text-align: center;      /* Centers text within the element */
+    height: 100%;            /* Ensures the container takes full height */
+  }
+  
+  .image-container {
+    max-width: 500px;
+  }
+
+  @media (max-width: 992px) {
+    #type-header {
+      order: 2; /* Makes the text column appear second */
+    }
+    #profile-header {
+      order: 1; /* Makes the image column appear first */
+      max-width: 450px;
+      padding-bottom: 50px;
+    }
+    #fade-in-text {
+        font-size: 1;
+    }
+  }
+  
+
+  

@@ -28,13 +28,16 @@
   max-width: 500px;
 }
 
+.about-img {
+  width: 200px;
+}
+
 @media (max-width: 992px) {
   #type-header {
     order: 2; /* Makes the text column appear second */
   }
   #profile-header {
     order: 1; /* Makes the image column appear first */
-    max-width: 450px;
     padding-bottom: 40px;
   }
   #fade-in-text {

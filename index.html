@@ -10,67 +10,85 @@
     <title>Teach Weaver</title>
   </head>
   <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a href="index.html" class="navbar-brand">
-          <h4 class="mb-0 logo">teachweaver</h4>
-        </a>
-        <button class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          >
+    <!-- Navbar -->
+    <section class="landing vh-100 d-flex flex-column">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <h4 class="mb-0 logo">teachweaver</h4>
+          </a>
+          <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#discover">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#summary">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#takeaways">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#subscribe">Resume</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!--Header-->
-    <header class="header pt-5">
-      <div class="container position-relative z-3">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div id="type-header" class="col-lg-8">
-            <div 
-        class="text-container position-relative d-flex flex-column justify-content-center align-items-center h-100"
-      >
-        <h5 id="type-name" class="text-primary fs-2 fw-bold text-uppercase"></h5>
-        <h1 id="typing-text" class="display-1 fw-bold text-white pb-3"></h1>
-      
-        <h5 id="fade-in-text" class="roles text-white text-uppercase fs-6" style="opacity: 0;">&#8203;</h5>
-      </div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#discover">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#summary">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#takeaways">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#subscribe">Resume</a>
+              </li>
+            </ul>
           </div>
-          <div id="profile-header" class="col-lg-4 d-flex justify-content-center align-items-center">
-            <div class="image-container position-relative">
-              <img src="images/profile.jpg" alt="" class="img-fluid rounded-circle" />
+        </div>
+      </nav>
+
+      <!-- Header -->
+      <header class="header flex-grow-1 py-5 d-flex justify-content-center align-items-center">
+        <div class="container text-center">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div id="type-header" class="col-lg-6">
+              <div class="text-container position-relative d-flex flex-column justify-content-center align-items-center h-100">
+                <h5 id="type-name" class="text-primary fs-2 fw-bold text-uppercase"></h5>
+                <h1 id="typing-text" class="display-1 fw-bold text-white pb-3"></h1>
+                <h5 id="fade-in-text" class="roles text-white text-uppercase fs-6" style="opacity: 0;">&#8203;</h5>
+              </div>
+            </div>
+            <div id="profile-header" class="col-lg-6 d-flex justify-content-center align-items-center">
+              <div class="image-container position-relative">
+                <img src="images/profile.jpg" alt="" class="img-fluid rounded-circle" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </section>
 
+    <!-- About -->
+    <section id="about" class="about bg-light py-5">
+      <div class="container">
+        <div class="text-center">
+          <h4 class="text-uppercase fw-bold text-secondary">About Me</h4>
+          <hr class="w-25 mx-auto" />
+          <h2 class="mb-4">Let me introduce myself.</h2>
+        </div>
+        <div class="about-content d-flex gap-5 align-items-center h-100">
+          <img
+            src="images/profile.jpg"
+            alt=""
+            class="about-img img-fluid rounded-circle"
+          />
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident, earum possimus commodi, eum deleniti incidunt nam ipsum quasi hic id enim illo architecto a eveniet eaque aperiam temporibus voluptatum. Eos tempore aspernatur necessitatibus quisquam facere sequi tempora porro pariatur?
+          </p>
+        </div>
+      </div>
+    </section>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>

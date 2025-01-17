@@ -20,6 +20,29 @@
 
 .navbar {
   z-index: 12;
+  background-color: #161618;
+}
+
+.navbar-collapse {
+  background-color: rgba(22, 22, 24, 0.75);
+  transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 217, 249, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .header .text-container {
@@ -38,12 +61,17 @@
   color: #EDEDED;
 }
 
+.nav-item {
+  font-family: "Exo 2", serif;
+  font-optical-sizing: auto;
+}
+
 .nav-link {
   color: #EDEDED;
 }
 
-.nav-link:hover {
-  color: #00D9F9;
+.navbar .nav-link:hover {
+  color: #00D9F9 !important; /* Add !important to override any conflicts */
 }
 
 .text-container {
@@ -55,7 +83,7 @@
 }
 
 .image-container img {
-  width: 100%; /* Ensures the image fills the width of its container */
+  width: 90%; /* Ensures the image fills the width of its container */
   height: auto; /* Maintain aspect ratio */
   max-height: 80vh; /* Limits the height of the image to 80% of the viewport height */
   object-fit: cover; /* Ensures the image covers the area without distortion */

@@ -113,6 +113,10 @@
     opacity: 0.8;
   }
   
+  .features i {
+    margin-right: 10px;
+  }
+
   @media (max-width: 992px) {
     #type-header {
       order: 2; /* Makes the text column appear second */

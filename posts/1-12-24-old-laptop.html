@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Ben Weaver" />
+    <link rel="stylesheet" href="../css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/lightbox.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Teach Weaver</title>
+  </head>
+  <body>
+    <section class="other-landing d-flex flex-column">
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <h4 class="mb-0 logo text-light">teachweaver</h4>
+          </a>
+          <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- Header -->
+<header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                  <h1 class="fs-1">Resurrecting My Old Laptop: Linux Home Server</h1>
+                  <span class="meta">
+                      Posted by
+                      <a href="../about.html">Ben Weaver</a>
+                      on January 12, 2024
+                  </span>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</header>
+</section>
+
+<!-- Edit this for a new post! -->
+<article class="mb-4 pt-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+        <a href="#!"><img class="img-fluid pb-4" src="https://teachweaver.com/wp-content/uploads/2024/01/1_No2YRg3ROa3xBpTw8QNVEw-1024x512.png" alt="Ubuntu Server" /></a>
+
+        <p>I stumbled upon <a href="https://www.youtube.com/watch?v=IuRWqzfX1ik&amp;t=807s&amp;ab_channel=KalosLikesComputers" data-type="link" data-id="https://www.youtube.com/watch?v=IuRWqzfX1ik&amp;t=807s&amp;ab_channel=KalosLikesComputers">this guide</a> from Kalos Likes Computers on YouTube for turning an old laptop into a home server. I had a laptop lying around, gathering dust for years because it was too slow to use and the idea of giving it a new purpose really appealed to me. Plus, it seemed like a great chance to become more familiar with Linux, which I've only recently started exploring.</p>
+
+        <p>The first step was installing Ubuntu Server on the laptop. Having recently set up Ubuntu on another laptop dedicated to coding and writing, flashing the ISO to a USB and installing it was pretty straightforward. I first started getting excited when I connected to the server over SSH and began sending commands from my PC. While I now understand that this is a basic skill, it was a thrill to realize that experimenting at home allowed me to accomplish something I hadn't thought possible before. After that, I set up Samba and Jellyfin so I could store music and shows on the server and access them from my other devices.</p>
+
+        <p>However, I did run into a few hiccups later, mostly because of my limited knowledge of Linux. I forget to use sudo at the beginning of some commands still, although I have gotten better at figuring out when that is necessary. Also, it is sometimes unclear to me when I should change parts of the commands since I don't always know what parts of a guide are literal, although many are obvious in retrospect. For instance, I typed “sudo smbpasswd -a youruser” to set up my login which didn’t create a username and password for Samba so I could map to that drive. I had to circle back and figure out to replace ‘youruser’ with my username so I could give the permission.</p>
+
+        <p>I'm still in the process of getting the VPN set up correctly. I didn’t have any trouble with port-forwarding, installing Wireguard, or the PiVPN scripts. I can connect my phone to my home server and listen to the music I have stored there from anywhere, but the Local-Only VPN doesn’t seem to be working right. Everything is really bogged down, so I think all my traffic is routing through the VPN instead of just the requests that should go to the server. I'm not sure how well I understand what the VPN is doing, so that may be way off. The first thing I'll try when I work on it again is to make sure the network range in Wireguard is correct. Even with this problem, I just need to toggle the VPN switch back and forth when I want to access my home network. It is still really awesome to listen to my home music files in the car and to know that I set that up!</p>
+
+        <p>My next steps are setting up the connection to my home VPN on my laptop and figuring out how to run a Virtual Machine from the server. The first involves some commands I don’t fully understand and getting keys to tell the devices how to communicate with one another. My phone did that automatically with a QR code, and I was hoping it would be that easy, but it looks like a computer is trickier. The second step isn’t covered in the guide, I just think it would be fun. I have Virtual Box on my Linux laptop to run Kali, but running a VM through the server so I could connect to it from anywhere in the house would be really convenient. I thought I understood how to get started, but I’m going to have to research more.</p>
+
+        <p><br>In conclusion, converting my old laptop into a home server has been a surprisingly fulfilling venture. Guided by Kalos Likes Computers on YouTube, I breathed new life into an old device and embraced the intricacies of Linux. Despite facing some bumps along the way, like getting acquainted with Linux commands and troubleshooting VPN issues, each challenge has been a valuable learning experience. As I look forward to future projects, such as configuring VPNs on my laptop and exploring Virtual Machines, I continue to be excited about what I am able to do on my own and eager to learn what else is possible. Stay tuned for more tech adventures!</p>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+      <!--Footer-->
+      <section class="bg-dark">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+              <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+              </div>
+          
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="align-items-center ms-3">
+                  <a href="https://x.com/teachweave">
+                  <i class="fa-brands fa-x-twitter text-light"></i>
+                </a>
+                </li>
+                <li class="align-items-center ms-3">
+                  <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+                    <i class="fab fa-linkedin text-light"></i>
+                  </a>
+                </li>
+                <li class="align-items-center ms-3">
+                  <a href="https://www.youtube.com/@thenetweaver">
+                    <i class="fab fa-youtube text-light"></i>
+                  </a>
+                </li>
+                <li class="align-items-center ms-3">
+                  <a href="https://github.com/bgweaver">
+                    <i class="fab fa-github text-light"></i>
+                  </a>
+                </li>
+                <li class="align-items-center ms-3">
+                  <a href="mailto:bengweaver@protonmail.com">
+                    <i class="fas fa-envelope text-light"></i>
+                  </a>
+                </li>
+                
+
+            </footer>
+          </div>
+    </section>
+
+
+    
+    <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

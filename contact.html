@@ -96,7 +96,13 @@
             </div>
 
             <!-- Form -->
-            <form name="contact" netlify>
+            <form name="contact" method="POST" data-netlify="true">
+              <!-- Honeypot Field (invisible to users) -->
+              <div style="display:none;">
+                <label for="bot-field">Don't fill this out:</label>
+                <input id="bot-field" name="bot-field" type="text" />
+              </div>
+            
               <div class="mb-5">
                 <input
                   type="text"
@@ -124,6 +130,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
+            
           </div>
         </div>
         </div>

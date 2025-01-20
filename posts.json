@@ -1,0 +1,102 @@
+[
+    {
+        "title": "Bubbles & Fur: A Rework",
+        "image": "./images/bubbles1.jpg",
+        "alt": "New Bubbles & Fur website",
+        "description": "I took a course from Traversy Media on Bootstrap, which I really enjoy using. This inspired me to redo the Bubbles & Fur site to enhance user experience and navigability while condensing the pages...",
+        "author": "Ben Weaver",
+        "date": "October 15th, 2024",
+        "link": "./posts/10-15-24-bf-rework.html"
+      },
+      {
+        "title": "My Latest Web Development Project",
+        "image": "./images/bubbles-old.jpg",
+        "alt": "Bubbles & Fur website",
+        "description": "This was my first time creating a site for someone else, and I’m proud of the progress I’ve made. I wanted to take a moment to reflect on what went well and where I see room for improvement...",
+        "author": "Ben Weaver",
+        "date": "August 31st, 2024",
+        "link": "./posts/08-31-24-webdev.html"
+      },
+    {
+        "title": "Back to School and Certification Success: My Journey with the CompTIA A+ 1101 Exam",
+        "image": "./images/logoaplus.jpg",
+        "alt": "Comptia A+ logo",
+        "description": "As school kicks off and my schedule ramps up, I finally have the chance to share some exciting news: I passed the CompTIA A+ 1101 exam!...",
+        "author": "Ben Weaver",
+        "date": "August 10th, 2024",
+        "link": "./posts/08-10-24-aplus.html"
+      },
+    {
+        "title": "Enhancing My Home Network: Setting Up a Guest Network with DD-WRT",
+        "image": "./images/ddwrt.jpg",
+        "alt": "Router ready for ddwrt",
+        "description": "As my interest in networking and cybersecurity has grown, upgrading my basic router from my Internet Service Provider (ISP) has been on my to-do list. I called last week to ask about the replacement process, and they came out yesterday to swap the router for a modem...",
+        "author": "Ben Weaver",
+        "date": "June 14th, 2024",
+        "link": "./posts/6-14-24-ddwrt.html"
+      },
+    {
+        "title": "Switching to Unraid: Expanding My Home Server",
+        "image": "./images/unraid.jpg",
+        "alt": "Unraid image",
+        "description": "My server setup has undergone a lot of changes since I started with an old laptop. Recently, my dad upgraded his PC and generously donated his old parts to me...",
+        "author": "Ben Weaver",
+        "date": "June 5th, 2024",
+        "link": "./posts/06-05-24-unraid.html"
+      },
+    {
+      "title": "Digital Makeover: Transforming A Local Business' Website",
+      "image": "./images/yard-art.jpg",
+      "alt": "Yard Art website",
+      "description": "Yard Art was the top result on Google for local yard sign companies, but during my shopping, I noticed their website was outdated and lacked modern features. Seeing a chance to blend my coding skills with support for local businesses, I decided to give their online platform a facelift...",
+      "author": "Ben Weaver",
+      "date": "May 5th, 2024",
+      "link": "./posts/5-5-24-digital-makeover.html"
+    },
+    {
+      "title": "Server Update - Minecraft Adventures",
+      "image": "./images/minecraft.jpg",
+      "alt": "Minecraft characters",
+      "description": "I'm excited to share the latest developments in my home server journey! Recently, I set up a Minecraft server for me, my son, and his cousin to play together—an experience that was a big hit with the boys!...",
+      "author": "Ben Weaver",
+      "date": "March 19th, 2024",
+      "link": "./posts/3-19-24-minecraft-server.html"
+    },
+    {
+      "title": "CSS Journey: Three Projects, Valuable Lessons",
+      "image": "./images/css-practice.jpg",
+      "alt": "CSS practice site",
+      "description": "I began by creating a basic single-page site, implementing media queries to ensure responsiveness. While the process was straightforward, it underscored the importance of exploring alternative CSS tools. I'm grateful for the existence of these options...",
+      "author": "Ben Weaver",
+      "date": "May 5th, 2024",
+      "link": "./posts/3-19-24-css.html"
+    },
+    {
+      "title": "Resurrecting My Old Laptop: Linux Home Server",
+      "image": "./images/45_laptop.jpg",
+      "alt": "laptop",
+      "description": "I stumbled upon this guide from Kalos Likes Computers on YouTube for turning an old laptop into a home server. I had a laptop lying around, gathering dust for years because it was too slow to use and the idea of giving it a new purpose really appealed to me. ",
+      "author": "Ben Weaver",
+      "date": "February 6th, 2024",
+      "link": "./posts/1-12-24-old-laptop.html"
+    },
+    {
+      "title": "Python Course: Games & Learning",
+      "image": "./images/robogame.jpg",
+      "alt": "Pygame with robots",
+      "description": "For my final project, I dived into game development using pygame. The game involved collecting objects, dodging enemies, and keeping track of scores. Players navigate using arrow keys, collecting coins while leaping over monsters...",
+      "author": "Ben Weaver",
+      "date": "January 6th, 2024",
+      "link": "./posts/1-6-24-python.html"
+    },
+    {
+      "title": "My Learning Journey in Programming and Development",
+      "image": "./images/techteacher.jpg",
+      "alt": "Teacher with computer",
+      "description": "As an elementary school teacher, my passion for education has always driven me to explore new ways to engage my students and enhance their learning experience. Recently, I have taken a keen interest in programming and development...",
+      "author": "Ben Weaver",
+      "date": "January 6th, 2024",
+      "link": "./posts/1-6-24-journey.html"
+    }
+  ]
+  

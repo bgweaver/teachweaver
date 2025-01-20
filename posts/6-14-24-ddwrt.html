@@ -41,55 +41,62 @@
         </div>
       </nav>
     
-      <!-- Header -->
       <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
         <div class="container text-center">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="post-heading text-white">
-                        <h1 class="fs-1">Man must explore, and this is exploration at its greatest</h1>
-                        <span class="meta">
-                            Posted by
-                            <a href="../about.html">Ben Weaver</a>
-                            on August 24, 2023
-                        </span>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading text-white">
+                            <h1 class="fs-1">Upgrading My Home Network: A Journey Into Networking</h1>
+                            <span class="meta">
+                                Posted by
+                                <a href="../about.html">Ben Weaver</a>
+                                on January 19, 2025
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-      </header>
+    </header>
     </section>
+    <section>
+        <article class="mb-4 pt-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+                      <figure class="wp-block-image size-large text-center">
+                        <img src="../images/ddwrt.jpg" alt="a router ready for ddwrt" 
+                             class="img-fluid rounded mx-auto d-block" 
+                             style="max-width: 100%; height: auto;" />
+                      </figure>
     
-    <!--Edit this for a new post!-->
-    <article class="mb-4 pt-4">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7 text-light">
-                    <a href="#!"><img class="img-fluid pb-4" src="../images/45_laptop.jpg" alt="..." /></a>
-
-                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
-                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
-                    <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
-                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
-                    <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-                    <h2 class="section-heading">The Final Frontier</h2>
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-                    <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-                    <h2 class="section-heading">Reaching for the Stars</h2>
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-                    <a href="#!"><img class="img-fluid" src="../images/45_laptop.jpg" alt="..." /></a>
-                    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                        <p>As my interest in networking and cybersecurity has grown, upgrading my basic router from my Internet Service Provider (ISP) has been on my to-do list. I called last week to ask about the replacement process, and they came out yesterday to swap the router for a modem. I chose a modem from my ISP rather than one of their routers so that I could later upgrade to a pfSense router, in line with my long-term plans. My immediate goal was to set up a guest network and an IoT network, both separated from my main network.</p>
+                        <p>I already had some experience configuring a DD-WRT router from an old Linksys device I found at Goodwill. I liked the customization options it offered, even though it was outdated. After reviewing several recommended routers on the DD-WRT forum, I decided to go with the Netgear R7800 because of its speed, positive reviews, and affordability (I got a used one for $40 on eBay).</p>
+                        <p>Before flashing the router, I reviewed the flashing instructions carefully and saved the necessary firmware on my laptop. I also documented the static IP settings for devices like Home Assistant, Unraid, Pi-hole, and my IoT devices to help streamline the setup.</p>
+                        <p>When the router arrived, I first explored the default Netgear firmware to see if it would meet my needs. Setting up my network and the guest network was simple, requiring just a few clicks. However, I decided to flash DD-WRT because I wanted the flexibility to create more Virtual Access Points (VAPs) and address specific challenges with my IoT network. The IoT devices needed to be mostly isolated but still required communication with my Home Assistant virtual machine running on my Unraid tower.</p>
+                        <p>Following a guide from a forum post, I successfully installed DD-WRT on the Netgear R7800. The process was smoother than with the older Linksys router, which had more complex reset procedures and a higher risk of bricking the device. Initially, I installed the latest stable build (53562), but I ran into stability issues with the 5GHz band. I reverted to an older version (44715) listed in the DD-WRT Router Database, which worked much better.</p>
+                        <p>Once I had the older version installed, I adjusted the router’s IP address, DHCP server settings, and static IP addresses for my devices. This allowed me to set up the local and static DNS settings early, which helped me make the most of Pi-hole. I always seem to forget this step, so it was great to get it done early. After confirming everything was working, I started creating backups after each new configuration to avoid losing progress—something I learned the hard way after resetting the router a few times.</p>
+                        <p>I configured two access points for my main network and created virtual access points for guests and IoT devices. Initially, setting up the guest network in unbridged mode caused issues with the DHCP server, but I solved it by creating a second bridge (br1) and implementing firewall rules for traffic management, based on a guide I found. I also had ChatGPT help me understand what these rules meant, as I was unfamiliar with them. It took me a few days to isolate the IoT devices, but I eventually pieced together the necessary firewall rules. If anyone needs help with a similar setup, feel free to reach out, and I can share more details.</p>
+                        <h2 class="section-heading">Firewall Rules I Used:</h2>
+                        <ul>
+                            <li>Flush Existing Rules and Chains: Clears any previous firewall rules to start fresh.</li>
+                            <li>Allow Established Connections and Loopback: Allows ongoing connections and local device traffic.</li>
+                            <li>Allow DNS Traffic on All Bridges: Enables DNS requests on all network bridges so devices can resolve domain names.</li>
+                            <li>Allow Forwarding to WAN Interface: Lets traffic from all bridges reach the WAN (Internet) interface for internet access.</li>
+                            <li>Allow Specific Communication Between Home Assistant and IoT Devices: Allows IoT devices to communicate with the Home Assistant server.</li>
+                            <li>Block Communication Between Specific Bridges: Prevents devices on one bridge from communicating with devices on other bridges, isolating traffic.</li>
+                        </ul>
+                        <p>I think I can refine these rules further, especially by narrowing traffic to the observer port on Home Assistant. I want to make sure I understand the implications of that before proceeding. There may also be some redundant or unnecessary rules that need to be addressed. While working on the firewall, I realized there’s a lot I don’t know, so I’ll hold off on any more changes for now. My family is definitely getting tired of me constantly working on this and kicking them off the internet!</p>
+                        <p>One persistent issue I've been dealing with is my iPhone’s inaccurate location since setting up the new network. It sometimes places me across the creek in a nearby neighborhood, which causes issues with my home automation setup, triggering alarms and actions unexpectedly. To work around this, I’ve added short delays to automations and used a ping integration in Home Assistant to check my phone’s connection to the home network before taking any actions. While effective, I’d like to find a more permanent solution.</p>
+                        <p>Upgrading my home network has involved hardware upgrades, firmware flashing, and network setup, all of which tested my skills and patience. Transitioning from my ISP’s router to a modem and then configuring the Netgear R7800 with DD-WRT has boosted performance and deepened my understanding of networking essentials. Setting up separate guest and IoT networks was a significant milestone, but it came with troubleshooting and plenty of lessons in planning and flexibility.</p>
+                        <p>This hands-on experience has helped me improve my network configuration skills and taught me how to tackle real-time issues. Moving forward, I plan to enhance IoT device security, resolve automation problems, and explore more advanced networking concepts. This project has been a rewarding journey into technology, reaffirming my passion for IT and my commitment to continuous learning.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </article>
-
+        </article>
+    </section>
+    
 
 
 

@@ -171,7 +171,7 @@ footer a i:hover {
     padding-bottom: 40px;
   }
   #fade-in-text {
-      font-size: 1;
+      font-size: 1rem;
   }
   .image-container img {
     max-width: 50%;
@@ -179,5 +179,18 @@ footer a i:hover {
   .roles {
     font-size: 0.75rem !important;
   }
+  .navbar-collapse {
+    align-items: start !important;
+  }
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .navbar-nav.ms-auto {
+    flex-direction: row !important;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 }
+
 

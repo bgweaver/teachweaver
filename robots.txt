@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Allow: /blog/
+Sitemap: https://www.teachweaver.com/sitemap.xml

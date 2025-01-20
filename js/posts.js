@@ -57,4 +57,10 @@ function updatePager() {
 function changePage(direction) {
   currentPage += direction;
   displayPosts();
+  
+  // Scroll to the top of the page
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }

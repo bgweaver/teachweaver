@@ -1,189 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teachweaver: Bubbles & Fur Website</title>
-    <meta
-      name="description"
-      content="Follow along with my journey creating the Bubbles & Fur website, from deployment to design improvements. This blog post documents what went well, what could be improved, and the technologies I used."
-    />
-    <meta
-      name="keywords"
-      content="web development, web design, client projects, Netlify, Bootstrap, Bubbles and Fur, teachweaver"
-    />
-    <meta name="robots" content="index, follow" />
 
-    <meta
-      property="og:title"
-      content="teachweaver - Bubbles & Fur Website"
-    />
-    <meta
-      property="og:description"
-      content="Follow along with my journey creating the Bubbles & Fur website, from deployment to design improvements. This blog post documents what went well, what could be improved, and the technologies I used."
-    />
-    <meta
-      property="og:image"
-      content="https://www.teachweaver.com/images/bubbles-old.jpg"
-    />
-    <meta property="og:url" content="https://www.teachweaver.com/blog/bubbles-fur-website" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="../css/font-awesome.css" />
-    <link rel="stylesheet" href="../css/bootstrap.css" />
-    <link rel="stylesheet" href="../css/lightbox.min.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Bubbles & Fur Website</title>
+  <meta name="description"
+    content="Follow along with my journey creating the Bubbles & Fur website, from deployment to design improvements. This blog post documents what went well, what could be improved, and the technologies I used." />
+  <meta name="keywords"
+    content="web development, web design, client projects, Netlify, Bootstrap, Bubbles and Fur, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="teachweaver - Bubbles & Fur Website" />
+  <meta property="og:description"
+    content="Follow along with my journey creating the Bubbles & Fur website, from deployment to design improvements. This blog post documents what went well, what could be improved, and the technologies I used." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/bubbles-old.jpg" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/bubbles-fur-website" />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
 
 
 
-  <body>
-    <section class="other-landing d-flex flex-column">
-      <!-- Navbar -->
-      <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <h4 class="mb-0 logo text-light">teachweaver</h4>
-          </a>
-          <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-            >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../contact.html">Contact</a></li>
-            </ul>
-          </div>
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    
-      <!-- Header -->
-      <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
-        <div class="container text-center">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-              <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="post-heading text-white">
-                  <h1 class="fs-1">Bubbles & Fur Website</h1>
-                  <span class="meta">
-                    Posted by
-                    <a href="../about.html">Ben Weaver</a>
-                    on August 31, 2024
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      </section>
-      <!-- Main Article Content -->
-      <article class="mb-4 pt-4">
-        <div class="container px-4 px-lg-5">
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
           <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7 text-light">
-              <!-- Featured Image -->
-              <figure class="wp-block-image size-large text-center">
-                <img src="../images/bubbles-old.jpg" alt="Old version of Bubbles & Fur" 
-                     class="img-fluid rounded mx-auto d-block" 
-                     style="max-width: 100%; height: auto;" />
-              </figure>
-      
-              <!-- Introduction -->
-              <p>As a web developer, each project offers new challenges and opportunities to grow. My most recent project, a website for Bubbles & Fur, was no exception. This was my first time creating a site for someone else, and I’m proud of the progress I’ve made. I wanted to take a moment to reflect on what went well and where I see room for improvement.</p>
-              <p><em>*Note: This version has undergone several updates and is no longer live. You can see the original archived on <a href="https://github.com/bgweaver/bubblesandfur_old" target="_blank">GitHub</a>. You can also see the latest version live at <a href="https://www.bubblesandfur.com" target="_blank">Bubbles & Fur</a> or on <a href="https://github.com/bgweaver/bubblesandfur" target="_blank">GitHub</a>.</em></p>
-      
-              <!-- What I'm Proud Of -->
-              <h4 class="section-heading"><strong>What I’m Proud Of:</strong></h4>
-              <ul>
-                <li><strong>First Published Site for a Client:</strong> This was my first official project for someone else, and seeing it live was incredibly rewarding. Delivering a site that meets a client’s needs feels like a milestone.</li>
-                <li><strong>Utilized Netlify for Deployment:</strong> This was my first time using Netlify, which made the deployment process smooth and efficient.</li>
-                <li><strong>Form Integration:</strong> I implemented Netlify Forms with honeypot and CAPTCHA features to reduce spam, a critical improvement from past experiences.</li>
-                <li><strong>Custom Email Setup:</strong> Using ImprovMX, I set up a custom email address, enhancing the client’s brand credibility.</li>
-                <li><strong>Animation with AOS:</strong> Subtle animations added a dynamic element, making the first impression more engaging.</li>
-                <li><strong>Meeting the Client Brief:</strong> I adapted quickly to client requests, ensuring the final product aligned with her vision.</li>
-                <li><strong>About Page Creation:</strong> I crafted an “About the Business” page using the client’s interview responses, adding a personal touch.</li>
-                <li><strong>Expanded Use of Bootstrap:</strong> I ensured responsiveness across devices and seamless navigation bar behavior.</li>
-                <li><strong>Meta Tags for Enhanced Sharing:</strong> Implementing meta tags improved how the site appears on social media and messaging apps.</li>
-                <li><strong>Site Indexing and Google Business Entry:</strong> Indexing the site improved its visibility and online presence.</li>
-              </ul>
-      
-              <!-- Wishes and Next Steps -->
-              <h4 class="section-heading"><strong>Wishes and Next Steps:</strong></h4>
-              <ul>
-                <li><strong>Integrating Payment:</strong> The next step is adding a payment system like Clover or PayPal, which will be a learning opportunity.</li>
-                <li><strong>Improving Bootstrap Skills:</strong> I want to enhance my layouts and solve centering issues more effectively.</li>
-                <li><strong>Enhancing Visual Appeal:</strong> Some pages lack visual interest, so I’ll focus on improving design principles.</li>
-                <li><strong>Expanding My Client Base:</strong> My goal is to publish a site for a non-relative client, expanding my portfolio.</li>
-                <li><strong>Creating a Portfolio Site:</strong> I aim to build a custom site showcasing my work and skills.</li>
-              </ul>
-      
-              <!-- Conclusion -->
-              <p>This project was a significant step forward in my web development journey. I’m excited about the progress I’ve made and motivated by the challenges ahead. Each project is a learning experience, and I can’t wait to see where the next one takes me.</p>
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Bubbles & Fur Website</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on August 31, 2024
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </article>
-      
+      </div>
+    </header>
+  </section>
+  <!-- Main Article Content -->
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <!-- Featured Image -->
+          <figure class="wp-block-image size-large text-center">
+            <img src="../images/bubbles-old.jpg" alt="Old version of Bubbles & Fur"
+              class="img-fluid rounded mx-auto d-block" style="max-width: 100%; height: auto;" />
+          </figure>
+
+          <!-- Introduction -->
+          <p>As a web developer, each project offers new challenges and opportunities to grow. My most recent project, a
+            website for Bubbles & Fur, was no exception. This was my first time creating a site for someone else, and
+            I’m proud of the progress I’ve made. I wanted to take a moment to reflect on what went well and where I see
+            room for improvement.</p>
+          <p><em>*Note: This version has undergone several updates and is no longer live. You can see the original
+              archived on <a href="https://github.com/bgweaver/bubblesandfur_old" target="_blank">GitHub</a>. You can
+              also see the latest version live at <a href="https://www.bubblesandfur.com" target="_blank">Bubbles &
+                Fur</a> or on <a href="https://github.com/bgweaver/bubblesandfur" target="_blank">GitHub</a>.</em></p>
+
+          <!-- What I'm Proud Of -->
+          <h4 class="section-heading"><strong>What I’m Proud Of:</strong></h4>
+          <ul>
+            <li><strong>First Published Site for a Client:</strong> This was my first official project for someone else,
+              and seeing it live was incredibly rewarding. Delivering a site that meets a client’s needs feels like a
+              milestone.</li>
+            <li><strong>Utilized Netlify for Deployment:</strong> This was my first time using Netlify, which made the
+              deployment process smooth and efficient.</li>
+            <li><strong>Form Integration:</strong> I implemented Netlify Forms with honeypot and CAPTCHA features to
+              reduce spam, a critical improvement from past experiences.</li>
+            <li><strong>Custom Email Setup:</strong> Using ImprovMX, I set up a custom email address, enhancing the
+              client’s brand credibility.</li>
+            <li><strong>Animation with AOS:</strong> Subtle animations added a dynamic element, making the first
+              impression more engaging.</li>
+            <li><strong>Meeting the Client Brief:</strong> I adapted quickly to client requests, ensuring the final
+              product aligned with her vision.</li>
+            <li><strong>About Page Creation:</strong> I crafted an “About the Business” page using the client’s
+              interview responses, adding a personal touch.</li>
+            <li><strong>Expanded Use of Bootstrap:</strong> I ensured responsiveness across devices and seamless
+              navigation bar behavior.</li>
+            <li><strong>Meta Tags for Enhanced Sharing:</strong> Implementing meta tags improved how the site appears on
+              social media and messaging apps.</li>
+            <li><strong>Site Indexing and Google Business Entry:</strong> Indexing the site improved its visibility and
+              online presence.</li>
+          </ul>
+
+          <!-- Wishes and Next Steps -->
+          <h4 class="section-heading"><strong>Wishes and Next Steps:</strong></h4>
+          <ul>
+            <li><strong>Integrating Payment:</strong> The next step is adding a payment system like Clover or PayPal,
+              which will be a learning opportunity.</li>
+            <li><strong>Improving Bootstrap Skills:</strong> I want to enhance my layouts and solve centering issues
+              more effectively.</li>
+            <li><strong>Enhancing Visual Appeal:</strong> Some pages lack visual interest, so I’ll focus on improving
+              design principles.</li>
+            <li><strong>Expanding My Client Base:</strong> My goal is to publish a site for a non-relative client,
+              expanding my portfolio.</li>
+            <li><strong>Creating a Portfolio Site:</strong> I aim to build a custom site showcasing my work and skills.
+            </li>
+          </ul>
+
+          <!-- Conclusion -->
+          <p>This project was a significant step forward in my web development journey. I’m excited about the progress
+            I’ve made and motivated by the challenges ahead. Each project is a learning experience, and I can’t wait to
+            see where the next one takes me.</p>
+        </div>
+      </div>
+    </div>
+  </article>
 
 
 
-      <!--Footer-->
-      <section class="bg-dark">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="align-items-center ms-3">
-                  <a href="https://x.com/teachweave">
-                  <i class="fa-brands fa-x-twitter text-light"></i>
-                </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
-                    <i class="fab fa-linkedin text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.youtube.com/@thenetweaver">
-                    <i class="fab fa-youtube text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://github.com/bgweaver">
-                    <i class="fab fa-github text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="mailto:bengweaver@protonmail.com">
-                    <i class="fas fa-envelope text-light"></i>
-                  </a>
-                </li>
-                
 
-            </footer>
-          </div>
-    </section>
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
 
 
-    
-    <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script src="js/script.js"></script>
+      </footer>
+    </div>
+  </section>
 
-  </body>
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
 </html>

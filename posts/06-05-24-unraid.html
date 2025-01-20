@@ -1,58 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teachweaver: Summer Break and My Server Project</title>
-    <meta
-      name="description"
-      content="Explore the latest upgrades to my server setup during summer break. From Tailscale and Pi-hole to Home Assistant and Docker containers, this post documents the improvements made to enhance my home network and security."
-    />
-    <meta
-      name="keywords"
-      content="home server, Unraid, Tailscale, Pi-hole, Home Assistant, Docker containers, tech projects, teachweaver"
-    />
-    <meta name="robots" content="index, follow" />
 
-    <meta
-      property="og:title"
-      content="teachweaver - Summer Break and My Server Project"
-    />
-    <meta
-      property="og:description"
-      content="Explore the latest upgrades to my server setup during summer break. From Tailscale and Pi-hole to Home Assistant and Docker containers, this post documents the improvements made to enhance my home network and security."
-    />
-    <meta
-      property="og:image"
-      content="https://www.teachweaver.com/images/unraid.jpg"
-    />
-    <meta property="og:url" content="https://www.teachweaver.com/blog/summer-break-server-project" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="../css/font-awesome.css" />
-    <link rel="stylesheet" href="../css/bootstrap.css" />
-    <link rel="stylesheet" href="../css/lightbox.min.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
-  <body>
-    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
-      <div class="container text-center">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-              <div class="post-heading text-white">
-                <h1 class="fs-1">Summer Break and My Server Project</h1>
-                <span class="meta">
-                  Posted by
-                  <a href="../about.html">Ben Weaver</a>
-                  on January 19, 2025
-                </span>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Summer Break and My Server Project</title>
+  <meta name="description"
+    content="Explore the latest upgrades to my server setup during summer break. From Tailscale and Pi-hole to Home Assistant and Docker containers, this post documents the improvements made to enhance my home network and security." />
+  <meta name="keywords"
+    content="home server, Unraid, Tailscale, Pi-hole, Home Assistant, Docker containers, tech projects, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="teachweaver - Summer Break and My Server Project" />
+  <meta property="og:description"
+    content="Explore the latest upgrades to my server setup during summer break. From Tailscale and Pi-hole to Home Assistant and Docker containers, this post documents the improvements made to enhance my home network and security." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/unraid.jpg" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/summer-break-server-project" />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+    <div class="container text-center">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading text-white">
+              <h1 class="fs-1">Summer Break and My Server Project</h1>
+              <span class="meta">
+                Posted by
+                <a href="../about.html">Ben Weaver</a>
+                on January 19, 2025
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
 
   <body>
@@ -61,139 +51,192 @@
       <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
         <div class="container">
           <a href="index.html" class="navbar-brand">
-            <h4 class="mb-0 logo text-light">teachweaver</h4>
+            <h4 class="mb-1 logo text-light">teachweaver</h4>
           </a>
-          <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-            >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-e">
               <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
               <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                  aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-    
+
       <!-- Header -->
       <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
         <div class="container text-center">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="post-heading text-white">
-                            <h1 class="fs-1">Summer Break and My Server Project</h1>
-                            <span class="meta">
-                                Posted by
-                                <a href="../about.html">Ben Weaver</a>
-                                on January 19, 2025
-                            </span>
-                        </div>
-                    </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading text-white">
+                  <h1 class="fs-1">Summer Break and My Server Project</h1>
+                  <span class="meta">
+                    Posted by
+                    <a href="../about.html">Ben Weaver</a>
+                    on January 19, 2025
+                  </span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </header>
+      </header>
     </section>
-    
+
     <!--Edit this for a new post!-->
     <article class="mb-4 pt-4">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7 text-light">
-                  <figure class="wp-block-image size-large text-center">
-                    <img src="../images/unraid.jpg" alt="Unraid Image" 
-                         class="img-fluid rounded mx-auto d-block" 
-                         style="max-width: 100%; height: auto;" />
-                  </figure>
-    
-                    <p>Now that summer break is here, I finally have more time to blog about my tech projects. My server setup has undergone a lot of changes since I started with an old laptop. Recently, my dad upgraded his PC and generously donated his old parts to me. I combined those with some parts I already had to build a serviceable computer. The only thing I had to buy was a couple of hard drives, which I've been picking up gradually when they go on sale. I installed Unraid on it and have spent the last few months exploring its features, with plenty of help from Space Invader One’s awesome videos. Here are a few of the most interesting things I’ve set up.</p>
-    
-                    <h2 class="section-heading">Tailscale</h2>
-                    <p>Wireguard is built into Unraid, but I chose Tailscale for my home VPN because it's so easy to use. While both are based on Wireguard and help me access my home network remotely, Tailscale is much simpler to set up. Setting up Wireguard required manually pairing keys between devices, which was a bit complicated for me. With Tailscale, I just download the client, log in, and verify the device. My wife’s device helped me test the usability, and she found Tailscale much easier to manage than Wireguard.</p>
-    
-                    <p>Unlike my issues with Wireguard, I didn’t have any trouble using Tailscale to connect to other networks or websites. However, Wireguard caused some networks to block internet access if it was active first, which added to my frustration. Now, I can easily manage my server remotely with Tailscale as my VPN, using my server tower as an exit node. While I mainly use Tailscale on my phone and laptop, I’m planning to explore other VPN options once I learn more about VPN usage.</p>
-    
-                    <p>However, routing my traffic through the server tower revealed my home IP address, ISP, and DNS server details, which wasn’t ideal for privacy. For now, I’m using Opera, which has a VPN and an ad blocker, but it’s limited to browser activity only. I plan to choose a dedicated VPN later to improve my security.</p>
-    
-                    <h2 class="section-heading">Pi-hole</h2>
-                    <p>Pi-hole is a key tool in my network, running in a VM on my Unraid tower. It blocks unwanted ads and tracking at the DNS level. At first, I had some issues with stability in a Docker container, but now it’s reliable after making it the static DNS server for my router. My wife sometimes gets frustrated when Pi-hole blocks Google-sponsored ads in her searches, but it’s effective in enhancing our online privacy. To ensure Pi-hole works even during power outages, I’m planning to move it to a Raspberry Pi. I currently use NextDNS as my upstream DNS server, but I might revisit Unbound in the future to customize my DNS resolution setup.</p>
-    
-                    <h2 class="section-heading">Home Assistant</h2>
-                    <p>Home Assistant has been a game-changer for making our home smarter. It’s running on a virtual machine on my server, and I’ve connected several smart switches to control the lights in our bedrooms and living room from one place. I repurposed an old Amazon tablet as a dedicated Home Assistant device, making it super easy to manage everything. By linking my Ring doorbell and cameras, I can monitor what's happening around the house, with motion alerts showing up on the tablet when needed. Automations like adjusting the thermostat when we're out and waking up the kids in the morning have made daily routines much smoother. My wife is a huge fan of this project, and it’s been really helpful in making our lives easier.</p>
-    
-                    <h2 class="section-heading">Docker Containers</h2>
-                    <p>I run a few Docker containers, mainly through Cloudflare, and I want to highlight a couple of my favorites. My parents love a container I set up for Mealie, a recipe manager that pulls recipes from websites. It’s been really helpful for them, even though it doesn't mesh well with our shopping and meal-planning. Having users outside my home has made me more careful and purposeful with my server. My server has only gone down once, and my mom was the first to let me know, which has made me more aware of my updates and work timing.</p>
-    
-                    <p>The two Docker containers I use the most are Komga and Audiobookshelf. Komga is perfect for organizing and sorting my PDF and e-book collection, especially my programming and cybersecurity books from Humble Bundle. Audiobookshelf does an excellent job sorting and pulling metadata for audiobooks, but it has one annoying issue: the app stops playing at the end of each chapter if my phone is locked or if I switch to another app. I hope this issue gets resolved with the iOS app when it’s out of beta.</p>
-    
-                    <h2 class="section-heading">Conclusion</h2>
-                    <p>Running a home server has been an incredible way to practice skills that will help me as I continue my journey in the tech field. From hardware assembly and software configuration to networking, security, troubleshooting, and mobile device integration, these projects have given me hands-on experience across many areas. As I study for the CompTIA A+ certification, I’ve been pleasantly surprised by how much of the material I’m already familiar with from building and maintaining my server. This journey has strengthened my passion for technology and inspired me to dive deeper into the world of IT.</p>
-                </div>
-            </div>
-        </div>
-    </article>
-    
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+            <figure class="wp-block-image size-large text-center">
+              <img src="../images/unraid.jpg" alt="Unraid Image" class="img-fluid rounded mx-auto d-block"
+                style="max-width: 100%; height: auto;" />
+            </figure>
 
+            <p>Now that summer break is here, I finally have more time to blog about my tech projects. My server setup
+              has undergone a lot of changes since I started with an old laptop. Recently, my dad upgraded his PC and
+              generously donated his old parts to me. I combined those with some parts I already had to build a
+              serviceable computer. The only thing I had to buy was a couple of hard drives, which I've been picking up
+              gradually when they go on sale. I installed Unraid on it and have spent the last few months exploring its
+              features, with plenty of help from Space Invader One’s awesome videos. Here are a few of the most
+              interesting things I’ve set up.</p>
 
+            <h2 class="section-heading">Tailscale</h2>
+            <p>Wireguard is built into Unraid, but I chose Tailscale for my home VPN because it's so easy to use. While
+              both are based on Wireguard and help me access my home network remotely, Tailscale is much simpler to set
+              up. Setting up Wireguard required manually pairing keys between devices, which was a bit complicated for
+              me. With Tailscale, I just download the client, log in, and verify the device. My wife’s device helped me
+              test the usability, and she found Tailscale much easier to manage than Wireguard.</p>
 
+            <p>Unlike my issues with Wireguard, I didn’t have any trouble using Tailscale to connect to other networks
+              or websites. However, Wireguard caused some networks to block internet access if it was active first,
+              which added to my frustration. Now, I can easily manage my server remotely with Tailscale as my VPN, using
+              my server tower as an exit node. While I mainly use Tailscale on my phone and laptop, I’m planning to
+              explore other VPN options once I learn more about VPN usage.</p>
 
-      <!--Footer-->
-      <section class="bg-dark">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="align-items-center ms-3">
-                  <a href="https://x.com/teachweave">
-                  <i class="fa-brands fa-x-twitter text-light"></i>
-                </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
-                    <i class="fab fa-linkedin text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.youtube.com/@thenetweaver">
-                    <i class="fab fa-youtube text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://github.com/bgweaver">
-                    <i class="fab fa-github text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="mailto:bengweaver@protonmail.com">
-                    <i class="fas fa-envelope text-light"></i>
-                  </a>
-                </li>
-                
+            <p>However, routing my traffic through the server tower revealed my home IP address, ISP, and DNS server
+              details, which wasn’t ideal for privacy. For now, I’m using Opera, which has a VPN and an ad blocker, but
+              it’s limited to browser activity only. I plan to choose a dedicated VPN later to improve my security.</p>
 
-            </footer>
+            <h2 class="section-heading">Pi-hole</h2>
+            <p>Pi-hole is a key tool in my network, running in a VM on my Unraid tower. It blocks unwanted ads and
+              tracking at the DNS level. At first, I had some issues with stability in a Docker container, but now it’s
+              reliable after making it the static DNS server for my router. My wife sometimes gets frustrated when
+              Pi-hole blocks Google-sponsored ads in her searches, but it’s effective in enhancing our online privacy.
+              To ensure Pi-hole works even during power outages, I’m planning to move it to a Raspberry Pi. I currently
+              use NextDNS as my upstream DNS server, but I might revisit Unbound in the future to customize my DNS
+              resolution setup.</p>
+
+            <h2 class="section-heading">Home Assistant</h2>
+            <p>Home Assistant has been a game-changer for making our home smarter. It’s running on a virtual machine on
+              my server, and I’ve connected several smart switches to control the lights in our bedrooms and living room
+              from one place. I repurposed an old Amazon tablet as a dedicated Home Assistant device, making it super
+              easy to manage everything. By linking my Ring doorbell and cameras, I can monitor what's happening around
+              the house, with motion alerts showing up on the tablet when needed. Automations like adjusting the
+              thermostat when we're out and waking up the kids in the morning have made daily routines much smoother. My
+              wife is a huge fan of this project, and it’s been really helpful in making our lives easier.</p>
+
+            <h2 class="section-heading">Docker Containers</h2>
+            <p>I run a few Docker containers, mainly through Cloudflare, and I want to highlight a couple of my
+              favorites. My parents love a container I set up for Mealie, a recipe manager that pulls recipes from
+              websites. It’s been really helpful for them, even though it doesn't mesh well with our shopping and
+              meal-planning. Having users outside my home has made me more careful and purposeful with my server. My
+              server has only gone down once, and my mom was the first to let me know, which has made me more aware of
+              my updates and work timing.</p>
+
+            <p>The two Docker containers I use the most are Komga and Audiobookshelf. Komga is perfect for organizing
+              and sorting my PDF and e-book collection, especially my programming and cybersecurity books from Humble
+              Bundle. Audiobookshelf does an excellent job sorting and pulling metadata for audiobooks, but it has one
+              annoying issue: the app stops playing at the end of each chapter if my phone is locked or if I switch to
+              another app. I hope this issue gets resolved with the iOS app when it’s out of beta.</p>
+
+            <h2 class="section-heading">Conclusion</h2>
+            <p>Running a home server has been an incredible way to practice skills that will help me as I continue my
+              journey in the tech field. From hardware assembly and software configuration to networking, security,
+              troubleshooting, and mobile device integration, these projects have given me hands-on experience across
+              many areas. As I study for the CompTIA A+ certification, I’ve been pleasantly surprised by how much of the
+              material I’m already familiar with from building and maintaining my server. This journey has strengthened
+              my passion for technology and inspired me to dive deeper into the world of IT.</p>
           </div>
+        </div>
+      </div>
+    </article>
+
+
+
+
+
+    <!--Footer-->
+    <section class="bg-dark">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+          <div class="col-md-4 d-flex align-items-center">
+            <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+          </div>
+
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="align-items-center ms-3">
+              <a href="https://x.com/teachweave">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="align-items-center ms-3">
+              <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="align-items-center ms-3">
+              <a href="https://www.youtube.com/@thenetweaver">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="align-items-center ms-3">
+              <a href="https://github.com/bgweaver">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li class="align-items-center ms-3">
+              <a href="mailto:bengweaver@protonmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+
+        </footer>
+      </div>
     </section>
 
 
-    
+
     <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/lightbox-plus-jquery.min.js"></script>
     <script src="js/script.js"></script>
 
   </body>
+
 </html>

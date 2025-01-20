@@ -1,177 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teachweaver: Upgrading My Home Network</title>
-    <meta
-      name="description"
-      content="Follow my journey of upgrading my home network, from replacing the ISP router with a modem to configuring a Netgear R7800 with DD-WRT for IoT and guest network isolation."
-    />
-    <meta
-      name="keywords"
-      content="networking, home network upgrade, DD-WRT, IoT network, pfSense, networking blog, teachweaver"
-    />
-    <meta name="robots" content="index, follow" />
 
-    <meta
-      property="og:title"
-      content="teachweaver - Upgrading My Home Network"
-    />
-    <meta
-      property="og:description"
-      content="Follow my journey of upgrading my home network, from replacing the ISP router with a modem to configuring a Netgear R7800 with DD-WRT for IoT and guest network isolation."
-    />
-    <meta
-      property="og:image"
-      content="https://www.teachweaver.com/images/ddwrt.jpg"
-    />
-    <meta property="og:url" content="https://www.teachweaver.com/blog/upgrading-my-home-network" />
-    <meta property="og:type" content="article" />
-    
-    <link rel="stylesheet" href="../css/font-awesome.css" />
-    <link rel="stylesheet" href="../css/bootstrap.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Upgrading My Home Network</title>
+  <meta name="description"
+    content="Follow my journey of upgrading my home network, from replacing the ISP router with a modem to configuring a Netgear R7800 with DD-WRT for IoT and guest network isolation." />
+  <meta name="keywords"
+    content="networking, home network upgrade, DD-WRT, IoT network, pfSense, networking blog, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="teachweaver - Upgrading My Home Network" />
+  <meta property="og:description"
+    content="Follow my journey of upgrading my home network, from replacing the ISP router with a modem to configuring a Netgear R7800 with DD-WRT for IoT and guest network isolation." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/ddwrt.jpg" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/upgrading-my-home-network" />
+  <meta property="og:type" content="article" />
+
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
 
 
 
-  <body>
-    <section class="other-landing d-flex flex-column">
-      <!-- Navbar -->
-      <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <h4 class="mb-0 logo text-light">teachweaver</h4>
-          </a>
-          <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-            >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../contact.html">Contact</a></li>
-            </ul>
-          </div>
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    
-      <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
-        <div class="container text-center">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="post-heading text-white">
-                            <h1 class="fs-1">Upgrading My Home Network: A Journey Into Networking</h1>
-                            <span class="meta">
-                                Posted by
-                                <a href="../about.html">Ben Weaver</a>
-                                on January 19, 2025
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    </section>
-    <section>
-        <article class="mb-4 pt-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7 text-light">
-                      <figure class="wp-block-image size-large text-center">
-                        <img src="../images/ddwrt.jpg" alt="a router ready for ddwrt" 
-                             class="img-fluid rounded mx-auto d-block" 
-                             style="max-width: 100%; height: auto;" />
-                      </figure>
-    
-                        <p>As my interest in networking and cybersecurity has grown, upgrading my basic router from my Internet Service Provider (ISP) has been on my to-do list. I called last week to ask about the replacement process, and they came out yesterday to swap the router for a modem. I chose a modem from my ISP rather than one of their routers so that I could later upgrade to a pfSense router, in line with my long-term plans. My immediate goal was to set up a guest network and an IoT network, both separated from my main network.</p>
-                        <p>I already had some experience configuring a DD-WRT router from an old Linksys device I found at Goodwill. I liked the customization options it offered, even though it was outdated. After reviewing several recommended routers on the DD-WRT forum, I decided to go with the Netgear R7800 because of its speed, positive reviews, and affordability (I got a used one for $40 on eBay).</p>
-                        <p>Before flashing the router, I reviewed the flashing instructions carefully and saved the necessary firmware on my laptop. I also documented the static IP settings for devices like Home Assistant, Unraid, Pi-hole, and my IoT devices to help streamline the setup.</p>
-                        <p>When the router arrived, I first explored the default Netgear firmware to see if it would meet my needs. Setting up my network and the guest network was simple, requiring just a few clicks. However, I decided to flash DD-WRT because I wanted the flexibility to create more Virtual Access Points (VAPs) and address specific challenges with my IoT network. The IoT devices needed to be mostly isolated but still required communication with my Home Assistant virtual machine running on my Unraid tower.</p>
-                        <p>Following a guide from a forum post, I successfully installed DD-WRT on the Netgear R7800. The process was smoother than with the older Linksys router, which had more complex reset procedures and a higher risk of bricking the device. Initially, I installed the latest stable build (53562), but I ran into stability issues with the 5GHz band. I reverted to an older version (44715) listed in the DD-WRT Router Database, which worked much better.</p>
-                        <p>Once I had the older version installed, I adjusted the router’s IP address, DHCP server settings, and static IP addresses for my devices. This allowed me to set up the local and static DNS settings early, which helped me make the most of Pi-hole. I always seem to forget this step, so it was great to get it done early. After confirming everything was working, I started creating backups after each new configuration to avoid losing progress—something I learned the hard way after resetting the router a few times.</p>
-                        <p>I configured two access points for my main network and created virtual access points for guests and IoT devices. Initially, setting up the guest network in unbridged mode caused issues with the DHCP server, but I solved it by creating a second bridge (br1) and implementing firewall rules for traffic management, based on a guide I found. I also had ChatGPT help me understand what these rules meant, as I was unfamiliar with them. It took me a few days to isolate the IoT devices, but I eventually pieced together the necessary firewall rules. If anyone needs help with a similar setup, feel free to reach out, and I can share more details.</p>
-                        <h2 class="section-heading">Firewall Rules I Used:</h2>
-                        <ul>
-                            <li>Flush Existing Rules and Chains: Clears any previous firewall rules to start fresh.</li>
-                            <li>Allow Established Connections and Loopback: Allows ongoing connections and local device traffic.</li>
-                            <li>Allow DNS Traffic on All Bridges: Enables DNS requests on all network bridges so devices can resolve domain names.</li>
-                            <li>Allow Forwarding to WAN Interface: Lets traffic from all bridges reach the WAN (Internet) interface for internet access.</li>
-                            <li>Allow Specific Communication Between Home Assistant and IoT Devices: Allows IoT devices to communicate with the Home Assistant server.</li>
-                            <li>Block Communication Between Specific Bridges: Prevents devices on one bridge from communicating with devices on other bridges, isolating traffic.</li>
-                        </ul>
-                        <p>I think I can refine these rules further, especially by narrowing traffic to the observer port on Home Assistant. I want to make sure I understand the implications of that before proceeding. There may also be some redundant or unnecessary rules that need to be addressed. While working on the firewall, I realized there’s a lot I don’t know, so I’ll hold off on any more changes for now. My family is definitely getting tired of me constantly working on this and kicking them off the internet!</p>
-                        <p>One persistent issue I've been dealing with is my iPhone’s inaccurate location since setting up the new network. It sometimes places me across the creek in a nearby neighborhood, which causes issues with my home automation setup, triggering alarms and actions unexpectedly. To work around this, I’ve added short delays to automations and used a ping integration in Home Assistant to check my phone’s connection to the home network before taking any actions. While effective, I’d like to find a more permanent solution.</p>
-                        <p>Upgrading my home network has involved hardware upgrades, firmware flashing, and network setup, all of which tested my skills and patience. Transitioning from my ISP’s router to a modem and then configuring the Netgear R7800 with DD-WRT has boosted performance and deepened my understanding of networking essentials. Setting up separate guest and IoT networks was a significant milestone, but it came with troubleshooting and plenty of lessons in planning and flexibility.</p>
-                        <p>This hands-on experience has helped me improve my network configuration skills and taught me how to tackle real-time issues. Moving forward, I plan to enhance IoT device security, resolve automation problems, and explore more advanced networking concepts. This project has been a rewarding journey into technology, reaffirming my passion for IT and my commitment to continuous learning.</p>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </section>
-    
+      </div>
+    </nav>
 
-
-
-      <!--Footer-->
-      <section class="bg-dark">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Upgrading My Home Network: A Journey Into Networking</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on January 19, 2025
+                </span>
               </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="align-items-center ms-3">
-                  <a href="https://x.com/teachweave">
-                  <i class="fa-brands fa-x-twitter text-light"></i>
-                </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
-                    <i class="fab fa-linkedin text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.youtube.com/@thenetweaver">
-                    <i class="fab fa-youtube text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://github.com/bgweaver">
-                    <i class="fab fa-github text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="mailto:bengweaver@protonmail.com">
-                    <i class="fas fa-envelope text-light"></i>
-                  </a>
-                </li>
-                
-
-            </footer>
+            </div>
           </div>
-    </section>
+        </div>
+      </div>
+    </header>
+  </section>
+  <section>
+    <article class="mb-4 pt-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+            <figure class="wp-block-image size-large text-center">
+              <img src="../images/ddwrt.jpg" alt="a router ready for ddwrt" class="img-fluid rounded mx-auto d-block"
+                style="max-width: 100%; height: auto;" />
+            </figure>
+
+            <p>As my interest in networking and cybersecurity has grown, upgrading my basic router from my Internet
+              Service Provider (ISP) has been on my to-do list. I called last week to ask about the replacement process,
+              and they came out yesterday to swap the router for a modem. I chose a modem from my ISP rather than one of
+              their routers so that I could later upgrade to a pfSense router, in line with my long-term plans. My
+              immediate goal was to set up a guest network and an IoT network, both separated from my main network.</p>
+            <p>I already had some experience configuring a DD-WRT router from an old Linksys device I found at Goodwill.
+              I liked the customization options it offered, even though it was outdated. After reviewing several
+              recommended routers on the DD-WRT forum, I decided to go with the Netgear R7800 because of its speed,
+              positive reviews, and affordability (I got a used one for $40 on eBay).</p>
+            <p>Before flashing the router, I reviewed the flashing instructions carefully and saved the necessary
+              firmware on my laptop. I also documented the static IP settings for devices like Home Assistant, Unraid,
+              Pi-hole, and my IoT devices to help streamline the setup.</p>
+            <p>When the router arrived, I first explored the default Netgear firmware to see if it would meet my needs.
+              Setting up my network and the guest network was simple, requiring just a few clicks. However, I decided to
+              flash DD-WRT because I wanted the flexibility to create more Virtual Access Points (VAPs) and address
+              specific challenges with my IoT network. The IoT devices needed to be mostly isolated but still required
+              communication with my Home Assistant virtual machine running on my Unraid tower.</p>
+            <p>Following a guide from a forum post, I successfully installed DD-WRT on the Netgear R7800. The process
+              was smoother than with the older Linksys router, which had more complex reset procedures and a higher risk
+              of bricking the device. Initially, I installed the latest stable build (53562), but I ran into stability
+              issues with the 5GHz band. I reverted to an older version (44715) listed in the DD-WRT Router Database,
+              which worked much better.</p>
+            <p>Once I had the older version installed, I adjusted the router’s IP address, DHCP server settings, and
+              static IP addresses for my devices. This allowed me to set up the local and static DNS settings early,
+              which helped me make the most of Pi-hole. I always seem to forget this step, so it was great to get it
+              done early. After confirming everything was working, I started creating backups after each new
+              configuration to avoid losing progress—something I learned the hard way after resetting the router a few
+              times.</p>
+            <p>I configured two access points for my main network and created virtual access points for guests and IoT
+              devices. Initially, setting up the guest network in unbridged mode caused issues with the DHCP server, but
+              I solved it by creating a second bridge (br1) and implementing firewall rules for traffic management,
+              based on a guide I found. I also had ChatGPT help me understand what these rules meant, as I was
+              unfamiliar with them. It took me a few days to isolate the IoT devices, but I eventually pieced together
+              the necessary firewall rules. If anyone needs help with a similar setup, feel free to reach out, and I can
+              share more details.</p>
+            <h2 class="section-heading">Firewall Rules I Used:</h2>
+            <ul>
+              <li>Flush Existing Rules and Chains: Clears any previous firewall rules to start fresh.</li>
+              <li>Allow Established Connections and Loopback: Allows ongoing connections and local device traffic.</li>
+              <li>Allow DNS Traffic on All Bridges: Enables DNS requests on all network bridges so devices can resolve
+                domain names.</li>
+              <li>Allow Forwarding to WAN Interface: Lets traffic from all bridges reach the WAN (Internet) interface
+                for internet access.</li>
+              <li>Allow Specific Communication Between Home Assistant and IoT Devices: Allows IoT devices to communicate
+                with the Home Assistant server.</li>
+              <li>Block Communication Between Specific Bridges: Prevents devices on one bridge from communicating with
+                devices on other bridges, isolating traffic.</li>
+            </ul>
+            <p>I think I can refine these rules further, especially by narrowing traffic to the observer port on Home
+              Assistant. I want to make sure I understand the implications of that before proceeding. There may also be
+              some redundant or unnecessary rules that need to be addressed. While working on the firewall, I realized
+              there’s a lot I don’t know, so I’ll hold off on any more changes for now. My family is definitely getting
+              tired of me constantly working on this and kicking them off the internet!</p>
+            <p>One persistent issue I've been dealing with is my iPhone’s inaccurate location since setting up the new
+              network. It sometimes places me across the creek in a nearby neighborhood, which causes issues with my
+              home automation setup, triggering alarms and actions unexpectedly. To work around this, I’ve added short
+              delays to automations and used a ping integration in Home Assistant to check my phone’s connection to the
+              home network before taking any actions. While effective, I’d like to find a more permanent solution.</p>
+            <p>Upgrading my home network has involved hardware upgrades, firmware flashing, and network setup, all of
+              which tested my skills and patience. Transitioning from my ISP’s router to a modem and then configuring
+              the Netgear R7800 with DD-WRT has boosted performance and deepened my understanding of networking
+              essentials. Setting up separate guest and IoT networks was a significant milestone, but it came with
+              troubleshooting and plenty of lessons in planning and flexibility.</p>
+            <p>This hands-on experience has helped me improve my network configuration skills and taught me how to
+              tackle real-time issues. Moving forward, I plan to enhance IoT device security, resolve automation
+              problems, and explore more advanced networking concepts. This project has been a rewarding journey into
+              technology, reaffirming my passion for IT and my commitment to continuous learning.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
 
 
-    
-    <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script src="js/script.js"></script>
 
-  </body>
+
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
 </html>

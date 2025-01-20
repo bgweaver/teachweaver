@@ -1,168 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teachweaver: Digital Makeover: Transforming A Local Business' Website</title>
-    <meta
-      name="description"
-      content="In this post, I share my experience in giving a local business' outdated website a modern, mobile-friendly makeover using Bootstrap. The project features simplified content, updated galleries, and a focus on easy customer interaction."
-    />
-    <meta
-      name="keywords"
-      content="web design, web development, Bootstrap, local business, website redesign, yard art"
-    />
-    <meta name="robots" content="index, follow" />
 
-    <meta
-      property="og:title"
-      content="teachweaver - Digital Makeover: Transforming A Local Business' Website"
-    />
-    <meta
-      property="og:description"
-      content="In this post, I share my experience in giving a local business' outdated website a modern, mobile-friendly makeover using Bootstrap. The project features simplified content, updated galleries, and a focus on easy customer interaction."
-    />
-    <meta
-      property="og:image"
-      content="https://teachweaver.com/images/yard-art.jpg"
-    />
-    <meta property="og:url" content="https://www.teachweaver.com/blog/yard-art-website-makeover" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="../css/font-awesome.css" />
-    <link rel="stylesheet" href="../css/bootstrap.css" />
-    <link rel="stylesheet" href="../css/lightbox.min.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Digital Makeover: Transforming A Local Business' Website</title>
+  <meta name="description"
+    content="In this post, I share my experience in giving a local business' outdated website a modern, mobile-friendly makeover using Bootstrap. The project features simplified content, updated galleries, and a focus on easy customer interaction." />
+  <meta name="keywords" content="web design, web development, Bootstrap, local business, website redesign, yard art" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="teachweaver - Digital Makeover: Transforming A Local Business' Website" />
+  <meta property="og:description"
+    content="In this post, I share my experience in giving a local business' outdated website a modern, mobile-friendly makeover using Bootstrap. The project features simplified content, updated galleries, and a focus on easy customer interaction." />
+  <meta property="og:image" content="https://teachweaver.com/images/yard-art.jpg" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/yard-art-website-makeover" />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
 
 
 
-  <body>
-    <section class="other-landing d-flex flex-column">
-      <!-- Navbar -->
-      <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <h4 class="mb-0 logo text-light">teachweaver</h4>
-          </a>
-          <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-            >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../contact.html">Contact</a></li>
-            </ul>
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Digital Makeover: Transforming A Local Business' Website</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on May 5, 2024
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    
-      <!-- Header -->
-<header class="header flex-grow-1 d-flex justify-content-center align-items-center">
-  <div class="container text-center">
-      <div class="row d-flex justify-content-center align-items-center">
-          <div class="row gx-4 gx-lg-5 justify-content-center">
-              <div class="col-md-10 col-lg-8 col-xl-7">
-                  <div class="post-heading text-white">
-                      <h1 class="fs-1">Digital Makeover: Transforming A Local Business' Website</h1>
-                      <span class="meta">
-                          Posted by
-                          <a href="../about.html">Ben Weaver</a>
-                          on May 5, 2024
-                      </span>
-                  </div>
-              </div>
-          </div>
       </div>
-  </div>
-</header>
-</section>
+    </header>
+  </section>
 
-<!-- Edit this for a new post! -->
-<article class="mb-4 pt-4">
-  <div class="container px-4 px-lg-5">
+  <!-- Edit this for a new post! -->
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-md-10 col-lg-8 col-xl-7 text-light">
-            <figure class="wp-block-image size-large text-center">
-              <img src="../images/yard-art.jpg" alt="Yard Art Website" 
-                   class="img-fluid rounded mx-auto d-block" 
-                   style="max-width: 100%; height: auto;" />
-            </figure>
-              <p>With my wife's 40th birthday approaching, I sought a light-hearted surprise—a humorous yard sign to mark her milestone. I found an Indianapolis-based company offering the signs I wanted, specifically one welcoming my wife into the "Lordy, Lordy" decade. When she caught a glimpse of my plan and was less than enthused, I pivoted to a different endeavor: updating a local yard sign company's website.</p>
-              <p>Yard Art was the top result on Google for local yard sign companies, but during my shopping, I noticed their website was outdated and lacked modern features. Seeing a chance to blend my coding skills with support for local businesses, I decided to give <a href="http://ayardart.com">their online platform</a> a facelift.</p>
-              <p>Using Bootstrap for its simplicity, I revamped the site's layout, keeping the original color scheme but streamlining galleries and condensing content onto a single page. Since the company does not take online orders, I wanted to simplify their landing page and make it easy for potential customers to see the offered services and then call to set up a delivery. In its current form, the site has an excess amount of text and some unnecessary pages that I worked to condense and refine.</p>
-              <div class="wp-block-media-text is-stacked-on-mobile" style="grid-template-columns:31% auto">
-                  <div class="wp-block-media-text__content">
-                      <p>One aspect of the project that I'm particularly proud of is the implementation of three visually appealing galleries, each showcasing the main types of signs the company provides. This kept the presence of the company's work that was so heavily featured in their original site while keeping the design tidy and contained. Crafting this component required combining different elements and customizing them to fit seamlessly within the site's design. You can view <a href="https://bgweaver.github.io/yardart/">my live version here</a> via GitHub Pages. The <a href="https://github.com/bgweaver/yardart">project repository</a> is also available in my GitHub collection.</p>
-                  </div>
-              </div>
-              <p>After completing the project, I reflected on the lessons learned and the skills gained. While I offered to implement the changes for the company, I'm still awaiting their response. Nevertheless, I consider this project a success—a tangible achievement and an opportunity for personal growth.</p>
-              <p>As I continue to refine my skills and tackle new challenges, I'm grateful for the chance to contribute positively to local businesses and communities through my technical abilities.</p>
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <figure class="wp-block-image size-large text-center">
+            <img src="../images/yard-art.jpg" alt="Yard Art Website" class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;" />
+          </figure>
+          <p>With my wife's 40th birthday approaching, I sought a light-hearted surprise—a humorous yard sign to mark
+            her milestone. I found an Indianapolis-based company offering the signs I wanted, specifically one welcoming
+            my wife into the "Lordy, Lordy" decade. When she caught a glimpse of my plan and was less than enthused, I
+            pivoted to a different endeavor: updating a local yard sign company's website.</p>
+          <p>Yard Art was the top result on Google for local yard sign companies, but during my shopping, I noticed
+            their website was outdated and lacked modern features. Seeing a chance to blend my coding skills with
+            support for local businesses, I decided to give <a href="http://ayardart.com">their online platform</a> a
+            facelift.</p>
+          <p>Using Bootstrap for its simplicity, I revamped the site's layout, keeping the original color scheme but
+            streamlining galleries and condensing content onto a single page. Since the company does not take online
+            orders, I wanted to simplify their landing page and make it easy for potential customers to see the offered
+            services and then call to set up a delivery. In its current form, the site has an excess amount of text and
+            some unnecessary pages that I worked to condense and refine.</p>
+          <div class="wp-block-media-text is-stacked-on-mobile" style="grid-template-columns:31% auto">
+            <div class="wp-block-media-text__content">
+              <p>One aspect of the project that I'm particularly proud of is the implementation of three visually
+                appealing galleries, each showcasing the main types of signs the company provides. This kept the
+                presence of the company's work that was so heavily featured in their original site while keeping the
+                design tidy and contained. Crafting this component required combining different elements and customizing
+                them to fit seamlessly within the site's design. You can view <a
+                  href="https://bgweaver.github.io/yardart/">my live version here</a> via GitHub Pages. The <a
+                  href="https://github.com/bgweaver/yardart">project repository</a> is also available in my GitHub
+                collection.</p>
+            </div>
           </div>
+          <p>After completing the project, I reflected on the lessons learned and the skills gained. While I offered to
+            implement the changes for the company, I'm still awaiting their response. Nevertheless, I consider this
+            project a success—a tangible achievement and an opportunity for personal growth.</p>
+          <p>As I continue to refine my skills and tackle new challenges, I'm grateful for the chance to contribute
+            positively to local businesses and communities through my technical abilities.</p>
+        </div>
       </div>
-  </div>
-</article>
+    </div>
+  </article>
 
 
 
 
 
-      <!--Footer-->
-      <section class="bg-dark">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="align-items-center ms-3">
-                  <a href="https://x.com/teachweave">
-                  <i class="fa-brands fa-x-twitter text-light"></i>
-                </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
-                    <i class="fab fa-linkedin text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.youtube.com/@thenetweaver">
-                    <i class="fab fa-youtube text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://github.com/bgweaver">
-                    <i class="fab fa-github text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="mailto:bengweaver@protonmail.com">
-                    <i class="fas fa-envelope text-light"></i>
-                  </a>
-                </li>
-                
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
 
-            </footer>
-          </div>
-    </section>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
 
 
-    
-    <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script src="js/script.js"></script>
+      </footer>
+    </div>
+  </section>
 
-  </body>
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
 </html>

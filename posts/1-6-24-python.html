@@ -1,170 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teachweaver: Python Course - Games & Learning</title>
-    <meta
-      name="description"
-      content="Explore my experience with the Advanced Python Programming course from the University of Helsinki. This post covers my final project, a Pygame, and insights from the course."
-    />
-    <meta
-      name="keywords"
-      content="Python, Pygame, game development, learning journey, programming, teachweaver"
-    />
-    <meta name="robots" content="index, follow" />
 
-    <meta
-      property="og:title"
-      content="teachweaver - Python Course: Games & Learning"
-    />
-    <meta
-      property="og:description"
-      content="Explore my experience with the Advanced Python Programming course from the University of Helsinki. This post covers my final project, a Pygame, and insights from the course."
-    />
-    <meta
-      property="og:image"
-      content="https://www.teachweaver.com/images/robogame.jpg"
-    />
-    <meta property="og:url" content="https://www.teachweaver.com/blog/python-course-games-learning" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="../css/font-awesome.css" />
-    <link rel="stylesheet" href="../css/bootstrap.css" />
-    <link rel="stylesheet" href="../css/lightbox.min.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Python Course - Games & Learning</title>
+  <meta name="description"
+    content="Explore my experience with the Advanced Python Programming course from the University of Helsinki. This post covers my final project, a Pygame, and insights from the course." />
+  <meta name="keywords" content="Python, Pygame, game development, learning journey, programming, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="teachweaver - Python Course: Games & Learning" />
+  <meta property="og:description"
+    content="Explore my experience with the Advanced Python Programming course from the University of Helsinki. This post covers my final project, a Pygame, and insights from the course." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/robogame.jpg" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/python-course-games-learning" />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
 
 
 
-  <body>
-    <section class="other-landing d-flex flex-column">
-      <!-- Navbar -->
-      <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <h4 class="mb-0 logo text-light">teachweaver</h4>
-          </a>
-          <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-            >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../contact.html">Contact</a></li>
-            </ul>
-          </div>
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    
-      <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
-        <div class="container text-center">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="post-heading text-white">
-                            <h1 class="fs-1">Python Course: Games & Learning</h1>
-                            <span class="meta">
-                                Posted by
-                                <a href="../about.html">Ben Weaver</a>
-                                on Jan 6th, 2024
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    </section>
-    
-    <article class="mb-4 pt-4">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7 text-light">
-                  <figure class="wp-block-image size-large text-center">
-                    <img src="../images/robogame.jpg" alt="A Pygame with Robots" 
-                         class="img-fluid rounded mx-auto d-block" 
-                         style="max-width: 100%; height: auto;" />
-                  </figure>
-    
-                    <p>I recently wrapped up the coursework for the <a href="https://programming-23.mooc.fi/" target="_blank">Advanced Course in Python Programming MOOC</a>, offered by the Department of Computer Science at the University of Helsinki. I highly recommend this free online course for anyone interested in an introduction to Python. Prior to this, I also took the Introduction to Programming course, which laid a solid foundation. What stood out for me was the perfect balance between theoretical learning and hands-on practice. Unlike other programs I've tried, this one swiftly progressed through the basics, allowing me to reach my current level with ease.</p>
-    
-                    <p>The course structure included reading materials and practical exercises, and though optional, they also provided video lectures and a Discord channel for student interaction—resources I didn't personally utilize. With my final exam scheduled for the end of the month, I feel well-prepared to tackle it and confident in my ability to further hone specific or advanced Python skills independently.</p>
-    
-                    <p>For my final project, I dived into game development using pygame. The game involved collecting objects, dodging enemies, and keeping track of scores. Players navigate using arrow keys, collecting coins while leaping over monsters. To keep the game from being static, I added a progression feature: the more coins collected, the faster both monsters and coins moved. For the assignment, we were limited to specific image files: a monster, a robot, coins, and a door (which I didn't incorporate). The hardest part was figuring out how to get the robot to jump and come back down with one button press. With this <a href="https://trinket.io/embed/pygame/2f3bb08258" target="_blank">trinket</a>, you can see the code I wrote and try out the game:</p>
-    
-                    <iframe src="https://trinket.io/embed/pygame/2f3bb08258" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-    
-                    <p>Reflecting on the game, if I were to continue working on it, I'd enhance the visual appeal by creating a title graphic with <a href="http://textcraft.net" target="_blank">Textcraft</a>. Additionally, I'd implement a start page featuring controls and a simple prompt like "Press Enter to Start," similar to the end screen I created.</p>
-    
-                    <p>After I was done, I initiated another project intended for my classroom website. However, I encountered limitations with pygame for creating a game accessible to my students on Chromebooks or on a school-approved website. Despite this challenge, I acquired a valuable skill—coding sprite animations using a <a href="https://www.youtube.com/watch?v=nXOVcOBqFwM&amp;ab_channel=CodingWithRuss" target="_blank">tutorial from Coding with Russ</a>.
-    
-                    <p>I'm excited about the prospect of creating more such content as my programming knowledge expands. Stay tuned for more updates as I navigate through this evolving programming journey!</p>
-                </div>
-            </div>
-        </div>
-    </article>
-    
+      </div>
+    </nav>
 
-
-
-
-      <!--Footer-->
-      <section class="bg-dark">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Python Course: Games & Learning</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on Jan 6th, 2024
+                </span>
               </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="align-items-center ms-3">
-                  <a href="https://x.com/teachweave">
-                  <i class="fa-brands fa-x-twitter text-light"></i>
-                </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
-                    <i class="fab fa-linkedin text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.youtube.com/@thenetweaver">
-                    <i class="fab fa-youtube text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://github.com/bgweaver">
-                    <i class="fab fa-github text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="mailto:bengweaver@protonmail.com">
-                    <i class="fas fa-envelope text-light"></i>
-                  </a>
-                </li>
-                
-
-            </footer>
+            </div>
           </div>
-    </section>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <figure class="wp-block-image size-large text-center">
+            <img src="../images/robogame.jpg" alt="A Pygame with Robots" class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;" />
+          </figure>
+
+          <p>I recently wrapped up the coursework for the <a href="https://programming-23.mooc.fi/"
+              target="_blank">Advanced Course in Python Programming MOOC</a>, offered by the Department of Computer
+            Science at the University of Helsinki. I highly recommend this free online course for anyone interested in
+            an introduction to Python. Prior to this, I also took the Introduction to Programming course, which laid a
+            solid foundation. What stood out for me was the perfect balance between theoretical learning and hands-on
+            practice. Unlike other programs I've tried, this one swiftly progressed through the basics, allowing me to
+            reach my current level with ease.</p>
+
+          <p>The course structure included reading materials and practical exercises, and though optional, they also
+            provided video lectures and a Discord channel for student interaction—resources I didn't personally utilize.
+            With my final exam scheduled for the end of the month, I feel well-prepared to tackle it and confident in my
+            ability to further hone specific or advanced Python skills independently.</p>
+
+          <p>For my final project, I dived into game development using pygame. The game involved collecting objects,
+            dodging enemies, and keeping track of scores. Players navigate using arrow keys, collecting coins while
+            leaping over monsters. To keep the game from being static, I added a progression feature: the more coins
+            collected, the faster both monsters and coins moved. For the assignment, we were limited to specific image
+            files: a monster, a robot, coins, and a door (which I didn't incorporate). The hardest part was figuring out
+            how to get the robot to jump and come back down with one button press. With this <a
+              href="https://trinket.io/embed/pygame/2f3bb08258" target="_blank">trinket</a>, you can see the code I
+            wrote and try out the game:</p>
+
+          <iframe src="https://trinket.io/embed/pygame/2f3bb08258" width="100%" height="500" frameborder="0"
+            marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+          <p>Reflecting on the game, if I were to continue working on it, I'd enhance the visual appeal by creating a
+            title graphic with <a href="http://textcraft.net" target="_blank">Textcraft</a>. Additionally, I'd implement
+            a start page featuring controls and a simple prompt like "Press Enter to Start," similar to the end screen I
+            created.</p>
+
+          <p>After I was done, I initiated another project intended for my classroom website. However, I encountered
+            limitations with pygame for creating a game accessible to my students on Chromebooks or on a school-approved
+            website. Despite this challenge, I acquired a valuable skill—coding sprite animations using a <a
+              href="https://www.youtube.com/watch?v=nXOVcOBqFwM&amp;ab_channel=CodingWithRuss" target="_blank">tutorial
+              from Coding with Russ</a>.
+
+          <p>I'm excited about the prospect of creating more such content as my programming knowledge expands. Stay
+            tuned for more updates as I navigate through this evolving programming journey!</p>
+        </div>
+      </div>
+    </div>
+  </article>
 
 
-    
-    <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script src="js/script.js"></script>
 
-  </body>
+
+
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
 </html>

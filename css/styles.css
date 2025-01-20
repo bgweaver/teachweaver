@@ -77,10 +77,15 @@
 
 .nav-link {
   color: #EDEDED;
+  transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
   color: #00D9F9 !important;
+}
+
+.navbar .nav-link:focus, .navbar .nav-link:active {
+  color: #FF007A;
 }
 
 .text-container {
@@ -128,6 +133,27 @@
   opacity: 1;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+input, textarea {
+  color: black;
+}
+
+input::placeholder, textarea::placeholder {
+  color: black !important;
+}
+
+footer a i {
+  color: #EDEDED; /* Default icon color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer a i:hover {
+  color: #00D9F9; /* Electric Blue on hover */
+}
+
+.about-page img {
+  max-height: 600px;
 }
 
 @media (max-width: 992px) {

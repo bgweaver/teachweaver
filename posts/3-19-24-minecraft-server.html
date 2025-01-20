@@ -1,164 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teachweaver: Server Update - Minecraft Adventures</title>
-    <meta
-      name="description"
-      content="Follow along with my journey of setting up a Minecraft server on my home server for a fun experience with my kids. This post shares insights and challenges, from Rediscovering Linux to adding controller support."
-    />
-    <meta
-      name="keywords"
-      content="minecraft server, home server, Linux, controller support, Forge server, teachweaver"
-    />
-    <meta name="robots" content="index, follow" />
 
-    <meta
-      property="og:title"
-      content="teachweaver - Server Update - Minecraft Adventures"
-    />
-    <meta
-      property="og:description"
-      content="Follow along with my journey of setting up a Minecraft server on my home server for a fun experience with my kids. This post shares insights and challenges, from Rediscovering Linux to adding controller support."
-    />
-    <meta
-      property="og:image"
-      content="https://www.teachweaver.com/images/minecraft.jpg"
-    />
-    <meta property="og:url" content="https://www.teachweaver.com/blog/server-update-minecraft-adventures" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="../css/font-awesome.css" />
-    <link rel="stylesheet" href="../css/bootstrap.css" />
-    <link rel="stylesheet" href="../css/lightbox.min.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Server Update - Minecraft Adventures</title>
+  <meta name="description"
+    content="Follow along with my journey of setting up a Minecraft server on my home server for a fun experience with my kids. This post shares insights and challenges, from Rediscovering Linux to adding controller support." />
+  <meta name="keywords" content="minecraft server, home server, Linux, controller support, Forge server, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="teachweaver - Server Update - Minecraft Adventures" />
+  <meta property="og:description"
+    content="Follow along with my journey of setting up a Minecraft server on my home server for a fun experience with my kids. This post shares insights and challenges, from Rediscovering Linux to adding controller support." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/minecraft.jpg" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/server-update-minecraft-adventures" />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
 
 
 
-  <body>
-    <section class="other-landing d-flex flex-column">
-      <!-- Navbar -->
-      <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <h4 class="mb-0 logo text-light">teachweaver</h4>
-          </a>
-          <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-            >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../contact.html">Contact</a></li>
-            </ul>
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Server Update - Minecraft Adventures</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on March 19, 2024
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    
-      <!-- Header -->
-<header class="header flex-grow-1 d-flex justify-content-center align-items-center">
-  <div class="container text-center">
-      <div class="row d-flex justify-content-center align-items-center">
-          <div class="row gx-4 gx-lg-5 justify-content-center">
-              <div class="col-md-10 col-lg-8 col-xl-7">
-                  <div class="post-heading text-white">
-                      <h1 class="fs-1">Server Update - Minecraft Adventures</h1>
-                      <span class="meta">
-                          Posted by
-                          <a href="../about.html">Ben Weaver</a>
-                          on March 19, 2024
-                      </span>
-                  </div>
-              </div>
-          </div>
       </div>
-  </div>
-</header>
-</section>
+    </header>
+  </section>
 
-<!-- Edit this for a new post! -->
-<article class="mb-4 pt-4">
-  <div class="container px-4 px-lg-5">
+  <!-- Edit this for a new post! -->
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-md-10 col-lg-8 col-xl-7 text-light">
-            <figure class="wp-block-image size-large text-center">
-              <img src="../images/minecraft.jpg" alt="a laptop placeholder" 
-                   class="img-fluid rounded mx-auto d-block" 
-                   style="max-width: 100%; height: auto;" />
-            </figure>
-              <p>I'm excited to share the latest developments in my home server journey! Recently, I set up a Minecraft server for me, my son, and his cousin to play together—an experience that was a big hit with the boys!</p>
-              <p>Rediscovering Linux skills while setting up the Minecraft server was a refreshing experience. Though the initial setup was straightforward, it reminded me of the importance of regular practice. I stumbled over some basic commands, like "wget," and found myself relearning how to navigate between folders quickly in the terminal. Thankfully, I found helpful guidance from <a href="https://www.youtube.com/@KeepItTechie/videos" target="_blank" rel="noreferrer noopener">KeepItTechie</a> on YouTube, whose tutorial was really easy to follow. I subscribed to the channel as part of my plan to keep practicing Linux.</p>
-              <p>One of the challenges arose when my 5-year-old son struggled with using a keyboard and mouse to play Minecraft (he's more accustomed to using the Switch). Determined to find a solution, I explored how to add controller support, leading me to switch from the basic Minecraft Java server to a Forge server. This change allowed my son to run the Controllable mod seamlessly. However, matching versions of Forge and mods between the server and client computers proved to be a bit tricky. I encountered various errors along the way, such as needing to kill Java because the old server was still running on the Minecraft port despite my attempts to stop and delete it.</p>
-              <p>After troubleshooting and Googling solutions, everything fell into place. We had a blast yesterday when we created a large, pink horse farm on a cherry blossom village seed that I stumbled upon.</p>
-              <p>Looking ahead, my oldest son occasionally plays Minecraft with his friends over Discord, sparking the idea of setting up a server for them as well. However, I anticipate challenges in ensuring simplicity for his friends to log on independently, as I won't always be available to assist with setup. I'm also not sure if my laptop is going to be sufficient to run additional servers on top of the music library, so I may need to look into other options as I move forward.</p>
-              <p>In conclusion, the journey of transforming my old laptop into a home server continues to be filled with challenges and rewarding moments. From rediscovering Linux skills to overcoming Minecraft server challenges, each step reinforces the value of learning and exploration. Stay tuned for more updates as we explore new possibilities with our home server setup!</p>
-              <p>Happy crafting!</p>
-          </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <figure class="wp-block-image size-large text-center">
+            <img src="../images/minecraft.jpg" alt="a laptop placeholder" class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;" />
+          </figure>
+          <p>I'm excited to share the latest developments in my home server journey! Recently, I set up a Minecraft
+            server for me, my son, and his cousin to play together—an experience that was a big hit with the boys!</p>
+          <p>Rediscovering Linux skills while setting up the Minecraft server was a refreshing experience. Though the
+            initial setup was straightforward, it reminded me of the importance of regular practice. I stumbled over
+            some basic commands, like "wget," and found myself relearning how to navigate between folders quickly in the
+            terminal. Thankfully, I found helpful guidance from <a href="https://www.youtube.com/@KeepItTechie/videos"
+              target="_blank" rel="noreferrer noopener">KeepItTechie</a> on YouTube, whose tutorial was really easy to
+            follow. I subscribed to the channel as part of my plan to keep practicing Linux.</p>
+          <p>One of the challenges arose when my 5-year-old son struggled with using a keyboard and mouse to play
+            Minecraft (he's more accustomed to using the Switch). Determined to find a solution, I explored how to add
+            controller support, leading me to switch from the basic Minecraft Java server to a Forge server. This change
+            allowed my son to run the Controllable mod seamlessly. However, matching versions of Forge and mods between
+            the server and client computers proved to be a bit tricky. I encountered various errors along the way, such
+            as needing to kill Java because the old server was still running on the Minecraft port despite my attempts
+            to stop and delete it.</p>
+          <p>After troubleshooting and Googling solutions, everything fell into place. We had a blast yesterday when we
+            created a large, pink horse farm on a cherry blossom village seed that I stumbled upon.</p>
+          <p>Looking ahead, my oldest son occasionally plays Minecraft with his friends over Discord, sparking the idea
+            of setting up a server for them as well. However, I anticipate challenges in ensuring simplicity for his
+            friends to log on independently, as I won't always be available to assist with setup. I'm also not sure if
+            my laptop is going to be sufficient to run additional servers on top of the music library, so I may need to
+            look into other options as I move forward.</p>
+          <p>In conclusion, the journey of transforming my old laptop into a home server continues to be filled with
+            challenges and rewarding moments. From rediscovering Linux skills to overcoming Minecraft server challenges,
+            each step reinforces the value of learning and exploration. Stay tuned for more updates as we explore new
+            possibilities with our home server setup!</p>
+          <p>Happy crafting!</p>
+        </div>
       </div>
-  </div>
-</article>
+    </div>
+  </article>
 
 
 
 
-      <!--Footer-->
-      <section class="bg-dark">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="align-items-center ms-3">
-                  <a href="https://x.com/teachweave">
-                  <i class="fa-brands fa-x-twitter text-light"></i>
-                </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
-                    <i class="fab fa-linkedin text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://www.youtube.com/@thenetweaver">
-                    <i class="fab fa-youtube text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="https://github.com/bgweaver">
-                    <i class="fab fa-github text-light"></i>
-                  </a>
-                </li>
-                <li class="align-items-center ms-3">
-                  <a href="mailto:bengweaver@protonmail.com">
-                    <i class="fas fa-envelope text-light"></i>
-                  </a>
-                </li>
-                
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
 
-            </footer>
-          </div>
-    </section>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
 
 
-    
-    <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script src="js/script.js"></script>
+      </footer>
+    </div>
+  </section>
 
-  </body>
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
 </html>

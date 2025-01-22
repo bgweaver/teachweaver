@@ -1,4 +1,13 @@
 [
+  {
+    "title": "A Year in Review",
+    "image": "./images/planning.jpg",
+    "alt": "planning",
+    "description": "The biggest change? I realized I no longer needed to rely on someone else to host my site—I’ve learned how to do it myself. Now, I’m hosting my own blog and portfolio, and this is the first post on the new and improved teachweaver site!",
+    "author": "Ben Weaver",
+    "date": "January 22nd, 2025",
+    "link": "./posts/1-22-25-year-review.html"
+  },
     {
         "title": "Bubbles & Fur: A Rework",
         "image": "./images/bubbles1.jpg",

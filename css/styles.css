@@ -185,4 +185,10 @@ footer a i:hover {
     justify-content: flex-start;
     gap: 10px;
   }
+  .navbar-nav .fab {
+    padding-left: 10px;
+  }
+  .lead {
+    text-align: center;
+  }
 }

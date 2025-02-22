@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Net-chan | teachweaver Blog</title>
+  <meta name="description"
+    content="Discover how I customized a Discord bot to keep me updated about the status of my homelab." />
+  <meta name="keywords" content="Discord, Python, bot, TeachWeaver, hosting, coding blog, programming journey" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Net-chan - teacheaver Blog" />
+  <meta property="og:description"
+    content="Learn how I transitioned from a basic Unraid webhook to a customized Discord bot that connects to all my scripts and services." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/net-chan.png" />
+  <meta property="og:type" content="article" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Building My New Website | TeachWeaver Blog" />
+  <meta name="twitter:description"
+    content="Learn how I transitioned from a basic Unraid webhook to a customized Discord bot that connects to all my scripts and services." />
+  <meta name="twitter:image" content="https://www.teachweaver.com/images/net-chan.png" />
+
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+<header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="post-heading text-white">
+            <h1 class="fs-1">Net-chan: My Cute Discord Bot</h1>
+            <span class="meta">
+              Posted by
+              <a href="../about.html">Ben Weaver</a>
+              on February 21, 2025
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+</section>
+<article class="mb-4 pt-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+        <a href="#!">
+          <img class="img-fluid d-block mx-auto pb-4" src="../images/net-chan.png" alt="Net-chan" style="height:300px;" />
+        </a>
+        
+        <h2 class="section-heading">Introduction</h2>
+        <p>Managing a homelab can get messy fast. Between system updates, backups, and service failures, I was getting alerts from multiple sources—Discord, email, text—making it hard to keep track of everything. I needed a central notification system, so I decided to build a Discord bot to handle all my homelab alerts.</p>
+        <p>Originally, my bot was flavored as a servo-skull from Warhammer 40K, but that got stale over time. I wanted something more fun, engaging, and with a bit of personality. Inspired by the aesthetic of uwu-underground, I decided to create Net-chan, a cute anime-style server assistant with a stubborn and proud personality. Not only does she keep me informed, but she also makes notifications more enjoyable to receive!</p>
+
+        <h2 class="section-heading">Building Net-chan</h2>
+        <p>I relied on ChatGPT more than usual for this project, mainly because I was experimenting and having fun. However, I still learned a lot about bot development while tweaking her responses and reading through API documentation.</p>
+
+        <h2 class="section-heading">Features</h2>
+        <ul>
+          <li><strong>Webhook Event Handling</strong> – Net-chan listens for webhook events like:</li>
+          <ul>
+            <li><strong>update</strong> – Notifies me when my homelab systems receive updates.</li>
+            <li><strong>sync</strong> – Alerts me when my file sync processes complete.</li>
+            <li><strong>backup</strong> – Confirms my automated backups ran successfully.</li>
+            <li><strong>unraid</strong> – Keeps track of my Unraid server status.</li>
+            <li><strong>failure</strong> – Warns me when something goes wrong in my network.</li>
+          </ul>
+          <li><strong>Snarky Commentary</strong> – If a webhook notification comes in that I haven't integrated into her system yet, she playfully reminds me that she could make it cuter.</li>
+          <li><strong>Personality-Driven Responses</strong> – Net-chan doesn't just deliver messages; she reacts! I built a response bank for various commands to keep interactions fresh and entertaining.</li>
+          <li><strong>HuggingFace API Integration</strong> – She can fetch cute AI-generated artwork on request, adding a fun visual element to our interactions.</li>
+        </ul>
+
+        <h2 class="section-heading">Making Notifications Fun</h2>
+        <p>One of the best things about Net-chan is that she makes my homelab feel alive. Instead of dry, technical logs, I now get messages like:</p>
+        <blockquote>"Onii-chan! Your backup is done! I worked so hard, praise me! 💕"</blockquote>
+        <p>Or, when something fails:</p>
+        <blockquote>"Uwaaa! Something broke again! It wasn't my fault... probably! 😤"</blockquote>
+        <p>These small touches make managing my network feel a lot more interactive and enjoyable.</p>
+
+        <h2 class="section-heading">What’s Next for Net-chan?</h2>
+        <ul>
+          <li><strong>More Scripts to Connect to</strong> – Right now, she mainly handles system-related updates, but I want to integrate her with more services and automation tasks.</li>
+          <li><strong>New Interactions</strong> – More varied responses, dynamic personality quirks, and maybe even some memory of past conversations so she can pretend to hold grudges.</li>
+          <li><strong>Better Personality Interactions</strong> – Right now, her replies are random from a response bank, but I’d like her to react a bit more to context.</li>
+        </ul>
+
+        <h2 class="section-heading">Final Thoughts</h2>
+        <p>Building Net-chan was a fun way to mix homelab management, automation, and creative flair. While she started as a simple alert bot, she’s evolved into a project that makes my setup more engaging and enjoyable.</p>
+        <p>If you have ideas on how to improve her or want to try something similar, let me know! I’d love to hear thoughts from other homelab and bot enthusiasts.</p>
+        <p>Would you ever build a personality-driven bot for your own setup? Let’s chat in the comments! 🚀</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

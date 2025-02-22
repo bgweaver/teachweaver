@@ -6,7 +6,7 @@
     "description": "Managing a homelab can get messy fast. Between system updates, backups, and service failures, I was getting alerts from multiple sources—Discord, email, text—making it hard to keep track of everything. I needed a central notification system, so I decided to build a Discord bot to handle all my homelab alerts.",
     "author": "Ben Weaver",
     "date": "February 20th, 2025",
-    "link": "./posts/2-20-25-net-chan.html"
+    "link": "./posts/02-20-25-net-chan.html"
   },
   {
     "title": "A Year in Review",

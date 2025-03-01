@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Building Sweet Speech</title>
+  <meta name="description"
+    content="Explore the teachweaver blog, a personal journal documenting my web design and development projects. Follow along as I build and experiment with new ideas." />
+  <meta name="keywords" content="web design, web development, project journal, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Building Sweet Speech - teachweaver" />
+  <meta property="og:description"
+    content="An overview of my process and lessons learned from creating a website for my wife's new speech therapy private practice." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/sweetspeech.jpg" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/building-sweet-speech" />
+  <meta property="og:type" content="article" />
+
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Building Sweet Speech</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on March 01, 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!--Edit this for a new post!-->
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <figure class="wp-block-image size-large text-center">
+            <img src="../images/sweetspeech.jpg" alt="sweetspeech header" class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;" />
+          </figure>
+		<p>Over the past week, I&rsquo;ve had the privilege of developing a website for my wife&rsquo;s private speech therapy practice, <strong>Sweet Speech SLP</strong>. Her vision was to create a platform that was warm and professional, making it easy for parents to navigate and understand the services offered. This allowed me to apply my web development skills to a project close to our hearts and contribute to our family’s journey.</p>
+<h3>Defining the Objectives</h3>
+<p>Collaborating closely with my wife, we identified key objectives for the website:</p>
+<ul>
+<li><strong>Inviting Design</strong>: Craft a warm and professional aesthetic that resonates with parents seeking speech therapy services.</li>
+<li><strong>Comprehensive Services Overview</strong>: Clearly outline the services provided, specifying age groups and specialized conditions.</li>
+<li><strong>User-Friendly Contact Options</strong>: Implement an intuitive contact form to facilitate easy communication.</li>
+<li><strong>Responsive Design</strong>: Ensure seamless functionality across devices, particularly mobile, given the browsing habits of our target audience.</li>
+<li><strong>Optimized Performance</strong>: Achieve fast loading times and enhance SEO to improve local search visibility.</li>
+</ul>
+<h3>Selecting the Appropriate Tech Stack</h3>
+<p>Given the project&rsquo;s scope, I chose to utilize technologies I am most familiar with: <strong>HTML</strong>, <strong>Bootstrap</strong>, and <strong>JavaScript</strong>. Bootstrap&rsquo;s responsive grid system was instrumental in creating a mobile-friendly layout without extensive custom CSS. For form handling, <strong>Netlify Forms</strong> provided a straightforward solution, eliminating the need for a complex backend setup.</p>
+<h3>Design &amp; Development Process</h3>
+<h4>Color Scheme &amp; Branding</h4>
+<p>To embody the desired warmth and professionalism, we selected a color palette featuring deep watercolor reds, muted mints, soft neutral beiges, and warm charcoals. This palette, complemented by a watercolor strawberry logo, conveys a nurturing and approachable atmosphere. Typography choices, such as <strong>Poppins</strong> and <strong>Lora</strong>, further enhance the site&rsquo;s friendly yet polished appearance.</p>
+<h4>Structuring the Layout</h4>
+<p>The homepage was strategically designed to address the immediate needs of parents:</p>
+<ul>
+<li><strong>Hero Section</strong>: Provides a concise overview of the practice&rsquo;s mission and values.</li>
+<li><strong>Services Overview</strong>: Details the range of services offered, ensuring clarity on specialties and age groups served.</li>
+<li><strong>Call-to-Action</strong>: Features prominent buttons guiding users to the contact form for easy engagement.</li>
+</ul>
+<p>The &ldquo;About Me&rdquo; section introduces my wife, highlighting her experience and dedication to empowering children through effective communication. This section was styled to ensure proper spacing and alignment, particularly on mobile devices—a learning area I focused on during development. I still have room to grow in this area, but I am looking forward to studying and developing.</p>
+<h3>Optimizing Performance</h3>
+<p>Recognizing the importance of performance, especially for mobile users, I prioritized image optimization. Initially, some images sourced from Unsplash were several megabytes in size, which could significantly slow down page load times. To address this, I resized the images to appropriate dimensions and converted them to <strong>AVFI</strong> format using <a href="https://squoosh.app/">Squoosh</a>, achieving substantial reductions in file size without compromising quality. This practice aligns with best practices in web performance optimization.</p>
+<h3>Lessons Learned &amp; Future Steps</h3>
+<p>This project has been both fulfilling and educational. Key takeaways include:</p>
+<ul>
+<li><strong>Continuous Learning</strong>: Enhancing my understanding of spacing and structure, particularly for mobile responsiveness, remains an ongoing goal.</li>
+<li><strong>Image Optimization</strong>: Incorporating image resizing and compression into my routine is crucial for maintaining optimal performance.</li>
+<li><strong>Responsive Design</strong>: Ensuring the site functions seamlessly across various devices enhances user experience and accessibility.</li>
+</ul>
+<p>Looking ahead, our next steps involve:</p>
+<ul>
+<li><strong>Establishing an LLC</strong>: Formalizing the business structure to support the practice&rsquo;s growth.</li>
+<li><strong>Mapping Service Areas</strong>: Creating a visual representation of the regions served to inform potential clients.</li>
+<li><strong>Client Outreach</strong>: Developing strategies to connect with and engage potential clients effectively.</li>
+</ul>
+<p>Additionally, we are considering integrating payment functionalities in the future. Given the nature of the practice, ensuring HIPAA compliance will be paramount when implementing payment and communication systems. This is one of the reasons that, although I am excited to share here, she is not quite ready to begin client outreach while we work to make sure we are respectful of potential clients rights and privacy.</p>
+<p>Overall, I&rsquo;m proud of the progress made and the positive feedback from my wife. This experience has reinforced my passion for web development and my commitment to continuous improvement. I look forward to further refining my skills and contributing to meaningful projects like Sweet Speech SLP.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+
+
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

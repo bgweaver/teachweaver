@@ -1,8 +1,17 @@
 [
   {
+    "title": "Building Sweet Speech SLP",
+    "image": "./images/sweetspeech.jpg",
+    "alt": "sweet speech website",
+    "description": "Her vision was to create a platform that was warm and professional, making it easy for parents to navigate and understand the services offered.",
+    "author": "Ben Weaver",
+    "date": "March 1st, 2025",
+    "link": "./posts/sweet-speech-slp"
+  },
+  {
     "title": "Net-chan: My Discord Bot",
     "image": "./images/net-chan.png",
-    "alt": "planning",
+    "alt": "anime mascot",
     "description": "Managing a homelab can get messy fast. Between system updates, backups, and service failures, I was getting alerts from multiple sources—Discord, email, text—making it hard to keep track of everything. I needed a central notification system, so I decided to build a Discord bot to handle all my homelab alerts.",
     "author": "Ben Weaver",
     "date": "February 20th, 2025",
@@ -24,7 +33,7 @@
         "description": "I took a course from Traversy Media on Bootstrap, which I really enjoy using. This inspired me to redo the Bubbles & Fur site to enhance user experience and navigability while condensing the pages...",
         "author": "Ben Weaver",
         "date": "October 15th, 2024",
-        "link": "./posts/10-15-24-bf-rework.html"
+        "link": "./posts/bubbles-fur-rework"
       },
       {
         "title": "My Latest Web Development Project",

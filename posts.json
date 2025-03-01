@@ -15,7 +15,7 @@
     "description": "Managing a homelab can get messy fast. Between system updates, backups, and service failures, I was getting alerts from multiple sources—Discord, email, text—making it hard to keep track of everything. I needed a central notification system, so I decided to build a Discord bot to handle all my homelab alerts.",
     "author": "Ben Weaver",
     "date": "February 20th, 2025",
-    "link": "./posts/02-20-25-net-chan.html"
+    "link": "./posts/net-chan"
   },
   {
     "title": "A Year in Review",
@@ -24,7 +24,7 @@
     "description": "The biggest change? I realized I no longer needed to rely on someone else to host my site—I’ve learned how to do it myself. Now, I’m hosting my own blog and portfolio, and this is the first post on the new and improved teachweaver site!",
     "author": "Ben Weaver",
     "date": "January 22nd, 2025",
-    "link": "./posts/1-22-25-year-review.html"
+    "link": "./posts/24-review"
   },
   {
     "title": "Bubbles & Fur: A Rework",
@@ -42,7 +42,7 @@
     "description": "This was my first time creating a site for someone else, and I’m proud of the progress I’ve made. I wanted to take a moment to reflect on what went well and where I see room for improvement...",
     "author": "Ben Weaver",
     "date": "August 31st, 2024",
-    "link": "./posts/08-31-24-webdev.html"
+    "link": "./posts/bubbles-fur-website"
   },
   {
     "title": "Back to School and Certification Success: My Journey with the CompTIA A+ 1101 Exam",
@@ -51,7 +51,7 @@
     "description": "As school kicks off and my schedule ramps up, I finally have the chance to share some exciting news: I passed the CompTIA A+ 1101 exam!...",
     "author": "Ben Weaver",
     "date": "August 10th, 2024",
-    "link": "./posts/08-10-24-aplus.html"
+    "link": "./posts/comptia-a-plus-1101"
   },
   {
     "title": "Enhancing My Home Network: Setting Up a Guest Network with DD-WRT",
@@ -60,7 +60,7 @@
     "description": "As my interest in networking and cybersecurity has grown, upgrading my basic router from my Internet Service Provider (ISP) has been on my to-do list. I called last week to ask about the replacement process, and they came out yesterday to swap the router for a modem...",
     "author": "Ben Weaver",
     "date": "June 14th, 2024",
-    "link": "./posts/6-14-24-ddwrt.html"
+    "link": "./posts/upgrading-my-home-network"
   },
   {
     "title": "Switching to Unraid: Expanding My Home Server",
@@ -69,7 +69,7 @@
     "description": "My server setup has undergone a lot of changes since I started with an old laptop. Recently, my dad upgraded his PC and generously donated his old parts to me...",
     "author": "Ben Weaver",
     "date": "June 5th, 2024",
-    "link": "./posts/06-05-24-unraid.html"
+    "link": "./posts/summer-break-server-project"
   },
   {
     "title": "Digital Makeover: Transforming A Local Business' Website",
@@ -78,7 +78,7 @@
     "description": "Yard Art was the top result on Google for local yard sign companies, but during my shopping, I noticed their website was outdated and lacked modern features. Seeing a chance to blend my coding skills with support for local businesses, I decided to give their online platform a facelift...",
     "author": "Ben Weaver",
     "date": "May 5th, 2024",
-    "link": "./posts/5-5-24-digital-makeover.html"
+    "link": "./posts/yard-art-website-makeover"
   },
   {
     "title": "Server Update - Minecraft Adventures",
@@ -87,7 +87,7 @@
     "description": "I'm excited to share the latest developments in my home server journey! Recently, I set up a Minecraft server for me, my son, and his cousin to play together—an experience that was a big hit with the boys!...",
     "author": "Ben Weaver",
     "date": "March 19th, 2024",
-    "link": "./posts/3-19-24-minecraft-server.html"
+    "link": "./posts/server-update-minecraft-adventures"
   },
   {
     "title": "CSS Journey: Three Projects, Valuable Lessons",
@@ -96,16 +96,16 @@
     "description": "I began by creating a basic single-page site, implementing media queries to ensure responsiveness. While the process was straightforward, it underscored the importance of exploring alternative CSS tools. I'm grateful for the existence of these options...",
     "author": "Ben Weaver",
     "date": "May 5th, 2024",
-    "link": "./posts/3-19-24-css.html"
+    "link": "./posts/css-journey-three-projects"
   },
   {
     "title": "Resurrecting My Old Laptop: Linux Home Server",
-    "image": "./images/45_laptop.jpg",
+    "image": "./images/45_laptop.avif",
     "alt": "laptop",
     "description": "I stumbled upon this guide from Kalos Likes Computers on YouTube for turning an old laptop into a home server. I had a laptop lying around, gathering dust for years because it was too slow to use and the idea of giving it a new purpose really appealed to me. ",
     "author": "Ben Weaver",
     "date": "February 6th, 2024",
-    "link": "./posts/1-12-24-old-laptop.html"
+    "link": "./posts/linux-home-server"
   },
   {
     "title": "Python Course: Games & Learning",
@@ -114,15 +114,15 @@
     "description": "For my final project, I dived into game development using pygame. The game involved collecting objects, dodging enemies, and keeping track of scores. Players navigate using arrow keys, collecting coins while leaping over monsters...",
     "author": "Ben Weaver",
     "date": "January 6th, 2024",
-    "link": "./posts/1-6-24-python.html"
+    "link": "./posts/python-course-games-learning"
   },
   {
     "title": "My Learning Journey in Programming and Development",
-    "image": "./images/techteacher.jpg",
+    "image": "./images/techteacher.avif",
     "alt": "Teacher with computer",
     "description": "As an elementary school teacher, my passion for education has always driven me to explore new ways to engage my students and enhance their learning experience. Recently, I have taken a keen interest in programming and development...",
     "author": "Ben Weaver",
     "date": "January 6th, 2024",
-    "link": "./posts/1-6-24-journey.html"
+    "link": "./posts/learning-journey-programming"
   }
 ]

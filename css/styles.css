@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap");
 .landing {
-  background: #151515 url("../images/landing_background.jpg") no-repeat center center;
+  background: #151515 url("../images/landing_background.avif") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -144,12 +144,12 @@ input::placeholder, textarea::placeholder {
 }
 
 footer a i {
-  color: #EDEDED; /* Default icon color */
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: #EDEDED;
+  transition: color 0.3s ease;
 }
 
 footer a i:hover {
-  color: #00D9F9; /* Electric Blue on hover */
+  color: #00D9F9;
 }
 
 .about-page img {
@@ -191,4 +191,17 @@ footer a i:hover {
   .lead {
     text-align: center;
   }
+}
+/* Code Boxes */
+pre {
+  background-color: #2A2A2E;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  overflow: auto;
+  max-height: 500px;
+}
+
+code {
+  color: #00D9F9 !important;
 }

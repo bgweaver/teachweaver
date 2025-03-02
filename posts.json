@@ -1,5 +1,14 @@
 [
   {
+    "title": "Testing Code with Claude for Automation",
+    "image": "./images/claude.webp",
+    "alt": "Claude",
+    "description": "I&rsquo;ve been putting off writing blog posts since switching over to the new, improved teachweaver site because the process annoys me.",
+    "author": "Ben Weaver",
+    "date": "March 02, 2025",
+    "link": "./posts/testing-code-with-claude-for-automation"
+  },
+  {
     "title": "Building Sweet Speech",
     "image": "./images/sweetspeech.jpg",
     "alt": "sweetspeech header",
@@ -19,7 +28,7 @@
   },
   {
     "title": "A Year in Review",
-    "image": "./images/planning.jpg",
+    "image": "./images/planning.avif",
     "alt": "planning",
     "description": "The biggest change? I realized I no longer needed to rely on someone else to host my site—I’ve learned how to do it myself. Now, I’m hosting my own blog and portfolio, and this is the first post on the new and improved teachweaver site!",
     "author": "Ben Weaver",

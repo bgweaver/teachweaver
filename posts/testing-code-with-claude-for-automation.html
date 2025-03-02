@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Testing Code with Claude for Automation</title>
+  <meta name="description"
+    content="Explore the teachweaver blog, a personal journal documenting my web design and development projects. Follow along as I build and experiment with new ideas." />
+  <meta name="keywords" content="web design, web development, project journal, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Testing Code with Claude for Automation - teachweaver" />
+  <meta property="og:description"
+    content="My experience using Claude to create a Python program to automate formatting my blog posts into an HTML template and adding them to my site." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/claude.webp" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/testing-code-with-claude-for-automation" />
+  <meta property="og:type" content="article" />
+
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="height: 80px;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-1 logo text-light">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-e">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center pe-4">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Testing Code with Claude for Automation</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on March 02, 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!--Edit this for a new post!-->
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <figure class="wp-block-image size-large text-center">
+            <img src="../images/claude.webp" alt="Claude" class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;" />
+          </figure>
+		<p>I&rsquo;ve been putting off writing blog posts since switching over to the new, improved teachweaver site because the process annoys me. Writing is fine, but converting the post to HTML, adding it to a copy of my blog template, updating the meta tags, and modifying posts.json list of all my entries was taking entirely too long.</p>
+<p>So, I decided to try Claude to write a Python program to help me streamline the process. I was really impressed with its coding ability—it only took about six prompts and some code details, and now I have a program that meets my needs.</p>
+<p>The program automates the entire workflow:</p>
+<ul>
+<li>Prompts me for the blog title, description, and image details.</li>
+<li>Lets me input markdown directly or choose a file.</li>
+<li>Converts markdown to HTML.</li>
+<li>Fills in a template with metadata and formatted content.</li>
+<li>Saves the result in my blog’s post directory.</li>
+<li>Updates posts.json to include the new entry.</li>
+</ul>
+<p>This removes all the tedious steps and lets me focus on writing. Now, instead of getting annoyed, I can just run the script and my post is ready to publish. I have considered adding an option to push the update right to Github, but for now I am going to do it manually so I can double check the post before making it live.</p>
+<p>It’s not perfect, but it’s a huge improvement. I know there are other more convenient options, but I like having everything for my personal site stay on my coding VM and remain something I fully understand. I didn’t write the code myself, but thanks to Claude, I understand exactly what it does—and I could have written it myself&hellip; albeit much, much slower and with a lot of research. For now, it solved a problem that was keeping me from sharing more. It works—that’s what matters.</p>
+<p>The program Claude created for me, or at least something similiar as I made a few changes before posting, is below. Check it out!</p>
+<pre><code>import os
+import re
+import json
+import markdown
+from datetime import datetime
+import tkinter as tk
+from tkinter import filedialog
+import sys
+
+def get_user_input(prompt, multiline=False):
+    """Get input from user with the given prompt."""
+    print(prompt)
+    if multiline:
+        print("(Type 'END' on a new line when finished)")
+        lines = []
+        while True:
+            line = input()
+            if line == "END":
+                break
+            lines.append(line)
+        return "\n".join(lines)
+    else:
+        return input()
+
+def slugify(title):
+    """Convert title to URL-friendly slug."""
+    # Convert to lowercase
+    slug = title.lower()
+    # Replace non-alphanumeric characters with hyphens
+    slug = re.sub(r'[^a-z0-9]+', '-', slug)
+    # Remove leading and trailing hyphens
+    slug = slug.strip('-')
+    return slug
+
+def select_markdown_file():
+    """Open a file dialog to select a markdown file."""
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+    file_path = filedialog.askopenfilename(
+        title="Select Markdown File",
+        filetypes=[("Markdown files", "*.md"), ("Text files", "*.txt"), ("All files", "*.*")]
+    )
+    root.destroy()
+    return file_path if file_path else None
+
+def read_markdown_file(file_path):
+    """Read content from markdown file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return file.read()
+    except Exception as e:
+        print(f"Error reading markdown file: {e}")
+        return None
+
+def markdown_to_html(markdown_content):
+    """Convert markdown content to HTML."""
+    try:
+        # Create a markdown converter with extensions
+        html = markdown.markdown(
+            markdown_content,
+            extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+                'markdown.extensions.smarty'
+            ]
+        )
+        return html
+    except Exception as e:
+        print(f"Error converting markdown to HTML: {e}")
+        return None
+
+def generate_html(template_path, output_path, replacements):
+    """Generate HTML file with the provided replacements."""
+    try:
+        with open(template_path, 'r', encoding='utf-8') as file:
+            template = file.read()
+        
+        # Apply replacements
+        for key, value in replacements.items():
+            template = template.replace(key, value)
+        
+        # Write to output file
+        with open(output_path, 'w', encoding='utf-8') as file:
+            file.write(template)
+        
+        print(f"\nHTML blog post generated successfully at: {output_path}")
+        return True
+    except Exception as e:
+        print(f"Error generating HTML file: {e}")
+        return False
+
+def get_text_excerpt(markdown_content, max_chars=250):
+    """Extract a plain text excerpt from markdown content."""
+    # Convert markdown to HTML
+    html = markdown_to_html(markdown_content)
+    if not html:
+        return ""
+    
+    # Remove HTML tags to get plain text
+    plain_text = re.sub(r'<[^>]+>', '', html)
+    
+    # Truncate to max_chars
+    if len(plain_text) <= max_chars:
+        return plain_text
+    
+    # Try to find the last complete sentence within max_chars
+    truncated = plain_text[:max_chars]
+    last_sentence_end = max(
+        truncated.rfind('.'), 
+        truncated.rfind('!'), 
+        truncated.rfind('?')
+    )
+    
+    if last_sentence_end > 0:
+        return plain_text[:last_sentence_end+1]
+    else:
+        # If no sentence ending found, truncate at the last space
+        last_space = truncated.rfind(' ')
+        if last_space > 0:
+            return plain_text[:last_space] + '...'
+        else:
+            return truncated + '...'
+
+def update_posts_json(post_data, json_path):
+    """Update the posts.json file with new blog post data."""
+    try:
+        # Read existing posts with proper error handling
+        posts = []
+        if os.path.exists(json_path):
+            with open(json_path, 'r', encoding='utf-8') as file:
+                content = file.read().strip()
+                print(f"DEBUG: Read {len(content)} characters from {json_path}")
+                
+                if content:  # Check if file has content
+                    try:
+                        posts = json.loads(content)
+                        print(f"DEBUG: Successfully loaded {len(posts)} posts from JSON")
+                    except json.JSONDecodeError as json_err:
+                        print(f"JSON parsing error: {json_err}")
+                        # Try to recover by creating a backup of the file
+                        backup_path = json_path + ".backup"
+                        with open(backup_path, 'w', encoding='utf-8') as backup_file:
+                            backup_file.write(content)
+                        print(f"Created backup of original file at {backup_path}")
+                        # Initialize as empty list since we couldn't parse the file
+                        posts = []
+        
+        # Add new post at the beginning
+        posts.insert(0, post_data)
+        print(f"DEBUG: Preparing to write {len(posts)} posts to JSON file")
+        
+        # Write updated posts back to file
+        with open(json_path, 'w', encoding='utf-8') as file:
+            json.dump(posts, file, indent=2, ensure_ascii=False)
+        
+        print(f"\nSuccessfully updated posts.json at: {json_path}")
+        return True
+    except Exception as e:
+        print(f"Error updating posts.json: {e}")
+        return False
+    
+def main():
+    print("===== Blog Post Generator =====")
+    print("This program will help you generate an HTML blog post from your template.")
+    
+    # Get blog post details
+    blog_title = get_user_input("Enter the blog post title:")
+    blog_description = get_user_input("Enter a brief description of the blog post (for metadata):")
+    
+    # Ask for image details
+    image_filename = get_user_input("Enter the image filename (e.g., blog-image.jpg):")
+    image_alt = get_user_input("Enter alt text for the image:")
+    
+    # Get today's date formatted as Month Day, Year
+    today_date = datetime.now().strftime("%B %d, %Y")
+    
+    # Create a slug from the title
+    slug = slugify(blog_title)
+    
+    # Ask user if they want to input markdown directly or from a file
+    use_file = get_user_input("Do you want to select a markdown file? (y/n)").lower() == 'y'
+    
+    markdown_content = ""
+    if use_file:
+        print("Please select your markdown file...")
+        file_path = select_markdown_file()
+        if file_path:
+            markdown_content = read_markdown_file(file_path)
+            if not markdown_content:
+                print("Failed to read markdown content. Exiting.")
+                return
+        else:
+            print("No file selected. Exiting.")
+            return
+    else:
+        print("Enter your markdown content below:")
+        markdown_content = get_user_input("", multiline=True)
+    
+    # Convert markdown to HTML
+    html_content = markdown_to_html(markdown_content)
+    if not html_content:
+        print("Failed to convert markdown to HTML. Exiting.")
+        return
+    
+    # Define replacements
+    replacements = {
+        "<blog post title>": blog_title,
+        "<Blog post title>": blog_title,
+        "<ask me for a brief description of the blog post and put it here>": blog_description,
+        "<lowercase blog title separated by dashes>": slug,
+        "<add title from markdown here>": blog_title,
+        "<todays date formatted as Month Day, year>": today_date,
+        "<image file name program asked me for goes here>": image_filename,
+        "<image alt program asked me for goes here>": image_alt,
+        "<markdown blog content goes here>": html_content
+    }
+    
+    # Ask for output location with options
+    print("\nWhere would you like to save the HTML file?")
+    print("1. Current directory")
+    print("2. Your blog posts directory")
+    print("3. Enter a custom path")
+    
+    output_choice = get_user_input("Enter your choice (1, 2, or 3):")
+    
+    if output_choice == "1":
+        output_directory = os.getcwd()
+    elif output_choice == "2":
+        # Default to a 'posts' subdirectory in the current working directory
+        output_directory = os.path.join(os.getcwd(), "posts")
+        # Create directory if it doesn't exist
+        os.makedirs(output_directory, exist_ok=True)
+    elif output_choice == "3":
+        output_directory = get_user_input("Enter the custom output directory path:")
+        # Create directory if it doesn't exist
+        os.makedirs(output_directory, exist_ok=True)
+    else:
+        print("Invalid choice. Using current directory.")
+        output_directory = os.getcwd()
+    
+    output_filename = f"{slug}.html"
+    output_path = os.path.join(output_directory, output_filename)
+    
+    # Generate HTML file
+    template_path = os.path.join(os.getcwd(), "blog_template.html")
+    if not os.path.exists(template_path):
+        template_path = get_user_input("Template file 'blog_template.html' not found. Enter the path to your template file:")
+    
+    result = generate_html(template_path, output_path, replacements)
+    
+    if result:
+        # Ask if user wants to update posts.json
+        print("\nDo you want to update a posts.json file with this blog post?")
+        print("1. Yes")
+        print("2. No")
+        
+        update_json_choice = get_user_input("Enter your choice (1 or 2):")
+        
+        if update_json_choice == "1":
+            print("\nWhich posts.json file would you like to update?")
+            print("1. Default location (./posts.json)")
+            print("2. Enter a custom path")
+            
+            json_path_choice = get_user_input("Enter your choice (1 or 2):")
+            
+            if json_path_choice == "1":
+                json_path = os.path.join(os.getcwd(), "posts.json")
+            elif json_path_choice == "2":
+                json_path = get_user_input("Enter the path to your posts.json file:")
+            else:
+                print("Invalid choice. Skipping JSON update.")
+                json_path = None
+            
+            if json_path:
+                # Extract description from markdown content
+                description = get_text_excerpt(markdown_content)
+                
+                # Create post data object
+                post_data = {
+                    "title": blog_title,
+                    "image": f"./images/{image_filename}",
+                    "alt": image_alt,
+                    "description": description,
+                    "author": get_user_input("Enter author name:"),
+                    "date": today_date,
+                    "link": f"./posts/{slug}"
+                }
+                
+                update_posts_json(post_data, json_path)
+        
+        # Ask if user wants to open the generated file
+        open_file = get_user_input("Do you want to open the generated HTML file? (y/n)").lower() == 'y'
+        if open_file:
+            try:
+                if sys.platform == 'win32':
+                    os.startfile(output_path)
+                elif sys.platform == 'darwin':  # macOS
+                    os.system(f"open '{output_path}'")
+                else:  # Linux
+                    os.system(f"xdg-open '{output_path}'")
+            except Exception as e:
+                print(f"Error opening file: {e}")
+
+if __name__ == "__main__":
+    main()
+  </code></pre>
+  
+</div>
+      </div>
+    </div>
+  </article>
+
+
+
+
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teachweaver: Building a Secure, Segmented Home Network with MikroTik</title>
+  <meta name="description"
+    content="Explore the teachweaver blog, a personal journal documenting my web design and development projects. Follow along as I build and experiment with new ideas." />
+  <meta name="keywords" content="web design, web development, project journal, teachweaver" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Building a Secure, Segmented Home Network with MikroTik - teachweaver" />
+  <meta property="og:description"
+    content="Upgrading my home network from DD-WRT to MikroTik to learn VLAN segmentation" />
+  <meta property="og:image" content="https://www.teachweaver.com/images/eye.avif" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/building-a-secure-segmented-home-network-with-mikrotik" />
+  <meta property="og:type" content="article" />
+
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="min-height: 80px;">
+      <div class="container-fluid px-0">
+        <a href="index.html" class="navbar-brand">
+          <h4 class="mb-0 logo text-light px-3">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pt-1" id="navbarNavDropdown">
+          <ul class="navbar-nav px-3">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center px-3">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin ps-1"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github ps-1"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center pb-3">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">Building a Secure, Segmented Home Network with MikroTik</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on April 27, 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!--Edit this for a new post!-->
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <figure class="wp-block-image size-large text-center">
+            <img src="../images/logo-mikrotik.webp" alt="the eye" class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;" />
+          </figure>
+		<p>
+Over the past few weeks, I&rsquo;ve rebuilt my home network from the ground up using MikroTik hardware, focusing on VLAN segmentation, improved wireless coverage, and streamlined management. The new setup centers around a MikroTik hEX router, which now handles DHCP and routing duties, paired with a hAP ac² access point broadcasting multiple VLAN-tagged SSIDs.</p>
+<p>After testing several placement options, I mounted the hAP ac² high on a wall &mdash; a change that significantly improved wireless signal strength throughout the house. The signal is now strong enough that I&rsquo;ve been able to retire the older Cisco AP.</p>
+<p>The current VLAN layout includes dedicated networks for primary household traffic, IoT devices, and guest access. This design helps isolate untrusted or low-security devices, reduces unnecessary broadcast traffic, and ensures all DNS queries are filtered through a local Pi-hole instance for ad-blocking and privacy protection. Functionally, it&rsquo;s similar to my previous DD-WRT setup &mdash; but with VLANs, I now have a cleaner, more secure way to manage everything.</p>
+<figure class="wp-block-image size-large text-center">
+  <img src="../images/eye.avif" alt="the eye" class="img-fluid rounded mx-auto d-block"
+    style="max-width: 300px; height: auto;" />
+</figure>
+<p>As a lighthearted touch, the guest network&rsquo;s captive portal is themed around a fictional entity called <em>The Eye</em>, complete with a custom login screen, post-login landing page, and a set of &ldquo;Immutable Decrees&rdquo; &mdash; a playful warning to discourage bad behavior on the network.</p>
+<p><strong>Next Steps:</strong>
+  <ul>
+    <li>Test the captive portal speeds and functionality on different devices and operating systems</li>
+    <li>Refine firewall rules to tighten inter-VLAN segmentation</li>
+    <li>Experiment with VPN options through the MikroTik router</li>
+  </ul>
+<p>This project has been a great hands-on dive into network architecture and MikroTik&rsquo;s powerful RouterOS &mdash; and it&rsquo;s laid a solid, flexible foundation for future enhancements.</p>
+        </div>
+      </div>
+    </div>
+    <figure class="wp-block-image size-large text-center">
+      <img src="../images/decrees.avif" alt="the eye" class="img-fluid rounded mx-auto d-block"
+        style="max-width: 500px; height: auto;" />
+    </figure>
+  </article>
+
+
+
+
+  <!--Footer-->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/lightbox-plus-jquery.min.js"></script>
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

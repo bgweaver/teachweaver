@@ -1,5 +1,14 @@
 [
   {
+    "title": "Building a Secure, Segmented Home Network with MikroTik",
+    "image": "./images/logo-mikrotik.webp",
+    "alt": "the eye",
+    "description": "Building a Secure, Segmented Home Network with MikroTik\nOver the past few weeks, I&rsquo;ve rebuilt my home network from the ground up using MikroTik hardware, focusing on VLAN segmentation, improved wireless coverage, and streamlined management.",
+    "author": "Ben Weaver",
+    "date": "April 27, 2025",
+    "link": "./posts/building-a-secure-segmented-home-network-with-mikrotik"
+  },
+  {
     "title": "Testing Code with Claude for Automation",
     "image": "./images/claude.webp",
     "alt": "Claude",

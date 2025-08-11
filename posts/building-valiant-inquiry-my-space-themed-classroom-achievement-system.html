@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>teachweaver: 🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System</title>
+  <meta name="description" content="A behind-the-scenes look at building my space-themed classroom achievement tracker, Valiant Inquiry — a secure, gamified web app created with help from Claude AI to engage students with achievements, ISS tracking, and a custom space-only chatbot." />
+  <meta name="keywords" content="web design, web development, project journal, classroom, gamification, space theme, Node.js, EJS" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System - teachweaver" />
+  <meta property="og:description" content="A behind-the-scenes look at building my space-themed classroom achievement tracker, Valiant Inquiry — a secure, gamified web app created with help from Claude AI to engage students with achievements, ISS tracking, and a custom space-only chatbot." />
+  <meta property="og:image" content="https://www.teachweaver.com/images/valiant.png" />
+  <meta property="og:image:alt" content="Screenshot of the Valiant Inquiry classroom app" />
+  <meta property="og:url" content="https://www.teachweaver.com/blog/building-valiant-inquiry-my-space-themed-classroom-achievement-system.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@teachweave" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.teachweaver.com/blog/building-valiant-inquiry-my-space-themed-classroom-achievement-system.html" />
+
+  <link rel="stylesheet" href="../css/font-awesome.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/lightbox.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <section class="other-landing d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg py-3" style="min-height: 80px;">
+      <div class="container-fluid px-0">
+        <a href="../index.html" class="navbar-brand">
+          <h4 class="mb-0 logo text-light px-3">teachweaver</h4>
+        </a>
+        <button class="navbar-toggler pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pt-1" id="navbarNavDropdown">
+          <ul class="navbar-nav px-3">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html#contact">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-flex align-items-center px-3">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://x.com/teachweave" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.linkedin.com/in/ben-weaver-a63a452ab/" aria-label="LinkedIn">
+                <i class="fab fa-linkedin ps-1"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://github.com/bgweaver" aria-label="GitHub">
+                <i class="fab fa-github ps-1"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center pb-3">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading text-white">
+                <h1 class="fs-1">🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System</h1>
+                <span class="meta">
+                  Posted by
+                  <a href="../about.html">Ben Weaver</a>
+                  on August 11, 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Post -->
+  <article class="mb-4 pt-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7 text-light">
+          <figure class="wp-block-image size-large text-center">
+            <img
+              src="../images/valiant.png"
+              alt="Valiant Inquiry main page"
+              class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;"
+              width="1200" height="630" loading="lazy" />
+          </figure>
+
+          <h2>🚀 Building <em>Valiant Inquiry</em>: My Space-Themed Classroom Achievement System</h2>
+          <p>This school year, my classroom went to space. Alongside the usual chaos of lesson planning, I wanted to create something interactive, gamified, and very “sci-fi” to tie into our new theme. What I ended up with is <strong>M.O.S. Valiant Inquiry</strong> — a custom web app where students earn achievements, track the International Space Station in real time, and chat with our ship’s AI about the cosmos.</p>
+          <p>I didn’t build it alone. In fact, I leaned heavily on Claude from @AnthropicAI for the coding side. My role was captain of the mission — guiding the build, setting requirements, and learning a fair bit of JavaScript, EJS templating, and server logic along the way — while Claude handled a lot of the heavy lifting in code generation.</p>
+
+          <hr />
+          <h2>🛠️ What It Does</h2>
+          <ul>
+            <li><p><strong>Achievement tracking</strong> – Students can log in with a pseudonym and PIN to view their personal progress.</p></li>
+            <li><p><strong>Team scores</strong> – Balanced scoring across Red, Blue, Green, and Yellow crews.</p></li>
+            <li><p><strong>Live ISS tracking</strong> – Displays the station’s position and fun space facts.</p></li>
+            <li><p><strong>Ship AI chat</strong> – An embedded LLM (my own small hosted model) that only talks about space.</p></li>
+            <li><p><strong>Admin dashboard</strong> – Secure, PIN-hashed system for me to add students, grant achievements, and view progress analytics.</p></li>
+          </ul>
+          <p>Our achievements range from simple “Welcome Aboard!” onboarding to special robotics challenges like <em>Condiment Containment Specialist</em>. Some are hidden and unlock automatically based on actions — like chatting with the AI or logging in for a week straight.</p>
+
+          <figure class="wp-block-image size-large text-center mt-4">
+            <img
+              src="../images/ketchup.jpg"
+              alt="Condiment Containment Specialist achievement badge"
+              class="img-fluid rounded mx-auto d-block"
+              style="max-width: 300px; height: auto;"
+              width="300" height="300" loading="lazy" />
+            <figcaption class="text-light mt-2">
+              Example achievement: <em>Condiment Containment Specialist</em> – earned when a cadet completes a robotics challenge to retrieve a spilled ketchup bottle..
+            </figcaption>
+          </figure>
+
+          <hr />
+          <h2>🔐 Privacy First</h2>
+          <p>No student names or identifying info are stored. Each student is assigned a space-themed pseudonym, and only they (and I) know their PIN. Achievements are personal — no one can see another student’s progress.</p>
+          <p>Even PINs are hashed server-side, so if the database ever went missing, the codes wouldn’t be exposed. I learned a lot about secure handling of authentication data during this process, even if I couldn’t implement bcrypt hashing from memory yet.</p>
+
+          <hr />
+          <h2>🧠 What I Learned</h2>
+          <ul>
+            <li><p><strong>JavaScript &amp; EJS</strong> – I now understand how EJS templates pull dynamic data into HTML, even if I couldn’t yet build the whole thing from scratch without help.</p></li>
+            <li><p><strong>Express app structure</strong> – How routes, middleware, and static files all connect in a Node.js environment.</p></li>
+            <li><p><strong>Security basics</strong> – Why hashed credentials matter and how session handling works.</p></li>
+            <li><p><strong>LLM integration</strong> – How to build an in-app chat interface and connect it to a model with a limited domain.</p></li>
+          </ul>
+
+          <hr />
+          <h2>🤔 What’s Next</h2>
+          <p>Right now, students earn points through in-class challenges and special events. I’d like to expand the app so they can also earn points <em>inside</em> the site — maybe by completing small science quizzes, mini space missions, or interactive simulations.</p>
+          <p>I also want to iterate on the AI assistant. It’s currently a basic “ask me about space” system, but I can see it growing into a true mission guide, giving custom hints or assigning bonus challenges.</p>
+
+          <hr />
+          <h2>🛰️ Try It Yourself</h2>
+          <p>You can explore the login page, dashboard, and AI chat using a demo account:</p>
+          <p><strong>Pseudonym:</strong> <code>Nebula</code><br>
+          <strong>PIN:</strong> <code>3798</code></p>
+          <p>This account is for demonstration only and contains no student information.</p>
+          <p><a class="btn btn-outline-info" href="https://valiantinquiry.com/" target="_blank" rel="noopener">Launch Valiant Inquiry</a></p>
+
+          <hr />
+          <h2>💡 Takeaways</h2>
+          <p>Even though most of the code was co-written with an AI, this project taught me how to <strong>steer a complex build, understand the moving parts, and make informed decisions about architecture, security, and design</strong>. It’s the kind of “vibe coding” that works well for rapid prototyping — and for creating something magical for my students.</p>
+          <p>End result: I now have a fully functional, secure, space-themed classroom achievement tracker that my students are going to love — and a lot more confidence in tackling JavaScript and Node.js projects in the future.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <section class="bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-md-0 text-light">© 2025 TeachWeaver</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="align-items-center ms-3">
+            <a href="https://x.com/teachweave" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://www.youtube.com/@thenetweaver" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="https://github.com/bgweaver" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="align-items-center ms-3">
+            <a href="mailto:bengweaver@protonmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </section>
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/lightbox-plus-jquery.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

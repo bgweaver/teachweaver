@@ -1,5 +1,14 @@
 [
   {
+    "title": "🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System",
+    "image": "./images/valiant.jpg",
+    "alt": "Valiant Inquiry Main Page",
+    "description": "🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System\nThis school year, my classroom went to space.",
+    "author": "Ben Weaver",
+    "date": "August 11, 2025",
+    "link": "./posts/building-valiant-inquiry-my-space-themed-classroom-achievement-system"
+  },
+  {
     "title": "Building a Secure, Segmented Home Network with MikroTik",
     "image": "./images/logo-mikrotik.webp",
     "alt": "the eye",

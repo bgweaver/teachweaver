@@ -96,7 +96,7 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  color: #EDEDED;
+  color: #ededed;
 }
 
 .nav-item {
@@ -105,16 +105,17 @@
 }
 
 .nav-link {
-  color: #EDEDED;
+  color: #ededed;
   transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-  color: #00D9F9 !important;
+  color: #00d9f9 !important;
 }
 
-.navbar .nav-link:focus, .navbar .nav-link:active {
-  color: #FF007A;
+.navbar .nav-link:focus,
+.navbar .nav-link:active {
+  color: #ff007a;
 }
 
 .text-container {
@@ -151,6 +152,22 @@
   opacity: 0.8;
 }
 
+.project {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project .mt-2 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project .small {
+  flex-grow: 1;
+}
+
 .features i {
   margin-right: 10px;
 }
@@ -164,21 +181,23 @@
   cursor: not-allowed;
 }
 
-input, textarea {
+input,
+textarea {
   color: black;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: black !important;
 }
 
 footer a i {
-  color: #EDEDED;
+  color: #ededed;
   transition: color 0.3s ease;
 }
 
 footer a i:hover {
-  color: #00D9F9;
+  color: #00d9f9;
 }
 
 .about-page img {
@@ -228,7 +247,7 @@ footer a i:hover {
 }
 /* Code Boxes */
 pre {
-  background-color: #2A2A2E;
+  background-color: #2a2a2e;
   padding: 10px;
   border-radius: 5px;
   font-family: monospace;
@@ -237,7 +256,7 @@ pre {
 }
 
 code {
-  color: #00D9F9 !important;
+  color: #00d9f9 !important;
 }
 
 .responsive-img {
@@ -288,7 +307,8 @@ code {
   .row {
     flex-direction: row !important;
   }
-  #type-header, #profile-header {
+  #type-header,
+  #profile-header {
     order: initial;
     width: 50%;
     flex: 0 0 50%;

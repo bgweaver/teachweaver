@@ -354,3 +354,19 @@ WIDTH=800 ./tools/optimize.sh photo.jpg      # narrower
 FORMAT=avif ./tools/optimize.sh photo.jpg    # smaller files, slower encode
 QUALITY=90 ./tools/optimize.sh photo.jpg     # less compression
 ```
+
+## Making buttons
+
+Online 88x31 makers (sadgrl, datakra.sh) run on browser canvas and will hand you corrupted output in a
+hardened browser. Use the local one:
+
+```
+./tools/make-button.py "MONERO" "accepted" --bg 1e1410 --fg ff8c3c --border ff6600
+./tools/make-button.py "SELF" "HOSTED" --bg 101620 --fg 78c8ff --border 328cdc
+```
+
+Writes to `src/images/buttons/` and prints the JSON line to paste into `src/_data/badges.json`.
+Text auto-shrinks to fit, so long words are fine.
+
+For collected buttons from other sites, download the .gif into `src/images/buttons/` rather than
+hotlinking it. A large archive lives at cyber.dabamos.de/88x31.

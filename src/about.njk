@@ -1,0 +1,168 @@
+---
+layout: base.njk
+title: "teachweaver: About"
+description: "More about me, the homelab, and how I got into all of this. Plus a contact form."
+ogTitle: "teachweaver - About Me"
+permalink: /about.html
+---
+  <section class="other-landing d-flex flex-column">
+{% include "navbar.njk" %}
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div id="type-header" class="col-12">
+            <div class="text-container d-flex flex-column justify-content-center align-items-center position-relative">
+              <h1 class="display-1 fw-bold text-light pb-md-3 pb-0">About</h1>
+              <h2 class="text-light text-uppercase text-primary fs-6 pb-3">Who I am and how to reach me.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- About Me -->
+  <section class="about-page bg-dark py-1 text-white">
+    <div class="container mb-5 mt-0 my-md-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-xl-6 d-flex justify-content-center my-4">
+          <img class="responsive-img rounded-3" alt="My Picture">
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="row mt-3">
+            <div class="col-lg-12">
+              <h2 class="text-primary text-center">Between Teaching and Technology</h2>
+            </div>
+            <div class="col-lg-12 about-paragraph">
+              <p>I’m Ben Weaver. I’ve been teaching for a dozen years and currently teach 5th grade science.
+                The tech side started when I got handed a computer science class and had to stay a week ahead
+                of the students, which turned out to be an excellent way to learn something.</p>
+            </div>
+            <div class="col-lg-12 about-paragraph">
+              <p>Since then it’s mostly been a matter of following whatever I got curious about. I earned my
+                CompTIA A+ and I’m working through Network+ now, with Security+ after it. Plenty of things
+                haven’t stuck. I spent a while on malware analysis and reverse engineering before admitting
+                the math wasn’t there yet, so I backed up and started working through discrete math instead.
+                I’d rather say that plainly than pretend the path was straight.</p>
+            </div>
+            <div class="col-lg-12 about-paragraph">
+              <p>What has stuck: a homelab built almost entirely from secondhand and e-waste hardware, running
+                the services I’d otherwise be renting from someone else. Segmented networks, my own DNS, my
+                own backups, and a steady supply of self-inflicted problems to fix. Alongside that there’s a
+                lot of soldering, ESP32 boards, and things coming off a 3D printer that mostly cooperates. I
+                care about privacy and civic transparency, and occasionally do something about it locally.</p>
+            </div>
+            <div class="col-lg-12 about-paragraph">
+              <p>The common thread is that I learn things by building them, and I write down what happened,
+                including the parts that didn’t work, which are usually the more useful half. That’s what this
+                site is for. Most of it ends up in the
+                <a class="text-secondary" href="/projects.html">projects</a> or the
+                <a class="text-secondary" href="/blog.html">blog</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges / Elsewhere -->
+  <section class="bg-accent2 py-5 text-white">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="text-uppercase fw-bold text-primary">Elsewhere</h2>
+        <hr class="w-25 mx-auto" />
+        <p class="lead">Where else I turn up, and a few things I stand behind.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+          <!-- Links out -->
+          <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+            <a href="https://github.com/bgweaver" class="btn btn-outline-light btn-sm">
+              <i class="fab fa-github me-2"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/ben-weaver-a63a452ab/" class="btn btn-outline-light btn-sm">
+              <i class="fab fa-linkedin me-2"></i>LinkedIn
+            </a>
+            <a href="https://mastodon.social/@packetshepherd" rel="me" class="btn btn-outline-light btn-sm">
+              <i class="fa-brands fa-mastodon me-2"></i>Mastodon
+            </a>
+          </div>
+
+          <!-- 88x31 button wall -->
+          <div class="text-center mb-3">
+            <h5 class="text-uppercase text-primary fs-6">Buttons</h5>
+          </div>
+          <div class="d-flex flex-wrap justify-content-center gap-2 badge-wall">
+{% for b in badges %}
+  {% if b.url %}
+            <a href="{{ b.url }}" title="{{ b.alt }}">
+              <img src="{{ b.image }}" alt="{{ b.alt }}" width="88" height="31" loading="lazy" />
+            </a>
+  {% else %}
+            <img src="{{ b.image }}" alt="{{ b.alt }}" width="88" height="31" loading="lazy" />
+  {% endif %}
+{% endfor %}
+          </div>
+          <p class="small text-center mt-3 mb-0" style="opacity:.65;">
+            Take mine if you want it:
+            <img src="/images/buttons/teachweaver.gif" alt="teachweaver" width="88" height="31"
+                 style="vertical-align:middle;" />
+          </p>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold text-uppercase text-secondary">Get in Touch</h2>
+            <hr class="w-25 mx-auto" />
+            <p class="lead text-black">
+              Want to talk homelab setups, cybersecurity, privacy tools, or just say hi? Reach out. I'm always
+              happy to compare notes.
+            </p>
+          </div>
+
+<!-- Form -->
+          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div style="display:none;">
+              <label for="bot-field">Don't fill this out:</label>
+              <input id="bot-field" name="bot-field" type="text" />
+            </div>
+
+            <div class="mb-5">
+              <input type="text"
+                class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+                name="name" placeholder="Name" />
+            </div>
+            <div class="mb-5">
+              <input type="email"
+                class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+                name="email" placeholder="Email" />
+            </div>
+            <div class="mb-5">
+              <textarea
+                class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+                name="message" placeholder="Message"></textarea>
+            </div>
+            <div data-netlify-recaptcha="true" class="mb-5"></div>
+            <div class="mb-5 d-grid">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>        </div>
+      </div>
+    </div>
+  </section>
+
+{% include "footer.njk" %}

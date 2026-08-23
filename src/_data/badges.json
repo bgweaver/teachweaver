@@ -1,0 +1,47 @@
+[
+  {
+    "image": "/images/buttons/eff.gif",
+    "alt": "Electronic Frontier Foundation",
+    "url": "https://www.eff.org/"
+  },
+  {
+    "image": "/images/buttons/tor.gif",
+    "alt": "Tor Project",
+    "url": "https://www.torproject.org/"
+  },
+  {
+    "image": "/images/buttons/monero.gif",
+    "alt": "Monero",
+    "url": "https://www.getmonero.org/"
+  },
+  {
+    "image": "/images/buttons/grapheneos.gif",
+    "alt": "GrapheneOS",
+    "url": "https://grapheneos.org/"
+  },
+  {
+    "image": "/images/buttons/meshtastic.gif",
+    "alt": "Meshtastic",
+    "url": "https://meshtastic.org/"
+  },
+  {
+    "image": "/images/buttons/bookwyrm.gif",
+    "alt": "What I'm reading, on BookWyrm",
+    "url": "https://bookwyrm.social/user/hegazi/"
+  },
+  {
+    "image": "/images/buttons/homelab.gif",
+    "alt": "Running a homelab",
+    "url": ""
+  },
+  {
+    "image": "/images/buttons/eleventy.gif",
+    "alt": "Made with Eleventy",
+    "url": "https://www.11ty.dev/"
+  },
+  {
+    "image": "/images/buttons/browser.gif",
+    "alt": "Best viewed with any browser",
+    "url": ""
+  }
+]

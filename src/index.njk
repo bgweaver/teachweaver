@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: "teachweaver"
+description: "teachweaver: Ben Weaver's homelab, cybersecurity learning, and privacy-focused tinkering, documented as I go."
+ogTitle: "teachweaver - Homelab & Cybersecurity Journal"
+ogDescription: "A running record of homelab builds, cybersecurity self-study, and privacy-focused projects."
+permalink: /index.html
+---
+  <section class="landing vh-100 d-flex flex-column">
+{% include "navbar.njk" %}
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center flex-md-row">
+          <!-- Left Column -->
+          <div id="type-header" class="col-lg-6 col-sm-12">
+            <div class="text-container d-flex flex-column justify-content-cnter align-items-center position-relative">
+              <h5 id="type-name" class="text-primary fs-2 fw-bold text-uppercase">&#8203;</h5>
+              <h1 id="typing-text" class="display-1 fw-bold text-light pb-3">&#8203;</h1>
+
+              <h5 id="fade-in-text" class="roles text-light text-uppercase fs-6 pb-3" style="opacity: 0;">
+                Teacher | Builder | Perpetual Beginner
+              </h5>
+              <a href="#about" class="btn btn-outline-light btn-sm btn-lg mt-3 fade-in">
+                <div class="d-flex">
+                  <div class="me-3"><i class="fas fa-chevron-down"></i></div>
+                  <div class="text-start"><span>Scroll for more</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div id="profile-header" class="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="image-container position-relative">
+              <img src="/images/profile_tall.jpg" alt="" class="img-fluid rounded-5" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+
+  <!-- About -->
+  <section id="about" class="about bg-accent2 py-md-5 pt-5 pb-3">
+    <div class="container pb-3">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6 d-flex justify-content-center align-items-center ">
+          <div class="text-center">
+            <h4 class="text-uppercase fw-bold text-primary mb-2">Welcome!</h4>
+            <h2 class="mb-4 text-light">Let me introduce myself.</h2>
+            <div class="text-center">
+              <a href="/about.html" class="btn btn-primary">Learn More About Me</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 justify-content-center align-items-center pt-4 pt-md-0 px-3">
+          <p class="lead text-light">
+            I teach 5th grade science. The rest of the time I'm usually elbow-deep in something: ESP32
+            projects, a homelab built from secondhand hardware, a 3D printer that mostly cooperates. Currently
+            studying for Network+. I write down what I learn here, including the parts that didn't work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Currently - edit src/_data/currently.json to change these -->
+  <section class="portfolio pt-5 pb-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3 text-uppercase fw-bold text-secondary">Currently</h2>
+        <hr class="w-25 mx-auto" />
+        <p class="lead text-muted">What's on the bench right now.</p>
+      </div>
+
+      <div class="row g-4">
+{% for item in currently %}
+        <div class="col-md-4">
+          <div class="project shadow-sm rounded-4 p-4 h-100 bg-white">
+            <h5 class="fw-bold">{% if item.icon %}<i class="{{ item.icon }} text-primary me-2"></i>{% endif %}{{ item.title }}</h5>
+            <p class="small text-muted mb-0">{{ item.text }}</p>
+          </div>
+        </div>
+{% endfor %}
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="/projects.html" class="btn btn-primary px-4 py-2">See everything I've built</a>
+      </div>
+    </div>
+  </section>
+
+{% include "footer.njk" %}

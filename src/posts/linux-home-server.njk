@@ -1,0 +1,67 @@
+---
+title: "teachweaver: Blog Post"
+postTitle: "Resurrecting My Old Laptop: Linux Home Server"
+date: 2024-02-06
+postDate: "January 12, 2024"
+description: "Follow along as I transform an old laptop into a home server using Linux. This post documents the process, challenges, and technologies used, from Ubuntu installation to setting up Samba and Jellyfin."
+keywords: "Linux, home server, Ubuntu, Samba, Jellyfin, Wireguard, VPN, virtual machine"
+ogTitle: "teachweaver - Resurrecting My Old Laptop: Linux Home Server"
+ogDescription: "Follow along as I transform an old laptop into a home server using Linux. This post documents the process, challenges, and technologies used, from Ubuntu installation to setting up Samba and Jellyfin."
+ogImage: "https://www.teachweaver.com/images/45_laptop.avif"
+ogUrl: "https://www.teachweaver.com/posts/linux-home-server/"
+image: "/images/45_laptop.avif"
+imageAlt: "laptop"
+listDescription: "I stumbled upon this guide from Kalos Likes Computers on YouTube for turning an old laptop into a home server. I had a laptop lying around, gathering dust for years because it was too slow to use and the idea of giving it a new purpose really appealed to me."
+---
+<figure class="wp-block-image size-large text-center">
+            <img src="/images/45_laptop.avif" alt="a laptop placeholder" class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;" />
+          </figure>
+          <p>I stumbled upon <a
+              href="https://www.youtube.com/watch?v=IuRWqzfX1ik&amp;t=807s&amp;ab_channel=KalosLikesComputers"
+              data-type="link"
+              data-id="https://www.youtube.com/watch?v=IuRWqzfX1ik&amp;t=807s&amp;ab_channel=KalosLikesComputers">this
+              guide</a> from Kalos Likes Computers on YouTube for turning an old laptop into a home server. I had a
+            laptop lying around, gathering dust for years because it was too slow to use and the idea of giving it a new
+            purpose really appealed to me. Plus, it seemed like a great chance to become more familiar with Linux, which
+            I've only recently started exploring.</p>
+
+          <p>The first step was installing Ubuntu Server on the laptop. Having recently set up Ubuntu on another laptop
+            dedicated to coding and writing, flashing the ISO to a USB and installing it was pretty straightforward. I
+            first started getting excited when I connected to the server over SSH and began sending commands from my PC.
+            While I now understand that this is a basic skill, it was a thrill to realize that experimenting at home
+            allowed me to accomplish something I hadn't thought possible before. After that, I set up Samba and Jellyfin
+            so I could store music and shows on the server and access them from my other devices.</p>
+
+          <p>However, I did run into a few hiccups later, mostly because of my limited knowledge of Linux. I forget to
+            use sudo at the beginning of some commands still, although I have gotten better at figuring out when that is
+            necessary. Also, it is sometimes unclear to me when I should change parts of the commands since I don't
+            always know what parts of a guide are literal, although many are obvious in retrospect. For instance, I
+            typed “sudo smbpasswd -a youruser” to set up my login which didn’t create a username and password for Samba
+            so I could map to that drive. I had to circle back and figure out to replace ‘youruser’ with my username so
+            I could give the permission.</p>
+
+          <p>I'm still in the process of getting the VPN set up correctly. I didn’t have any trouble with
+            port-forwarding, installing Wireguard, or the PiVPN scripts. I can connect my phone to my home server and
+            listen to the music I have stored there from anywhere, but the Local-Only VPN doesn’t seem to be working
+            right. Everything is really bogged down, so I think all my traffic is routing through the VPN instead of
+            just the requests that should go to the server. I'm not sure how well I understand what the VPN is doing, so
+            that may be way off. The first thing I'll try when I work on it again is to make sure the network range in
+            Wireguard is correct. Even with this problem, I just need to toggle the VPN switch back and forth when I
+            want to access my home network. It is still really awesome to listen to my home music files in the car and
+            to know that I set that up!</p>
+
+          <p>My next steps are setting up the connection to my home VPN on my laptop and figuring out how to run a
+            Virtual Machine from the server. The first involves some commands I don’t fully understand and getting keys
+            to tell the devices how to communicate with one another. My phone did that automatically with a QR code, and
+            I was hoping it would be that easy, but it looks like a computer is trickier. The second step isn’t covered
+            in the guide, I just think it would be fun. I have Virtual Box on my Linux laptop to run Kali, but running a
+            VM through the server so I could connect to it from anywhere in the house would be really convenient. I
+            thought I understood how to get started, but I’m going to have to research more.</p>
+
+          <p><br>Converting my old laptop into a home server has been a surprisingly fulfilling venture.
+            Guided by Kalos Likes Computers on YouTube, I breathed new life into an old device and embraced the
+            intricacies of Linux. Despite facing some bumps along the way, like getting acquainted with Linux commands
+            and troubleshooting VPN issues, each challenge has been a valuable learning experience. As I look forward to
+            future projects, such as configuring VPNs on my laptop and exploring Virtual Machines, I'm still surprised by how much I can do on my own, and keen to learn what else is possible. Stay tuned for more
+            tech adventures!</p>

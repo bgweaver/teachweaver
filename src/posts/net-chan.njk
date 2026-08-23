@@ -1,0 +1,63 @@
+---
+title: "Net-chan | teachweaver Blog"
+postTitle: "Net-chan: My Cute Discord Bot"
+date: 2025-02-20
+postDate: "February 21, 2025"
+description: "Discover how I customized a Discord bot to keep me updated about the status of my homelab."
+keywords: "Discord, Python, bot, TeachWeaver, hosting, coding blog, programming"
+ogTitle: "Net-chan - teacheaver Blog"
+ogDescription: "Learn how I transitioned from a basic Unraid webhook to a customized Discord bot that connects to all my scripts and services."
+ogImage: "https://www.teachweaver.com/images/net-chan.png"
+ogUrl: "https://www.teachweaver.com/posts/net-chan/"
+twitterCard: "summary_large_image"
+twitterTitle: "Building My New Website | TeachWeaver Blog"
+twitterDescription: "Learn how I transitioned from a basic Unraid webhook to a customized Discord bot that connects to all my scripts and services."
+twitterImage: "https://www.teachweaver.com/images/net-chan.png"
+image: "/images/net-chan.png"
+imageAlt: "anime mascot"
+listDescription: "Managing a homelab can get messy fast. Between system updates, backups, and service failures, I was getting alerts from multiple sources (Discord, email, text), making it hard to keep track of everything. I needed a central notification system, so I decided to build a Discord bot to handle all my homelab alerts."
+---
+<a href="#!">
+          <img class="img-fluid d-block mx-auto pb-4" src="/images/net-chan.png" alt="Net-chan" style="height:300px;" />
+        </a>
+        
+        <h2 class="section-heading">Introduction</h2>
+        <p>Managing a homelab can get messy fast. Between system updates, backups, and service failures, I was getting alerts from multiple sources (Discord, email, text), making it hard to keep track of everything. I needed a central notification system, so I decided to build a Discord bot to handle all my homelab alerts.</p>
+        <p>Originally, my bot was flavored as a servo-skull from Warhammer 40K, but that got stale over time. I wanted something more fun, engaging, and with a bit of personality. Inspired by the aesthetic of uwu-underground, I decided to create Net-chan, a cute anime-style server assistant with a stubborn and proud personality. She keeps me informed and makes notifications more enjoyable to receive!</p>
+
+        <h2 class="section-heading">Building Net-chan</h2>
+        <p>I relied on ChatGPT more than usual for this project, mainly because I was experimenting and having fun. However, I still learned a lot about bot development while tweaking her responses and reading through API documentation.</p>
+
+        <h2 class="section-heading">Features</h2>
+        <ul>
+          <li><strong>Webhook Event Handling</strong> – Net-chan listens for webhook events like:</li>
+          <ul>
+            <li><strong>update</strong> – Notifies me when my homelab systems receive updates.</li>
+            <li><strong>sync</strong> – Alerts me when my file sync processes complete.</li>
+            <li><strong>backup</strong> – Confirms my automated backups ran successfully.</li>
+            <li><strong>unraid</strong> – Keeps track of my Unraid server status.</li>
+            <li><strong>failure</strong> – Warns me when something goes wrong in my network.</li>
+          </ul>
+          <li><strong>Snarky Commentary</strong> – If a webhook notification comes in that I haven't integrated into her system yet, she playfully reminds me that she could make it cuter.</li>
+          <li><strong>Personality-Driven Responses</strong> – Net-chan doesn't just deliver messages; she reacts! I built a response bank for various commands to keep interactions fresh and entertaining.</li>
+          <li><strong>HuggingFace API Integration</strong> – She can fetch cute AI-generated artwork on request, adding a fun visual element to our interactions.</li>
+        </ul>
+
+        <h2 class="section-heading">Making Notifications Fun</h2>
+        <p>One of the best things about Net-chan is that she makes my homelab feel alive. Instead of dry, technical logs, I now get messages like:</p>
+        <blockquote>"Onii-chan! Your backup is done! I worked so hard, praise me! 💕"</blockquote>
+        <p>Or, when something fails:</p>
+        <blockquote>"Uwaaa! Something broke again! It wasn't my fault... probably! 😤"</blockquote>
+        <p>These small touches make managing my network feel a lot more interactive and enjoyable.</p>
+
+        <h2 class="section-heading">What’s Next for Net-chan?</h2>
+        <ul>
+          <li><strong>More Scripts to Connect to</strong> – Right now, she mainly handles system-related updates, but I want to integrate her with more services and automation tasks.</li>
+          <li><strong>New Interactions</strong> – More varied responses, dynamic personality quirks, and maybe even some memory of past conversations so she can pretend to hold grudges.</li>
+          <li><strong>Better Personality Interactions</strong> – Right now, her replies are random from a response bank, but I’d like her to react a bit more to context.</li>
+        </ul>
+
+        <h2 class="section-heading">Final Thoughts</h2>
+        <p>Building Net-chan was a fun way to mix homelab management, automation, and creative flair. While she started as a simple alert bot, she’s evolved into a project that makes my setup more engaging and enjoyable.</p>
+        <p>If you have ideas on how to improve her or want to try something similar, let me know! I’d love to hear thoughts from other homelab and bot enthusiasts.</p>
+        <p>Would you ever build a personality-driven bot for your own setup? Let’s chat in the comments! 🚀</p>

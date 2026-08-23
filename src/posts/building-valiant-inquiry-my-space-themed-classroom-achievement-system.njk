@@ -1,0 +1,88 @@
+---
+title: "teachweaver: Building Valiant Inquiry: My Space-Themed Classroom Achievement System"
+postTitle: "Building Valiant Inquiry: My Space-Themed Classroom Achievement System"
+date: 2025-08-11
+postDate: "August 11, 2025"
+description: "A behind-the-scenes look at building my space-themed classroom achievement tracker, Valiant Inquiry, a secure, gamified web app created with help from Claude AI to engage students with achievements, ISS tracking, and a custom space-only chatbot."
+keywords: "web design, web development, project journal, classroom, gamification, space theme, Node.js, EJS"
+ogTitle: "🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System - teachweaver"
+ogDescription: "A behind-the-scenes look at building my space-themed classroom achievement tracker, Valiant Inquiry, a secure, gamified web app created with help from Claude AI to engage students with achievements, ISS tracking, and a custom space-only chatbot."
+ogImage: "https://www.teachweaver.com/images/valiant.png"
+ogImageAlt: "Screenshot of the Valiant Inquiry classroom app"
+ogUrl: "https://www.teachweaver.com/posts/building-valiant-inquiry-my-space-themed-classroom-achievement-system/"
+twitterCard: "summary_large_image"
+twitterTitle: "🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System - teachweaver"
+twitterDescription: "A behind-the-scenes look at building my space-themed classroom achievement tracker, Valiant Inquiry, a secure, gamified web app created with help from Claude AI to engage students with achievements, ISS tracking, and a custom space-only chatbot."
+twitterImage: "https://www.teachweaver.com/images/valiant.png"
+image: "/images/valiant.jpg"
+imageAlt: "Valiant Inquiry Main Page"
+listDescription: "🚀 Building Valiant Inquiry: My Space-Themed Classroom Achievement System\nThis school year, my classroom went to space."
+---
+<figure class="wp-block-image size-large text-center">
+            <img
+              src="/images/valiant.png"
+              alt="Valiant Inquiry main page"
+              class="img-fluid rounded mx-auto d-block"
+              style="max-width: 100%; height: auto;"
+              width="1200" height="630" loading="lazy" />
+          </figure>
+          <p class="fw-bold">
+          Update: This site is not currently live while I change how I am hosting some sites from home.
+          </p>
+          <p>This school year, my classroom went to space. Alongside the usual chaos of lesson planning, I wanted to create something interactive, gamified, and very “sci-fi” to tie into our new theme. What I ended up with is <strong>M.O.S. Valiant Inquiry</strong>, a custom web app where students earn achievements, track the International Space Station in real time, and chat with our ship’s AI about the cosmos.</p>
+          <p>I didn’t build it alone. In fact, I leaned heavily on Claude from @AnthropicAI for the coding side. My role was captain of the mission, guiding the build, setting requirements, and learning a fair bit of JavaScript, EJS templating, and server logic along the way, while Claude handled a lot of the heavy lifting in code generation.</p>
+
+          <hr />
+          <h2>🛠️ What It Does</h2>
+          <ul>
+            <li><p><strong>Achievement tracking</strong> – Students can log in with a pseudonym and PIN to view their personal progress.</p></li>
+            <li><p><strong>Team scores</strong> – Balanced scoring across Red, Blue, Green, and Yellow crews.</p></li>
+            <li><p><strong>Live ISS tracking</strong> – Displays the station’s position and fun space facts.</p></li>
+            <li><p><strong>Ship AI chat</strong> – An embedded LLM (my own small hosted model) that only talks about space.</p></li>
+            <li><p><strong>Admin dashboard</strong> – Secure, PIN-hashed system for me to add students, grant achievements, and view progress analytics.</p></li>
+          </ul>
+          <p>Our achievements range from simple “Welcome Aboard!” onboarding to special robotics challenges like <em>Condiment Containment Specialist</em>. Some are hidden and unlock automatically based on actions, like chatting with the AI or logging in for a week straight.</p>
+
+          <figure class="wp-block-image size-large text-center mt-4">
+            <img
+              src="/images/ketchup.jpg"
+              alt="Condiment Containment Specialist achievement badge"
+              class="img-fluid rounded mx-auto d-block"
+              style="max-width: 300px; height: auto;"
+              width="300" height="300" loading="lazy" />
+            <figcaption class="text-light mt-2">
+              Example achievement: <em>Condiment Containment Specialist</em> – earned when a cadet completes a robotics challenge to retrieve a spilled ketchup bottle..
+            </figcaption>
+          </figure>
+
+          <hr />
+          <h2>🔐 Privacy First</h2>
+          <p>No student names or identifying info are stored. Each student is assigned a space-themed pseudonym, and only they (and I) know their PIN. Achievements are personal. No one can see another student’s progress.</p>
+          <p>Even PINs are hashed server-side, so if the database ever went missing, the codes wouldn’t be exposed. I learned a lot about secure handling of authentication data during this process, even if I couldn’t implement bcrypt hashing from memory yet.</p>
+
+          <hr />
+          <h2>🧠 What I Learned</h2>
+          <ul>
+            <li><p><strong>JavaScript &amp; EJS</strong> – I now understand how EJS templates pull dynamic data into HTML, even if I couldn’t yet build the whole thing from scratch without help.</p></li>
+            <li><p><strong>Express app structure</strong> – How routes, middleware, and static files all connect in a Node.js environment.</p></li>
+            <li><p><strong>Security basics</strong> – Why hashed credentials matter and how session handling works.</p></li>
+            <li><p><strong>LLM integration</strong> – How to build an in-app chat interface and connect it to a model with a limited domain.</p></li>
+          </ul>
+
+          <hr />
+          <h2>🤔 What’s Next</h2>
+          <p>Right now, students earn points through in-class challenges and special events. I’d like to expand the app so they can also earn points <em>inside</em> the site, maybe by completing small science quizzes, mini space missions, or interactive simulations.</p>
+          <p>I also want to iterate on the AI assistant. It’s currently a basic “ask me about space” system, but I can see it growing into a true mission guide, giving custom hints or assigning bonus challenges.</p>
+
+          <hr />
+          <h2>🛰️ Try It Yourself</h2>
+          <p>You can explore the login page, dashboard, and AI chat using a demo account:</p>
+          <p><strong>Pseudonym:</strong> <code>Nebula</code><br>
+          <strong>PIN:</strong> <code>3798</code></p>
+          <p>This account is for demonstration only and contains no student information.</p>
+          <p><a class="btn btn-outline-info" href="https://valiantinquiry.com/" target="_blank" rel="noopener">Launch Valiant Inquiry</a></p>
+
+          <hr />
+          <h2>💡 Takeaways</h2>
+          <p>Even though most of the code was co-written with an AI, this project taught me how to <strong>steer a complex build, understand the moving parts, and make informed decisions about architecture, security, and design</strong>. It’s the kind of “vibe coding” that works well for rapid prototyping, and for creating something magical for my students.</p>
+          <p>End result: I now have a fully functional, secure, space-themed classroom achievement tracker that my students are going to love, and a lot more confidence in tackling JavaScript and Node.js projects in the future.</p>

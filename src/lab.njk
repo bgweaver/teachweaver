@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: "teachweaver: Lab"
+description: "A page of small interactive things I've built or wired up: proof-of-concept widgets and tools worth playing with."
+ogTitle: "teachweaver - Lab"
+permalink: /lab.html
+---
+  <section class="other-landing d-flex flex-column">
+{% include "navbar.njk" %}
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div id="type-header" class="col-12">
+            <div class="text-container d-flex flex-column justify-content-center align-items-center position-relative">
+              <h1 class="display-1 fw-bold text-light pb-md-3 pb-0">Lab</h1>
+              <h2 class="text-light text-uppercase text-primary fs-6 pb-3">Small things I've built or wired up.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <section class="bg-dark py-5 text-white">
+    <div class="container">
+{% for item in collections.lab %}
+      <div class="row justify-content-center mb-5">
+        <div class="{{ item.data.width or 'col-lg-8' }}">
+          <h3 class="text-primary">{{ item.data.name }}</h3>
+          {{ item.templateContent | safe }}
+        </div>
+      </div>
+{% endfor %}
+    </div>
+  </section>
+
+{% include "footer.njk" %}

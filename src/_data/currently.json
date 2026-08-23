@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Server Upgrades",
+    "icon": "fas fa-server",
+    "text": "Chasing a CPU upgrade that refuses to POST on an old PowerEdge. Currently deep in voltage rail logs and firmware revisions, which is not where I expected this to go."
+  },
+  {
+    "title": "CompTIA Network+",
+    "icon": "fas fa-certificate",
+    "text": "Working through the material now, with Security+ after it. The certs matter less to me than finally having names for things I'd been doing by feel."
+  },
+  {
+    "title": "Coin Rings",
+    "icon": "fas fa-ring",
+    "text": "Making wedding rings out of quarters, mostly because I keep losing the last one. Batch two is in progress and going better than batch one."
+  }
+]

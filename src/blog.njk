@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: "teachweaver: Blog"
+description: "Explore the teachweaver blog for updates on my projects, classes, and certifications."
+ogTitle: "teachweaver - Design & Technology Blog"
+extraScripts:
+  - "/js/posts.js"
+permalink: /blog.html
+---
+  <section class="other-landing d-flex flex-column">
+{% include "navbar.njk" %}
+
+    <!-- Header -->
+    <header class="header flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <!-- Left Column -->
+          <div id="type-header" class="col-12">
+            <div class="text-container d-flex flex-column justify-content-center align-items-center position-relative">
+              <h1 class="display-1 fw-bold text-light pb-md-3 pb-0">Journal</h1>
+              <h2 class="text-light text-uppercase fs-6 pb-3">
+                Documenting my growth in code, networks, and beyond.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Main Content -->
+  <section class="bg-light py-4">
+    <div class="container px-4 px-lg-5 text-black mt-4">
+      <!-- Posts will be loaded here -->
+      <div id="posts-container" class="row gx-4 gx-lg-5 justify-content-center">
+        <!-- JavaScript will inject posts here -->
+      </div>
+      <!-- Pager -->
+      <div class="d-flex justify-content-end pt-5 mb-4">
+        <button id="load-more" class="btn btn-primary text-uppercase">
+          Older Posts →
+        </button>
+      </div>
+    </div>
+  </section>
+
+{% include "footer.njk" %}

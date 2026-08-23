@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title | safe }}</title>
+  <meta name="description" content="{{ description | safe }}" />
+  <meta name="keywords" content="{{ keywords or 'web design, web development, technology projects, web design services, portfolio, teachweaver' }}" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="{{ (ogTitle or title) | safe }}" />
+  <meta property="og:description" content="{{ (ogDescription or description) | safe }}" />
+  <meta property="og:image" content="{{ ogImage or 'https://www.teachweaver.com/images/og-image.jpg' }}" />
+{% if ogImageAlt %}
+  <meta property="og:image:alt" content="{{ ogImageAlt | safe }}" />
+{% endif %}
+  <meta property="og:url" content="{{ ogUrl or 'https://www.teachweaver.com' }}" />
+  <meta property="og:type" content="{{ ogType or 'website' }}" />
+{% if twitterCard %}
+  <meta name="twitter:card" content="{{ twitterCard }}" />
+  <meta name="twitter:title" content="{{ twitterTitle | safe }}" />
+  <meta name="twitter:description" content="{{ twitterDescription | safe }}" />
+  <meta name="twitter:image" content="{{ twitterImage }}" />
+{% if twitterSite %}
+  <meta name="twitter:site" content="{{ twitterSite }}" />
+{% endif %}
+{% endif %}
+
+  <link rel="alternate" type="application/rss+xml" title="teachweaver" href="/feed.xml" />
+
+  <link rel="stylesheet" href="/css/font-awesome.css" />
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/lightbox.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+{{ content | safe }}
+
+  <script src="https://kit.fontawesome.com/b7472c6347.js" crossorigin="anonymous"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/lightbox-plus-jquery.min.js"></script>
+  <script src="/js/script.js"></script>
+{% for s in extraScripts %}
+  <script src="{{ s }}"></script>
+{% endfor %}
+</body>
+
+</html>

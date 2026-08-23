@@ -1,97 +1,78 @@
-# Human-only jobs
+# What's left
 
-Things I can't do for you, roughly in order of what unblocks the most.
-
----
-
-## Ship it
-
-- [ ] **Merge into the real repo.** Delete the old `css/ js/ images/ webfonts/ posts/ index.html
-      about.html blog.html posts.json sitemap.xml robots.txt` from the repo root, copy in `src/`,
-      `.eleventy.js`, `package.json`, `POSTING.md`, `TODO.md`. Check `git status` before committing.
-- [ ] **Add a `.gitignore`** with `node_modules` and `_site` if there isn't one. Both are generated.
-- [ ] **Change Netlify's build settings.** Build command `npm run build`, publish directory `_site`.
-      Nothing else about the Netlify setup changes.
-- [ ] **Test the contact form once after deploy.** It moved from the homepage to `/about.html#contact`.
-      Netlify Forms detects forms at build time, so confirm a real submission lands.
-- [ ] **Check old URLs still work.** All 17 post URLs are unchanged, but `/contact.html` briefly existed
-      and is now gone. If anything linked to it, it needs a redirect to `/about.html#contact`.
+Updated after the favicon, buttons, photos, and contact-form round.
 
 ---
 
-## Pictures
+## Do this first
 
-Every project card works without a photo, but the ones with photos look considerably better. Current state:
+These two are the difference between "works" and "actually good."
 
-**Has a photo already:** Valiant Inquiry, Sweet Speech, Bubbles & Fur, Yard Art, Earlier Sites
+- [ ] **Compress the photos.** They're still 1-2MB each. The projects page currently pulls something like
+      10MB, which is a bad first impression on mobile.
 
-**Wants a photo (just a phone snap is fine):**
+      ```
+      ./tools/optimize.sh src/images/*.JPG src/images/*.jpg
+      ```
 
-- [ ] **Spartus clock** — the finished clock, ideally. A teardown shot of the original guts would be even
-      better if you still have those photos from before you gutted it.
-- [ ] **Solar mesh node** — the node on the roof, or in hand before it went up.
-- [ ] **ESP32 projects** — a messy desk shot with boards and a soldering iron reads better here than
-      anything staged.
-- [ ] **The homelab** — the rack/tower. Blinkenlights photograph well.
-- [ ] **Coin rings** — the finished ring on your hand, and/or the quarter mid-process.
-- [ ] **Bleach shirts** — one of the finished shirts laid flat.
-- [ ] **This site** — optional, a screenshot is a bit self-referential.
+      This also lowercases `.JPG` to `.jpg`, which matters: the project files reference `clock.jpg` and
+      `clock-scattered.jpg` lowercase. On a case-sensitive server those 404 until you run this.
 
-Add them with `image: "/images/whatever.jpg"` in the project's file. Run them through
-[Squoosh](https://squoosh.app/) first; anything over ~500KB will drag the page.
-
-- [ ] **Header images for the two new posts.** Both currently point at `og-image.jpg` as a placeholder.
-      The R420 post especially wants a photo of the server with its lid off.
-- [ ] **A favicon.** The site has never had one, so browser tabs show a blank page icon. A 32x32 and a
-      180x180 apple-touch-icon would cover it. Tell me when the files exist and I'll wire them into `base.njk`.
+- [ ] **Copy the newest files into your repo.** Since you merged, these have been added or changed:
+      `netlify.toml`, `tools/optimize.sh`, `tools/make-button.py`, `src/images/favicon/*`,
+      `src/images/buttons/*` (15 files), `src/_data/badges.json`, plus edits to `src/about.njk`,
+      `src/projects.njk`, `src/_includes/base.njk`, `src/css/styles.css`, and several `src/projects/*.md`.
+      Easiest is to unzip over the top and let `git status` show you the diff.
 
 ---
 
-## Badges
+## Verify after the next deploy
 
-- [ ] **Replace my placeholder buttons.** The nine on the About page are ones I generated so the wall
-      wasn't broken images. Most projects that offer a real 88x31 have it somewhere on their site, and
-      there are archives of classic ones worth browsing.
-- [ ] **Decide on a "self-hosted" badge after the VPS move.** I pulled it because the site is on Netlify
-      right now and it would have been a lie. If you migrate, it goes back.
-- [ ] **Make your own teachweaver button properly.** Mine is a placeholder. Yours is the one other people
-      would actually put on their sites.
+- [ ] **Contact form.** It was white-on-white and unreadable. Type in it and confirm you can see the text.
+- [ ] **Favicon.** Should be a grey spider web in the browser tab. Hard-refresh; favicons cache hard.
+- [ ] **The project photos actually load.** Especially the two clock images, per the case-sensitivity note.
+- [ ] **RSS.** Add `https://www.teachweaver.com/feed.xml` to Miniflux. It's new and has never been tested
+      against a real reader.
+- [ ] **The `netlify.toml` took effect.** If the deploy log still shows no build command, the file isn't in
+      the repo root next to `package.json`.
 
 ---
 
-## Accounts
+## Small stuff
 
 - [ ] **Verify the site on Mastodon.** Add `https://www.teachweaver.com` to a metadata field on your
-      profile. The site already has `rel="me"` on the Mastodon links, so Mastodon will check for the link
-      back and show a green checkmark. Only works once both halves exist.
-- [ ] **Subscribe to your own feed in Miniflux** at `https://www.teachweaver.com/feed.xml` to confirm it
-      parses. It's new and untested against a real reader.
+      profile. The `rel="me"` half is already on the site, so this is the only remaining step to get the
+      green checkmark.
+- [ ] **Two projects still have no photo:** "This Site" and "Small Tools & Experiments." Both read fine
+      text-only, so this is optional.
+- [ ] **Header image for the Homarr post.** It still points at `og-image.jpg`. A screenshot of your
+      dashboard would be the obvious one.
 
 ---
 
-## Content decisions only you can make
+## Decisions only you can make
 
-- [ ] **Four posts had a title or date in the old `posts.json` that didn't match the post itself.** I made
-      the post page the source of truth in every case. Worth a look in case any should go the other way:
-      `summer-break-server-project`, `upgrading-my-home-network`, `bubbles-fur-website`, `net-chan`.
-- [ ] **Four post titles that contained "Journey" got renamed.** URLs unchanged, so nothing broke, but
-      the visible titles are different: the CompTIA post, the CSS post, the programming post, and the
-      home network post.
-- [ ] **Decide whether the ALPR work goes on the site.** It's arguably your strongest project and it's
-      currently not mentioned anywhere. I left it off because you said allude, don't claim. Still worth
-      a deliberate decision rather than a default.
-- [ ] **Keep "Currently" current.** `src/_data/currently.json` is three cards on the homepage. It's the
-      thing most likely to quietly go stale and make the site look abandoned. If it's still saying the
-      same three things in six months, either update it or cut the section.
+- [ ] **Four post titles changed** when I stripped "Journey" out of them. URLs are unchanged so nothing
+      broke, but the visible titles are different: the CompTIA post, the CSS post, the programming post,
+      and the home network post.
+- [ ] **Four posts had a title or date mismatch** between the old `posts.json` and the post itself. I used
+      the post page as truth in each case: `summer-break-server-project`, `upgrading-my-home-network`,
+      `bubbles-fur-website`, `net-chan`.
+- [x] **Keep the local-government work off the site.** Decided: the site gets linked to work, so the
+      council-meeting and records-request side stays off. Don't re-add it.
+
+- [ ] **Keep "Currently" current.** `src/_data/currently.json`, three cards on the homepage. It's the most
+      likely thing to go stale and make the site look abandoned.
 
 ---
 
-## Open questions I parked
+## Parked, say the word
 
-- **GitHub activity widget.** The usual option is a third-party service that renders an SVG card, which
-  means every visitor's browser hits someone else's server. Given the Tor and privacy badges on the same
-  page, I didn't add it without asking. Alternatives: pull your public repos client-side from GitHub's own
-  API, or leave the plain link.
-- **Live BookWyrm "currently reading".** The data is public and reachable, but a browser-side fetch may be
-  blocked by CORS depending on the instance. Now that I have your profile, I can test it if you want more
-  than the badge.
+- **GitHub activity on the site.** Usual approach is a third-party SVG service, which means every visitor
+  hits someone else's server. Given the Tor and privacy badges next to it, I didn't add it unasked.
+  Alternative is pulling your public repos client-side from GitHub's own API.
+- **Live BookWyrm "currently reading."** Right now it's just a button linking to your profile. A real
+  fetch may work now that I have your handle, though it may hit CORS.
+- **A webring or links page.** Fits the button-wall aesthetic if you ever want somewhere to point at other
+  people's sites.
+- **Self-hosted badge** goes back on if you move this off Netlify to the VPS.

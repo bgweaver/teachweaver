@@ -2,7 +2,10 @@ module.exports = function (eleventyConfig) {
   // Copy static assets straight through to the output folder, untouched.
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/images");
+  // Only publish real image formats. Keeps editable sources (.xcf, .psd) and
+  // anything else in that folder out of the deployed site.
+  eleventyConfig.addPassthroughCopy("src/images/**/*.{jpg,jpeg,png,gif,avif,webp,svg,ico}");
+  eleventyConfig.addPassthroughCopy("src/images/**/*.webmanifest");
   eleventyConfig.addPassthroughCopy("src/webfonts");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 

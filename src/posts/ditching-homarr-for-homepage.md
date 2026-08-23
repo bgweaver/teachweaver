@@ -6,10 +6,10 @@ postDate: "July 27, 2026"
 description: "Why I moved my everywhere-dashboard off Homarr and onto gethomepage, and what's still left before it fully replaces the old one."
 ogTitle: "Ditching Homarr for Homepage - teachweaver"
 ogDescription: "Why I moved my everywhere-dashboard off Homarr and onto gethomepage, and what's still left before it fully replaces the old one."
-ogImage: "https://www.teachweaver.com/images/og-image.jpg"
+ogImage: "https://www.teachweaver.com/images/homarr.png"
 ogUrl: "https://www.teachweaver.com/posts/ditching-homarr-for-homepage/"
-image: "/images/og-image.jpg"
-imageAlt: "Homepage dashboard"
+image: "/images/homarr.png"
+imageAlt: "A self-hosted dashboard"
 listDescription: "I've used Homarr as my browser homepage for a while, but I finally got around to trialing gethomepage as a replacement. Here's how the migration went."
 ---
 

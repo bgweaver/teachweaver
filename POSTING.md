@@ -257,6 +257,15 @@ Write the description here. Markdown works.
 - **`order`** controls position (lower = earlier). Categories appear in the order their first project does.
 - **`image`** is optional — leave it as `""` and the card is text-only. Add a path and you get a
   photo at the top of the card, clickable to full size.
+- **`gallery`** is optional extra photos, shown as small thumbnails under the description. Clicking any
+  photo on the page opens the lightbox and you can page through all of them.
+
+  ```
+  gallery:
+    - src: "/images/thing-back.jpg"
+      alt: "The other side"
+  ```
+
 - **`links`** is optional — each becomes a button. Use `links: []` for none.
 
 ## Lab widgets
@@ -318,3 +327,30 @@ Swap them for real ones as you collect them.
 
 All three regenerate on every build from `src/posts.11ty.js`, `src/sitemap.11ty.js`, and
 `src/feed.11ty.js`. Editing the output does nothing since it gets overwritten.
+
+---
+
+# Preparing images
+
+Don't use Squoosh. Its encoders run as WebAssembly in the browser and produce corrupted output
+(garbled colored lines) in hardened browser configurations. Do it locally instead:
+
+```
+sudo apt install imagemagick     # or: xbps-install -S ImageMagick / pacman -S imagemagick
+./tools/optimize.sh ~/Pictures/clock.jpg
+```
+
+It resizes to 1200px wide, compresses, strips metadata, slugifies the filename, and writes into
+`src/images/`. Point at several files at once to batch them.
+
+**Stripping metadata matters.** Phone photos carry GPS coordinates in EXIF. Publishing one taken at home
+publishes your address. The script strips this by default; if you ever optimize an image some other way,
+check that it does too.
+
+Options:
+
+```
+WIDTH=800 ./tools/optimize.sh photo.jpg      # narrower
+FORMAT=avif ./tools/optimize.sh photo.jpg    # smaller files, slower encode
+QUALITY=90 ./tools/optimize.sh photo.jpg     # less compression
+```

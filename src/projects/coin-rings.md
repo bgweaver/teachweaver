@@ -3,7 +3,8 @@ name: "Coin Rings"
 category: "Made by Hand"
 icon: "fas fa-ring"
 order: 12
-image: ""
+image: "/images/ring.jpg"
+imageAlt: "A finished coin ring"
 links: []
 ---
 I lost my wedding ring, so I made a new one out of a quarter minted the year we got married. Punch the center,

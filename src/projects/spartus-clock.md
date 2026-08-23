@@ -3,7 +3,11 @@ name: "Spartus Clock Rebuild"
 category: "Hardware & Electronics"
 icon: "fas fa-clock"
 order: 1
-image: ""
+image: "/images/clock.jpg"
+imageAlt: "The restored Spartus clock"
+gallery:
+  - src: "/images/clock-scattered.jpg"
+    alt: "The original clock movement, disassembled"
 links: []
 ---
 A vintage Spartus grandfather clock whose original movement was beyond saving. I photographed the teardown,

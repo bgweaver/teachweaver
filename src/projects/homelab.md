@@ -3,7 +3,8 @@ name: "The Homelab"
 category: "Hardware & Electronics"
 icon: "fas fa-server"
 order: 4
-image: ""
+image: "/images/servers.jpg"
+imageAlt: "The homelab rack"
 links: []
 ---
 A Proxmox host and a storage tower, both built from secondhand and e-waste hardware, running the services I'd

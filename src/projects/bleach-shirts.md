@@ -3,7 +3,11 @@ name: "Bleach-Stencil Shirts"
 category: "Made by Hand"
 icon: "fas fa-tshirt"
 order: 13
-image: ""
+image: "/images/papers-front.jpg"
+imageAlt: "Bleach-stencil shirt, front"
+gallery:
+  - src: "/images/papers-back.jpg"
+    alt: "Bleach-stencil shirt, back"
 links: []
 ---
 Hand-cut stencils and bleach on dark cotton, an ongoing series with a civics theme. It's an unforgiving

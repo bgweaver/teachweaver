@@ -3,7 +3,8 @@ name: "ESP32 Odds & Ends"
 category: "Hardware & Electronics"
 icon: "fas fa-microchip"
 order: 3
-image: ""
+image: "/images/ouspy.jpg"
+imageAlt: "A wardriving device in a printed enclosure"
 links: []
 ---
 A rotating cast of small ESP32 builds: sensors, voice satellites for my home automation setup,

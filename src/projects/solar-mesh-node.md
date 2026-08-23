@@ -3,7 +3,8 @@ name: "Solar Mesh Node"
 category: "Hardware & Electronics"
 icon: "fas fa-satellite-dish"
 order: 2
-image: ""
+image: "/images/mesh-node.jpg"
+imageAlt: "The solar Meshtastic node"
 links:
   - label: "About Meshtastic"
     url: "https://meshtastic.org/"

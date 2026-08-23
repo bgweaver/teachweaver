@@ -363,3 +363,18 @@ code {
 .badge-wall a:hover img {
   transform: scale(1.08);
 }
+
+/* Contact form sits on a light background, so keep text and placeholders readable. */
+.contact .form-control {
+  color: #212529;
+}
+.contact .form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.contact .form-control:focus {
+  background-color: transparent !important;
+  color: #212529;
+  border-color: #0d6efd;
+  box-shadow: none;
+}

@@ -6,10 +6,10 @@ postDate: "July 26, 2026"
 description: "A weekend spent chasing bent pins, voltage rails, and a possible CPLD firmware bug trying to upgrade my R420's CPUs, and the decisive test that ruled everything else out."
 ogTitle: "The R420 CPU Upgrade That Won't Boot - teachweaver"
 ogDescription: "A weekend spent chasing bent pins, voltage rails, and a possible CPLD firmware bug trying to upgrade my R420's CPUs, and the decisive test that ruled everything else out."
-ogImage: "https://www.teachweaver.com/images/og-image.jpg"
+ogImage: "https://www.teachweaver.com/images/r420.jpg"
 ogUrl: "https://www.teachweaver.com/posts/r420-cpu-upgrade-that-wont-boot/"
-image: "/images/og-image.jpg"
-imageAlt: "Dell PowerEdge R420"
+image: "/images/r420.jpg"
+imageAlt: "The R420 with its lid off"
 listDescription: "I tried to upgrade my R420's CPUs to a faster matched pair. It did not go well, but I learned a lot about voltage rails and CPLD firmware along the way."
 ---
 

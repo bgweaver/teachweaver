@@ -33,7 +33,7 @@ pretty pattern. This runs a Sieve of Eratosthenes client-side in your browser an
           <div class="d-flex justify-content-center">
             <canvas id="ulam-spiral" width="900" height="900" class="rounded-3" style="max-width: 100%; height: auto; background: #000;"></canvas>
           </div>
-          <div id="ulam-status" class="text-center text-muted small py-3">Tap Generate to draw. Larger "points across" = finer detail, slower render.</div>
+          <div id="ulam-status" class="text-center small py-3" style="color: rgba(255,255,255,0.55);">Tap Generate to draw. Larger "points across" = finer detail, slower render.</div>
 
 <script>
 (function () {

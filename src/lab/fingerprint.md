@@ -5,17 +5,16 @@ width: "col-lg-10"
 ---
 No cookies, no login, no account. Just by loading this page, a website already knows more about you than
 you'd guess. The checks below run automatically and never leave your browser. There's one optional check
-further down that does contact two outside services to show you what they'd see, and I'll explain exactly
-what that means before it runs.
+further down that contacts two outside services to show you what they'd see.
 
 <div id="fp-results"></div>
 
 <div class="text-center my-4">
-  <button id="net-check-btn" class="btn btn-primary btn-sm">Did you know where the internet thinks you are?</button>
+  <button id="net-check-btn" class="btn btn-primary btn-sm">Check what my connection reveals</button>
 </div>
 <div id="net-results"></div>
 
-<p class="small text-muted text-center mt-3">
+<p class="small text-center mt-3" style="color: rgba(255,255,255,0.55);">
   Want the deep version of this, checked against real data from other visitors? The EFF's
   <a class="text-secondary" href="https://coveryourtracks.eff.org/">Cover Your Tracks</a> does that.
 </p>
@@ -24,11 +23,15 @@ what that means before it runs.
 (function () {
   const el = document.getElementById('fp-results');
 
+  // Bootstrap's .text-muted resolves to a near-black color meant for light
+  // backgrounds, and this site never sets a dark theme override -- so
+  // .text-muted on a dark card is invisible. Using an explicit color here
+  // instead of that class.
   function card(question, answer) {
-    return `<div class="rounded-3 p-3 mb-2" style="background: rgba(255,255,255,0.05);">
-      <div class="text-primary small fw-bold mb-1">Did you know...</div>
-      <div class="text-light small">${question}</div>
-      <div class="mt-2 pt-2 small text-muted" style="border-top: 1px solid rgba(255,255,255,0.08);">${answer}</div>
+    return `<div class="rounded-3 px-3 py-2 mb-2" style="background: rgba(255,255,255,0.05);">
+      <span class="text-primary fw-bold small">Did you know</span>
+      <span class="small" style="color: rgba(255,255,255,0.9);"> ${question}</span>
+      <span class="small d-block mt-1" style="color: rgba(255,255,255,0.6);">${answer}</span>
     </div>`;
   }
 
@@ -77,46 +80,36 @@ what that means before it runs.
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const langs = (nav.languages || [nav.language]).join(', ');
 
+  // Four compact cards instead of six -- related facts are combined into one
+  // line each so this doesn't take over the page.
   const cards = [];
 
   cards.push(card(
-    'a website can guess a fair amount about what software you have installed just by quietly testing which fonts your browser can render?',
+    `a website can guess software you have installed just by testing which fonts render?`,
     fonts.length
-      ? `This page found ${fonts.length} of the 10 fonts it checked for on your device: ${fonts.join(', ')}. Combined with everything else here, that's one more thing that makes your browser a little more identifiable.`
-      : `This page couldn't detect any of the 10 fonts it checked for. Either your browser is blocking this kind of check, or it's just being cagey.`
+      ? `Found ${fonts.length} of 10 tested: ${fonts.join(', ')}`
+      : `None detected here, which itself is a little unusual.`
   ));
 
   cards.push(card(
-    'your exact screen size and zoom level get sent to every site you visit, automatically?',
-    `Yours is ${screen.width}&times;${screen.height} pixels, zoomed to ${Math.round((window.devicePixelRatio || 1) * 100)}%. Not identifying on its own, but it's one more puzzle piece.`
+    `your timezone and language settings can hint at where you live, with no GPS involved?`,
+    `Yours: <strong>${tz || 'unknown'}</strong>, set to <strong>${langs}</strong>`
   ));
 
   cards.push(card(
-    'your timezone alone can narrow down roughly where in the world you are, no GPS needed?',
-    `Yours is <strong>${tz || 'not detected'}</strong>.`
+    `your screen size and processor count are visible to every site, automatically?`,
+    `Yours: <strong>${screen.width}&times;${screen.height}</strong> px${cores ? `, <strong>${cores}</strong> cores` : ''}`
   ));
-
-  cards.push(card(
-    `the language your browser is set to can hint at where you're from, even if you never typed a word?`,
-    `Yours is set to <strong>${langs}</strong>.`
-  ));
-
-  if (cores) {
-    cards.push(card(
-      'a website can tell how powerful your device is, right down to how many processor cores it has?',
-      `Yours has <strong>${cores}</strong>. Combined with your screen size, that starts to narrow down what kind of device you're on.`
-    ));
-  }
 
   if (gl) {
     cards.push(card(
-      'a website can read the exact model of your graphics card, without ever asking permission?',
-      `Yours reports itself as: <strong>${gl}</strong>. That's a genuinely unusual thing for a website to know about your computer.`
+      `a website can read the exact model of your graphics card, without asking permission?`,
+      `Yours reports itself as: <strong>${gl}</strong>`
     ));
   } else {
     cards.push(card(
-      'most browsers let a website read your exact graphics card model, without asking permission?',
-      `Yours is hiding that from this check, which is your browser (or an extension) actively protecting you.`
+      `most browsers let a website read your exact graphics card model?`,
+      `Yours is hiding that here, which is your browser protecting you.`
     ));
   }
 
@@ -129,17 +122,18 @@ what that means before it runs.
 
   function card(question, answer) {
     const d = document.createElement('div');
-    d.className = 'rounded-3 p-3 mb-2';
+    d.className = 'rounded-3 px-3 py-2 mb-2';
     d.style.background = 'rgba(255,255,255,0.05)';
-    d.innerHTML = `<div class="text-primary small fw-bold mb-1">Did you know...</div>
-      <div class="text-light small">${question}</div>
-      <div class="mt-2 pt-2 small text-muted" style="border-top: 1px solid rgba(255,255,255,0.08);">${answer}</div>`;
+    d.innerHTML = `<span class="text-primary fw-bold small">Did you know</span>
+      <span class="small" style="color: rgba(255,255,255,0.9);"> ${question}</span>
+      <span class="small d-block mt-1" style="color: rgba(255,255,255,0.6);">${answer}</span>`;
     box.appendChild(d);
   }
 
   function note(html) {
     const d = document.createElement('div');
-    d.className = 'small text-muted text-center py-2';
+    d.className = 'small text-center py-2';
+    d.style.color = 'rgba(255,255,255,0.55)';
     d.innerHTML = html;
     box.appendChild(d);
   }
@@ -201,17 +195,17 @@ what that means before it runs.
         place = [data.city, data.region, data.country_name].filter(Boolean).join(', ');
       } catch (e) {
         box.innerHTML = '';
-        note("The lookup failed, was blocked, or timed out. If you run a tracker blocker, it may have just blocked a service whose entire business is location tracking, which is a little bit funny.");
+        note("The lookup failed, was blocked, or timed out. If you run a tracker blocker, it may have just blocked a service whose entire business is location tracking.");
       }
 
       box.innerHTML = '';
 
       if (httpIp) {
         card(
-          'just visiting a page tells that site roughly where you are, using nothing but your internet connection?',
+          `just visiting a page tells that site roughly where you are, using nothing but your connection?`,
           place
-            ? `This page can see you're browsing from near <strong>${place}</strong>. If that's not close to where you actually are, a VPN or proxy is doing its job.`
-            : `This page can see your address, but couldn't pin down a city for it.`
+            ? `You're browsing from near <strong>${place}</strong>. If that's not close to where you actually are, a VPN is doing its job.`
+            : `This page can see your address, but couldn't pin down a city.`
         );
       }
 
@@ -221,19 +215,19 @@ what that means before it runs.
       if (srflx.length) {
         if (httpIp && srflx.includes(httpIp)) {
           card(
-            'there\'s a second, completely separate way for a website to find your address, called WebRTC, that sometimes leaks even when a VPN is hiding you everywhere else?',
-            `Good news for you: this second check came back with the exact same address as before, so nothing extra leaked here.`
+            `there's a second, separate way for a site to find your address, called WebRTC, that sometimes leaks past a VPN?`,
+            `Good news: this second check came back with the exact same address, so nothing extra leaked here.`
           );
         } else if (httpIp) {
           card(
-            'a VPN can hide you from most of the internet, but a feature called WebRTC has its own separate door that some VPNs forget to lock?',
-            `This is exactly what just happened. The address above was <strong>${httpIp}</strong>, but this second check found <strong>${srflx[0]}</strong> instead &mdash; a different address, most likely your real internet provider's, leaking through the side door. This exact mismatch is what dedicated "VPN leak test" tools check for.`
+            `a VPN can hide you from most of the internet, but WebRTC has its own door that some VPNs forget to lock?`,
+            `That just happened. The address above was <strong>${httpIp}</strong>, but this check found <strong>${srflx[0]}</strong> instead &mdash; likely your real ISP, leaking through the side door.`
           );
         }
       } else {
         card(
-          'a feature called WebRTC can sometimes leak your real address even when a VPN is hiding you everywhere else?',
-          `Yours didn't leak anything through this path, which means your browser or an extension is blocking it.`
+          `WebRTC can sometimes leak your real address even behind a VPN?`,
+          `Yours didn't leak here, meaning your browser or an extension is blocking it.`
         );
       }
 
@@ -241,19 +235,19 @@ what that means before it runs.
         const raw192 = host.filter(a => /^\d+\.\d+\.\d+\.\d+$/.test(a));
         if (raw192.length) {
           card(
-            'a website can sometimes see the private address your own router assigned you at home, like 192.168.x.x?',
-            `Yours is exposing it: <strong>${raw192[0]}</strong>. Most current browsers hide this by default, so yours is either older or set up to allow it.`
+            `a site can sometimes see the private address your own router assigned you at home?`,
+            `Yours is exposing it: <strong>${raw192[0]}</strong>. Most current browsers hide this by default.`
           );
         } else {
           card(
-            'a website can sometimes see the private address your own router assigned you at home?',
-            `Yours is hidden behind a randomized name instead of the real number, which is your browser protecting you, working as intended.`
+            `a site can sometimes see your home router's private address?`,
+            `Yours is hidden behind a randomized name, which is your browser protecting you.`
           );
         }
       }
     } catch (e) {
       box.innerHTML = '';
-      note('Something in this check failed in a way I did not expect. Not much to show, but at least the button still works.');
+      note('Something in this check failed unexpectedly. Not much to show, but at least the button still works.');
     } finally {
       btn.textContent = 'Check again';
       btn.disabled = false;

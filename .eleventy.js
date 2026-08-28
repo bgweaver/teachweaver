@@ -8,20 +8,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images/**/*.webmanifest");
   eleventyConfig.addPassthroughCopy("src/webfonts");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
-
+  // Downloadable files linked from posts/projects (STLs, PDFs, etc.).
+  eleventyConfig.addPassthroughCopy("src/files");
+  
   // Projects and lab entries are files you drop in a folder, same as blog posts.
   // They render as cards on projects.html / lab.html, not as their own pages.
   // "order" in the frontmatter controls position (low number = first).
   eleventyConfig.addCollection("projects", (collection) =>
-    collection.getFilteredByGlob("src/projects/*.md")
-      .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
+  collection.getFilteredByGlob("src/projects/*.md")
+  .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
   );
-
+  
   eleventyConfig.addCollection("lab", (collection) =>
-    collection.getFilteredByGlob("src/lab/*.md")
-      .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
+  collection.getFilteredByGlob("src/lab/*.md")
+  .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
   );
-
+  
   return {
     // Only .njk files are templates for now. Raw .html files (like the
     // not-yet-converted posts) are left alone and passthrough-copied as-is.

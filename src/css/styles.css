@@ -378,3 +378,15 @@ code {
   border-color: #0d6efd;
   box-shadow: none;
 }
+
+/* Plain markdown images (![alt](src)) inside a post's body get no class at
+   all from markdown-it, and none of the img rules above apply to them --
+   so a full-size photo dropped straight into a post rendered at native
+   pixel width, overflowing the reading column instead of fitting it. */
+.col-xl-7.text-light img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+}

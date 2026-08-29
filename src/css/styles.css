@@ -206,14 +206,14 @@ footer a i:hover {
 
 @media (max-width: 992px) {
   #type-header {
-    order: 2;
+  order: 2;
   }
   #profile-header {
-    order: 1;
-    padding-bottom: 40px;
+  order: 1;
+  padding-bottom: 40px;
   }
   #fade-in-text {
-    font-size: 1rem;
+  font-size: 1rem;
   }
   .image-container img {
     max-width: 50%;
@@ -287,16 +287,16 @@ code {
     padding-bottom: 0;
   }
   #profile-header .image-container img {
-    max-height: 40vh;
+  max-height: 40vh;
   }
 }
 @media (max-height: 600px) {
   #typing-text {
-    font-size: 2rem !important;
+  font-size: 2rem !important;
   }
   #fade-in-text {
-    font-size: 0.7rem !important;
-    padding-bottom: 0.5rem !important;
+  font-size: 0.7rem !important;
+  padding-bottom: 0.5rem !important;
   }
   .btn-sm {
     padding: 0.25rem 0.5rem;
@@ -309,13 +309,13 @@ code {
   }
   #type-header,
   #profile-header {
-    order: initial;
-    width: 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+  order: initial;
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
   }
   #profile-header {
-    padding-bottom: 0;
+  padding-bottom: 0;
   }
   .image-container img {
     max-height: 90vh !important;
@@ -323,25 +323,25 @@ code {
     max-width: 90%;
   }
   #typing-text {
-    font-size: 1.5rem !important;
-    padding-bottom: 10px !important;
-    margin-bottom: 0.5rem !important;
+  font-size: 1.5rem !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 0.5rem !important;
   }
   .header .text-container {
     padding: 0 15px;
   }
   #fade-in-text.roles {
-    padding-bottom: 0 !important;
-    margin-bottom: 0.5rem !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.5rem !important;
   }
   #type-header .btn-sm {
-    margin-top: 0.5rem !important;
+  margin-top: 0.5rem !important;
   }
 }
 /* Medium screens adjustments */
 @media (min-width: 601px) and (max-width: 991px) {
   #typing-text {
-    font-size: 2.5rem !important;
+  font-size: 2.5rem !important;
   }
   .image-container img {
     max-width: 70%;
@@ -380,13 +380,66 @@ code {
 }
 
 /* Plain markdown images (![alt](src)) inside a post's body get no class at
-   all from markdown-it, and none of the img rules above apply to them --
-   so a full-size photo dropped straight into a post rendered at native
-   pixel width, overflowing the reading column instead of fitting it. */
+ *  all from markdown-it, and none of the img rules above apply to them --
+ *  so a full-size photo dropped straight into a post rendered at native
+ *  pixel width, overflowing the reading column instead of fitting it. */
 .col-xl-7.text-light img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 1.5rem auto;
   border-radius: 0.5rem;
+}
+
+/* Hover-to-define terms for technical posts. Usage in a post:
+ *    <span class="term" data-def="Plain-English definition here.">XOR</span>
+ *  Works on hover for mouse users, and on tap for touch (JS below), since
+ *  plain CSS :hover doesn't reliably trigger or dismiss on touchscreens. */
+.term {
+  position: relative;
+  border-bottom: 1px dotted #00d9f9;
+  cursor: help;
+  color: #00d9f9;
+}
+.term::after {
+  content: attr(data-def);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(calc(-50% + var(--term-shift, 0px))) translateY(4px);
+  width: 260px;
+  background: #1c1f2c;
+  color: #e8ecf5;
+  border: 1px solid #00d9f9;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 20;
+}
+/* small triangle pointing down at the term */
+.term::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 2px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #00d9f9;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 20;
+}
+.term:hover::after, .term:hover::before,
+.term:focus::after, .term:focus::before,
+.term.term-open::after, .term.term-open::before {
+  opacity: 1;
+  transform: translateX(calc(-50% + var(--term-shift, 0px))) translateY(0);
+}
+@media (max-width: 480px) {
+  .term::after { max-width: 200px; }
 }
